@@ -11,7 +11,8 @@
 }
 
 body {
-    font-family: 'Segoe UI', 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe UI', cursive, sans-serif;
+    font-size: 18px; /* Tamaño base más grande para niños */
     background: #f0f7ff;
     min-height: 100vh;
     padding: 20px;
@@ -670,42 +671,42 @@ img, svg {
 }
 
 /* ==========================================
-   DESLIZAMIENTO LATERAL - VERSIÓN DEFINITIVA
+   DESLIZAMIENTO LATERAL - VERSIÓN CORREGIDA
    ========================================== */
 
 .slide-out-izquierda {
-    animation: slideOutIzquierda 0.3s ease forwards;
+    animation: slideOutIzquierda 0.35s ease forwards;
 }
 
 .slide-out-derecha {
-    animation: slideOutDerecha 0.3s ease forwards;
+    animation: slideOutDerecha 0.35s ease forwards;
 }
 
 .slide-in-izquierda {
-    animation: slideInIzquierda 0.35s ease forwards;
+    animation: slideInIzquierda 0.4s ease forwards;
 }
 
 .slide-in-derecha {
-    animation: slideInDerecha 0.35s ease forwards;
+    animation: slideInDerecha 0.4s ease forwards;
 }
 
 @keyframes slideOutIzquierda {
     0% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(60px); opacity: 0; }
 }
 
 @keyframes slideOutDerecha {
     0% { transform: translateX(0); opacity: 1; }
-    100% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(-60px); opacity: 0; }
 }
 
 @keyframes slideInIzquierda {
-    0% { transform: translateX(50px); opacity: 0; }
+    0% { transform: translateX(-60px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes slideInDerecha {
-    0% { transform: translateX(-50px); opacity: 0; }
+    0% { transform: translateX(60px); opacity: 0; }
     100% { transform: translateX(0); opacity: 1; }
 }
 
