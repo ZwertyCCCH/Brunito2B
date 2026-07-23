@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 11 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 11
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🌍 Inmigrantes en Chile</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los inmigrantes del pasado y del presente en Chile. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C11.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué es un inmigrante?', opciones: ['Persona que nace en Chile', 'Persona que se traslada del lugar donde vive', 'Persona que nunca viaja', 'Persona que solo estudia'], correcta: 1 },
+            { texto: '¿Qué inmigrantes llegaron a la Zona Sur de Chile?', opciones: ['Ingleses', 'Alemanes', 'Árabes', 'Haitianos'], correcta: 1 },
+            { texto: '¿Qué aportaron los alemanes a Chile?', opciones: ['El fútbol', 'La arquitectura y el kuchen', 'La salsa', 'El candombe'], correcta: 1 },
+            { texto: '¿Qué aportaron los ingleses a Chile?', opciones: ['El kuchen', 'El fútbol y los bomberos', 'La arquitectura', 'La cestería'], correcta: 1 },
+            { texto: '¿Qué club de fútbol fue fundado por ingleses?', opciones: ['Colo-Colo', 'Santiago Wanderers', 'Universidad de Chile', 'Palestino'], correcta: 1 },
+            { texto: '¿De qué países vinieron los árabes a Chile?', opciones: ['Egipto y Marruecos', 'Palestina, Siria y Líbano', 'Arabia Saudita y Yemen', 'Turquía e Irán'], correcta: 1 },
+            { texto: '¿Qué aportaron los árabes a Chile?', opciones: ['El fútbol', 'El comercio textil', 'La arquitectura', 'El kuchen'], correcta: 1 },
+            { texto: '¿Qué club de fútbol fue fundado por árabes?', opciones: ['Santiago Wanderers', 'Everton', 'Palestino', 'Colo-Colo'], correcta: 2 },
+            { texto: '¿Cómo se llama el pueblo afrodescendiente reconocido en Chile?', opciones: ['Pueblo Chango', 'Pueblo Tribal Afrodescendiente Chileno', 'Pueblo Mapuche', 'Pueblo Rapa Nui'], correcta: 1 },
+            { texto: '¿Qué baile es típico del Pueblo Tribal Afrodescendiente Chileno?', opciones: ['Cueca', 'Baile de Morenos de Paso', 'Salsa', 'Tango'], correcta: 1 },
+            { texto: '¿De qué país viene la comida "ají de gallina"?', opciones: ['Argentina', 'Perú', 'México', 'China'], correcta: 1 },
+            { texto: '¿Qué idioma hablan los haitianos?', opciones: ['Español', 'Creole', 'Portugués', 'Inglés'], correcta: 1 },
+            { texto: '¿Qué inmigrantes han llegado a Chile en los últimos años?', opciones: ['Alemanes', 'Haitianos y venezolanos', 'Ingleses', 'Árabes'], correcta: 1 },
+            { texto: '¿Qué aporte han hecho los inmigrantes chinos en Chile?', opciones: ['La arquitectura', 'El comercio', 'El fútbol', 'El kuchen'], correcta: 1 },
+            { texto: '¿Qué país de origen tiene el Club Deportivo Palestino?', opciones: ['Argentina', 'Palestina', 'Inglaterra', 'Alemania'], correcta: 1 },
+            { texto: '¿Qué es la migración climática?', opciones: ['Personas que se mudan por trabajo', 'Personas que dejan sus hogares por problemas ambientales', 'Personas que viajan de vacaciones', 'Personas que estudian en el extranjero'], correcta: 1 },
+            { texto: '¿Qué problema ambiental ha causado migración en Chile?', opciones: ['Terremotos', 'Sequía y falta de agua', 'Tsunamis', 'Erupciones volcánicas'], correcta: 1 },
+            { texto: '¿Qué comida es típica de la inmigración peruana?', opciones: ['Kuchen', 'Ají de gallina', 'Pizza', 'Sushi'], correcta: 1 },
+            { texto: '¿Qué deporte trajeron los ingleses a Chile?', opciones: ['Tenis', 'Fútbol', 'Básquetbol', 'Voleibol'], correcta: 1 },
+            { texto: '¿Qué significa que Chile sea una sociedad multicultural?', opciones: ['Que todos hablan el mismo idioma', 'Que incluye diversas culturas', 'Que no hay inmigrantes', 'Que todos son iguales'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C11';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

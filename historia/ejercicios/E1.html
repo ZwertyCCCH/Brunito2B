@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 1 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 1
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🌎 Ubicando a Chile</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre la ubicación de Chile en el mundo y sus países vecinos. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C1.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+const preguntasPool = [
+    // ======== PREGUNTAS ORIGINALES (1-20) ========
+
+    // 1. Continente de Chile
+    { texto: '¿En qué continente está la mayor parte de Chile?', opciones: ['África', 'América del Sur', 'Asia', 'Europa'], correcta: 1 },
+
+    // 2. País que NO es vecino
+    { texto: '¿En cuál de los siguientes continentes Chile no posee territorios?', opciones: ['África', 'América', 'Antártida', 'Oceanía'], correcta: 0 },
+
+    // 3. Océano al oeste
+    { texto: '¿Qué océano está al oeste de Chile?', opciones: ['Océano Atlántico', 'Océano Pacífico', 'Océano Índico', 'Océano Glacial'], correcta: 1 },
+
+    // 4. Significado de tricontinental
+    { texto: '¿Por qué decimos que Chile es tricontinental?', opciones: ['Porque tiene 3 regiones', 'Porque tiene territorio en 3 continentes', 'Porque tiene 3 océanos', 'Porque tiene 3 países vecinos'], correcta: 1 },
+
+    // 5. Capital de Chile
+    { texto: '¿Cuál es la capital de Chile?', opciones: ['Valparaíso', 'Concepción', 'Santiago', 'Antofagasta'], correcta: 2 },
+
+    // 6. Continente de Rapa Nui
+    { texto: '¿En qué continente está la Rapa Nui?', opciones: ['América', 'Oceanía', 'Antártica', 'Asia'], correcta: 1 },
+
+    // 7. País al norte
+    { texto: '¿Cuál de estos países está al norte de Chile?', opciones: ['Argentina', 'Bolivia', 'Perú', 'Uruguay'], correcta: 2 },
+
+    // 8. País al este
+    { texto: '¿Qué país está al este de Chile, en su mayoría?', opciones: ['Perú', 'Bolivia', 'Argentina', 'Paraguay'], correcta: 2 },
+
+    // 9. Nombre del continente
+    { texto: '¿Cómo se llama el continente donde está Chile?', opciones: ['América del Norte', 'América del Sur', 'América Central', 'Europa'], correcta: 1 },
+
+    // 10. Salida del sol
+    { texto: '¿Por dónde sale el sol en la mañana?', opciones: ['Por el norte', 'Por el sur', 'Por el este', 'Por el oeste'], correcta: 2 },
+
+    // 11. Punto cardinal adelante
+    { texto: '¿Qué punto cardinal está adelante si extendemos los brazos hacia el este y oeste?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+    // 12. Número de regiones
+    { texto: '¿Cuántas regiones tiene Chile?', opciones: ['10', '12', '16', '20'], correcta: 2 },
+
+    // 13. País al norte y este
+    { texto: '¿Qué país está al noreste de Chile?', opciones: ['Perú', 'Argentina', 'Bolivia', 'Brasil'], correcta: 2 },
+
+    // 14. Relieves de Chile (NUEVA - reemplaza duplicado de océanos)
+    { texto: '¿Qué forma de relieve predomina en el norte de Chile?', opciones: ['Valles y desiertos', 'Lagos y bosques', 'Glaciares y fiordos', 'Llanuras extensas'], correcta: 0 },
+
+    // 15. País que NO limita
+    { texto: '¿Qué país NO limita con Chile?', opciones: ['Perú', 'Bolivia', 'Argentina', 'Colombia'], correcta: 3 },
+
+    // 16. Isla de Pascua
+    { texto: '¿Qué océano rodea a Rapa Nui?', opciones: ['Océano Atlántico', 'Océano Pacífico', 'Océano Índico', 'Océano Glacial Ártico'], correcta: 1 },
+
+    // 17. NO es un punto cardinal
+    { texto: '¿Cuál de estos NO es un punto cardinal?', opciones: ['Norte', 'Sur', 'Este', 'Arriba'], correcta: 3 },
+
+    // 18. Ubicación de Chile en América
+    { texto: '¿En qué parte de América está Chile?', opciones: ['Norte', 'Central', 'Sur', 'Caribe'], correcta: 2 },
+
+    // 19. Estrecho del sur
+    { texto: '¿Cómo se llama el estrecho que está en el extremo sur de Chile?', opciones: ['Magallanes', 'Gibraltar', 'Bering', 'Dover'], correcta: 0 },
+
+    // 20. Continente con base científica
+    { texto: '¿Qué continente tiene Chile con su base científica?', opciones: ['América', 'Oceanía', 'Antártica', 'Europa'], correcta: 2 },
+
+
+    // ======== PREGUNTAS NUEVAS (21-40) - SIN DUPLICADOS ========
+
+    // 21. Pueblos originarios (NUEVA - reemplaza duplicado de #7)
+    { texto: '¿Qué pueblo originario habita en el altiplano del norte de Chile?', opciones: ['Mapuche', 'Aymara', 'Rapa Nui', 'Selk\'nam'], correcta: 1 },
+
+    // 22. Zonas naturales de Chile (NUEVA - reemplaza duplicado de #8)
+    { texto: '¿Cuántas zonas geográficas principales tiene Chile?', opciones: ['2', '3', '4', '5'], correcta: 1 },
+
+    // 23. Desierto de Atacama
+    { texto: '¿Cómo se llama el desierto más seco del mundo que está en Chile?', opciones: ['Desierto de Sahara', 'Desierto de Atacama', 'Desierto de Gobi', 'Desierto de Sonora'], correcta: 1 },
+
+    // 24. Territorio antártico
+    { texto: '¿Cómo se llama el territorio que Chile tiene en la Antártica?', opciones: ['Territorio Chileno Antártico', 'Antártica Antichilena', 'Provincia Antártica', 'Región Austral'], correcta: 0 },
+
+    // 25. Islas de Chile
+    { texto: '¿Cuál de estas islas pertenece a Chile?', opciones: ['Isla de Papa Rui', 'Isla Galápagos', 'Isla del Chamuyero', 'Isla de Pascua (Rapa Nui)'], correcta: 3 },
+
+    // 26. Línea de la cordillera
+    { texto: '¿Qué cordillera está al este de Chile?', opciones: ['Cordillera de la Costa', 'Cordillera de los Andes', 'Cordillera del Pacífico', 'Cordillera de los Apalaches'], correcta: 1 },
+
+    // 27. Línea de la costa
+    { texto: '¿Qué cordillera está al oeste de Chile?', opciones: ['Cordillera de la Costa', 'Cordillera de los Andes', 'Cordillera del Pacífico', 'Cordillera de los Apalaches'], correcta: 0 },
+
+    // 28. Capitales regionales (NUEVA - reemplaza duplicado de #13)
+    { texto: '¿Cuál es la capital de la Región de Valparaíso?', opciones: ['Valparaíso', 'Santiago', 'Concepción', 'La Serena'], correcta: 0 },
+
+    // 29. Volcanes de Chile
+    { texto: '¿Qué volcán famoso se encuentra en el sur de Chile?', opciones: ['Lascar', 'Calbuco', 'San José', 'Llullaillaco'], correcta: 1 },
+
+    // 30. País vecino con el que Chile comparte la frontera más larga
+    { texto: '¿Con qué país Chile comparte la frontera más larga?', opciones: ['Perú', 'Bolivia', 'Argentina', 'Brasil'], correcta: 2 },
+
+    // 31. Región más extensa de Chile
+    { texto: '¿Cuál es la región más extensa de Chile?', opciones: ['Región de Antofagasta', 'Región de Magallanes', 'Región de Atacama', 'Región de Arica y Parinacota'], correcta: 1 },
+
+    // 32. Clima de Chile
+    { texto: '¿Qué tipo de clima predomina en el norte de Chile?', opciones: ['Clima mediterráneo', 'Clima desértico', 'Clima polar', 'Clima tropical'], correcta: 1 },
+
+    // 33. Capital de la Región Metropolitana
+    { texto: '¿Cuál es la capital de la Región Metropolitana?', opciones: ['Valparaíso', 'Santiago', 'Concepción', 'La Serena'], correcta: 1 },
+
+    // 34. Paisajes de Chile
+    { texto: '¿Qué tipo de paisaje encontramos en la Zona Sur de Chile?', opciones: ['Desiertos', 'Lagos, ríos y volcanes', 'Ciudades muy grandes', 'Solo playas'], correcta: 1 },
+
+    // 35. Zona geográfica de Rapa Nui
+    { texto: '¿Cuál de los siguientes países si limita con Chile?', opciones: ['Bolivia', 'Ecuador', 'México', 'Paraguay'], correcta: 0 },
+
+    // 36. Isla de Chiloé (NUEVA - reemplaza duplicado de #16)
+    { texto: '¿En qué zona de Chile se encuentra la Isla de Chiloé?', opciones: ['Zona Norte', 'Zona Centro', 'Zona Sur', 'Zona Austral'], correcta: 2 },
+
+    // 37. Ubicación de Chile en el mundo
+    { texto: '¿En qué hemisferio se encuentra Chile?', opciones: ['Hemisferio Norte', 'Hemisferio Sur', 'Hemisferio Este', 'Hemisferio Oeste'], correcta: 1 },
+
+    // 38. Océano Pacífico (NUEVA - reemplaza duplicado de #15)
+    { texto: '¿Qué océano es el más grande del mundo y baña las costas de Chile?', opciones: ['Océano Atlántico', 'Océano Pacífico', 'Océano Índico', 'Océano Glacial Ártico'], correcta: 1 },
+
+    // 39. Ciudad que NO es capital regional
+    { texto: '¿Cuál de estas ciudades NO es una capital regional de Chile?', opciones: ['Valparaíso', 'Concepción', 'Antofagasta', 'Viña del Mar'], correcta: 3 },
+
+    // 40. Límites de Chile
+    { texto: '¿Qué país está al norte de Chile?', opciones: ['Argentina', 'Bolivia', 'Perú', 'Uruguay'], correcta: 2 }
+];
+
+        const CLASE_ID = 'C1';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

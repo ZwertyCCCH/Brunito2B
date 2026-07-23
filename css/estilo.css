@@ -1,0 +1,859 @@
+/* ==========================================
+   ESTILOS GLOBALES - PROYECTO 2° BÁSICO
+   Colores amigables y diseño infantil
+   ========================================== */
+
+/* ----- RESET Y FUENTES ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+    background: #f0f7ff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* ----- HEADER PRINCIPAL ----- */
+.header-principal {
+    background: linear-gradient(135deg, #4A90D9, #357ABD);
+    color: white;
+    padding: 30px 20px;
+    border-radius: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 25px rgba(74, 144, 217, 0.4);
+}
+
+.header-principal .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.header-principal .logo .emoji-grande {
+    font-size: 50px;
+}
+
+.header-principal .logo h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.header-principal .subtitulo {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 8px;
+}
+
+/* ----- GRID DE MATERIAS (Index principal) ----- */
+.materias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.materia-card {
+    background: white;
+    border-radius: 25px;
+    padding: 25px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.materia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.materia-card .materia-icono {
+    font-size: 50px;
+}
+
+.materia-card h2 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.materia-card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+}
+
+.materia-card .badge {
+    background: #e8f0fe;
+    color: #4A90D9;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Colores por materia */
+.materia-card.historia {
+    border-color: #F5A623;
+    background: #FFFBF0;
+}
+.materia-card.historia:hover {
+    border-color: #E09600;
+}
+
+.materia-card.bloqueado {
+    opacity: 0.6;
+    cursor: not-allowed;
+    border-color: #ddd;
+    filter: grayscale(0.3);
+}
+.materia-card.bloqueado .badge.bloqueado {
+    background: #eee;
+    color: #999;
+}
+
+/* ----- HEADER DE MATERIA (historia/index.html) ----- */
+.header-materia {
+    background: linear-gradient(135deg, #F5A623, #E09600);
+    color: white;
+    padding: 20px 25px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(245, 166, 35, 0.4);
+}
+
+.header-materia .btn-volver {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 8px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+.header-materia .btn-volver:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.header-materia > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.header-materia .emoji-grande {
+    font-size: 40px;
+}
+.header-materia h1 {
+    font-size: 2rem;
+}
+
+.header-materia .progreso-materia {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* ----- DESCRIPCIÓN DE MATERIA ----- */
+.descripcion-materia {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    margin-bottom: 25px;
+    border-left: 6px solid #F5A623;
+}
+
+/* ----- GRID DE CLASES (historia/index.html) ----- */
+.clases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.clase-card {
+    background: white;
+    border-radius: 18px;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 3px solid #e8f0fe;
+}
+.clase-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: #F5A623;
+}
+
+.clase-card .clase-numero {
+    background: #F5A623;
+    color: white;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.clase-card .clase-info {
+    flex: 1;
+}
+.clase-card .clase-info h3 {
+    font-size: 1rem;
+    margin: 0;
+}
+.clase-card .clase-info p {
+    font-size: 0.85rem;
+    color: #777;
+    margin: 2px 0 0;
+}
+
+.clase-card .clase-estado {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+/* Estados de clase */
+.clase-estado.completado-oro { color: #FFD700; }
+.clase-estado.completado-plata { color: #C0C0C0; }
+.clase-estado.completado-bronce { color: #CD7F32; }
+.clase-estado.completado-estrella { color: #4A90D9; }
+
+/* ----- BOTÓN REINICIAR ----- */
+.btn-reiniciar {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+}
+.btn-reiniciar:hover {
+    background: #e05555;
+}
+.btn-reiniciar:active {
+    transform: scale(0.95);
+}
+
+/* ----- PÁGINAS DE CLASE Y EJERCICIO ----- */
+.contenido-clase {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 30px;
+    padding: 30px 35px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contenido-clase .clase-titulo {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+.contenido-clase .clase-subtitulo {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+.contenido-clase .clase-cuerpo {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+.contenido-clase .clase-cuerpo img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+.contenido-clase .clase-cuerpo ul,
+.contenido-clase .clase-cuerpo ol {
+    padding-left: 25px;
+}
+.contenido-clase .clase-cuerpo li {
+    margin-bottom: 8px;
+}
+
+.navegacion-clase {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-navegacion {
+    background: #e8f0fe;
+    color: #4A90D9;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-navegacion:hover {
+    background: #d0e0fc;
+}
+.btn-navegacion:active {
+    transform: scale(0.95);
+}
+.btn-navegacion.principal {
+    background: #F5A623;
+    color: white;
+}
+.btn-navegacion.principal:hover {
+    background: #E09600;
+}
+
+/* ----- EJERCICIOS (dentro de clase) ----- */
+.ejercicio-container {
+    background: #f8faff;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 25px 0;
+    border: 3px dashed #d0e0fc;
+}
+
+.ejercicio-container .ejercicio-titulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Opciones de respuesta tipo botón */
+.opciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.opcion-btn {
+    background: white;
+    border: 3px solid #d0e0fc;
+    border-radius: 15px;
+    padding: 12px 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: #2c3e50;
+}
+.opcion-btn:hover {
+    background: #e8f0fe;
+    border-color: #4A90D9;
+}
+.opcion-btn.seleccionada {
+    background: #4A90D9;
+    color: white;
+    border-color: #4A90D9;
+}
+.opcion-btn.correcta {
+    background: #2ecc71;
+    color: white;
+    border-color: #27ae60;
+}
+.opcion-btn.incorrecta {
+    background: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+.opcion-btn.deshabilitada {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Botón comprobar respuesta */
+.btn-comprobar {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    margin-top: 15px;
+}
+.btn-comprobar:hover {
+    background: #27ae60;
+}
+.btn-comprobar:active {
+    transform: scale(0.95);
+}
+.btn-comprobar:disabled {
+    background: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Feedback de respuesta */
+.feedback {
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    font-weight: 600;
+    display: none;
+}
+.feedback.correcto {
+    display: block;
+    background: #d5f5e3;
+    color: #1a7a3a;
+    border: 2px solid #2ecc71;
+}
+.feedback.incorrecto {
+    display: block;
+    background: #fadbd8;
+    color: #922b21;
+    border: 2px solid #e74c3c;
+}
+
+/* ----- SISTEMA DE MEDALLAS (dentro del ejercicio) ----- */
+.medalla-container {
+    text-align: center;
+    padding: 20px;
+    background: #fff8e7;
+    border-radius: 20px;
+    border: 3px solid #F5A623;
+    margin-top: 20px;
+    display: none;
+}
+.medalla-container.visible {
+    display: block;
+}
+
+.medalla-container .medalla-icono {
+    font-size: 60px;
+}
+.medalla-container .medalla-nombre {
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.medalla-container .medalla-puntaje {
+    font-size: 1.2rem;
+    color: #555;
+}
+.medalla-container .medalla-oro .medalla-nombre { color: #FFD700; }
+.medalla-container .medalla-plata .medalla-nombre { color: #A8A8A8; }
+.medalla-container .medalla-bronce .medalla-nombre { color: #CD7F32; }
+.medalla-container .medalla-estrella .medalla-nombre { color: #4A90D9; }
+
+/* ----- FOOTER ----- */
+footer {
+    text-align: center;
+    padding: 25px 0 10px;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 600px) {
+    .header-principal .logo h1 {
+        font-size: 1.6rem;
+    }
+    .header-materia {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-materia > div {
+        flex-direction: column;
+    }
+    .materias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .clases-grid {
+        grid-template-columns: 1fr;
+    }
+    .contenido-clase {
+        padding: 20px 15px;
+    }
+    .opciones-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* ==========================================
+   MEJORAS DE RESPONSIVIDAD
+   ========================================== */
+
+/* --- Móviles pequeños (hasta 400px) --- */
+@media (max-width: 400px) {
+    /* Fuentes más pequeñas */
+    .header-principal .logo h1 {
+        font-size: 1.3rem;
+    }
+    .header-principal .subtitulo {
+        font-size: 0.9rem;
+    }
+    .header-materia h1 {
+        font-size: 1.4rem;
+    }
+    .contenido-clase .clase-titulo {
+        font-size: 1.3rem;
+    }
+    .clase-card .clase-info h3 {
+        font-size: 0.9rem;
+    }
+
+    /* Grids a 1 columna */
+    .materias-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    .opciones-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Botones más grandes para táctil */
+    .opcion-btn {
+        padding: 14px 12px;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+    .btn-navegacion {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+    .btn-comprobar {
+        padding: 14px 25px;
+        font-size: 1rem;
+        min-height: 48px;
+        width: 100%;
+    }
+
+    /* Ajustes de padding */
+    .contenido-clase {
+        padding: 15px 12px;
+    }
+    .header-principal {
+        padding: 20px 15px;
+    }
+    .header-materia {
+        padding: 15px;
+    }
+
+    /* Medallas más compactas */
+    .medalla-container .medalla-icono {
+        font-size: 40px;
+    }
+    .medalla-container .medalla-nombre {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- Móviles medianos (401px - 600px) --- */
+@media (min-width: 401px) and (max-width: 600px) {
+    .materias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .opciones-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .clases-grid {
+        grid-template-columns: 1fr;
+    }
+    .contenido-clase {
+        padding: 20px 18px;
+    }
+}
+
+/* --- Tablets verticales (601px - 900px) --- */
+@media (min-width: 601px) and (max-width: 900px) {
+    .materias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .clases-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .opciones-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* --- Mejoras generales para táctil --- */
+@media (pointer: coarse) {
+    /* Todos los botones más grandes en táctil */
+    button, .btn-navegacion, .opcion-btn, .btn-comprobar {
+        min-height: 48px;
+        min-width: 48px;
+    }
+    .opcion-btn {
+        padding: 14px 12px;
+    }
+}
+
+/* --- Orientación horizontal en móviles --- */
+@media (max-width: 800px) and (orientation: landscape) {
+    .contenido-clase {
+        padding: 15px 20px;
+    }
+    .clases-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .materias-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- Accesibilidad: texto legible en todos los tamaños --- */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px; /* Base para móviles */
+    }
+    .clase-cuerpo {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    .clase-card .clase-info p {
+        font-size: 0.8rem;
+    }
+}
+
+/* --- Mejora para imágenes --- */
+img, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Scroll horizontal para tablas (si se agregan) --- */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* ==========================================
+   DESLIZAMIENTO LATERAL - VERSIÓN DEFINITIVA
+   ========================================== */
+
+.slide-out-izquierda {
+    animation: slideOutIzquierda 0.3s ease forwards;
+}
+
+.slide-out-derecha {
+    animation: slideOutDerecha 0.3s ease forwards;
+}
+
+.slide-in-izquierda {
+    animation: slideInIzquierda 0.35s ease forwards;
+}
+
+.slide-in-derecha {
+    animation: slideInDerecha 0.35s ease forwards;
+}
+
+@keyframes slideOutIzquierda {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-50px); opacity: 0; }
+}
+
+@keyframes slideOutDerecha {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(50px); opacity: 0; }
+}
+
+@keyframes slideInIzquierda {
+    0% { transform: translateX(50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInDerecha {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* ==========================================
+   EFECTO POP EN OPCIONES
+   ========================================== */
+
+.opcion-btn {
+    transition: all 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+.opcion-btn:active {
+    transform: scale(0.92);
+    transition: transform 0.05s;
+}
+
+.opcion-btn.pop-seleccion {
+    animation: popEfecto 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes popEfecto {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(74, 144, 217, 0.4);
+    }
+    30% {
+        transform: scale(1.08);
+        box-shadow: 0 0 20px 8px rgba(74, 144, 217, 0.25);
+    }
+    60% {
+        transform: scale(0.97);
+        box-shadow: 0 0 10px 4px rgba(74, 144, 217, 0.15);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(74, 144, 217, 0);
+    }
+}
+
+/* Efecto de onda al hacer clic */
+.opcion-btn .onda-efecto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(74, 144, 217, 0.2);
+    transform: translate(-50%, -50%);
+    animation: ondaExpansion 0.6s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes ondaExpansion {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.8;
+    }
+    100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+}
+
+/* ==========================================
+   EFECTO ONDA EN BARRA DE PROGRESO
+   ========================================== */
+
+.barra-progreso-container {
+    width: 100%;
+    max-width: 500px;
+    height: 12px;
+    background: #e8f0fe;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.barra-progreso-llenado {
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4A90D9, #2ecc71);
+    background-size: 200% 100%;
+    transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+}
+
+/* Efecto de onda encima de la barra */
+.barra-progreso-llenado::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 30%,
+        rgba(255, 255, 255, 0.5) 50%,
+        rgba(255, 255, 255, 0.3) 70%,
+        transparent 100%
+    );
+    animation: ondaBarra 2s ease-in-out infinite;
+    border-radius: 50%;
+}
+
+@keyframes ondaBarra {
+    0% {
+        transform: translateX(-100%) scaleX(1.5);
+    }
+    100% {
+        transform: translateX(100%) scaleX(1.5);
+    }
+}
+
+/* Segunda onda más sutil */
+.barra-progreso-llenado::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.15) 40%,
+        rgba(255, 255, 255, 0.25) 50%,
+        rgba(255, 255, 255, 0.15) 60%,
+        transparent 100%
+    );
+    animation: ondaBarra 3s ease-in-out infinite reverse;
+    border-radius: 50%;
+}
+
+/* Efecto de brillo al completar */
+.barra-progreso-llenado.completo {
+    animation: brilloCompleto 0.8s ease 3;
+}
+
+@keyframes brilloCompleto {
+    0%, 100% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+}

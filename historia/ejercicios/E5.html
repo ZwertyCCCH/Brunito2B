@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 5 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 5
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🌆 La Zona Centro de Chile</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las ciudades, valles, puertos y el Censo en la Zona Centro. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C5.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Cómo son los veranos en la Zona Central?', opciones: ['Fríos y lluviosos', 'Calurosos y secos', 'Muy fríos con nieve', 'Lluviosos todo el año'], correcta: 1 },
+            { texto: '¿Cómo son los inviernos en la Zona Central?', opciones: ['Calurosos y secos', 'Fríos y lluviosos', 'Muy cálidos', 'Siempre con nieve'], correcta: 1 },
+            { texto: '¿Cuál es la capital de Chile?', opciones: ['Valparaíso', 'Concepción', 'Santiago', 'Antofagasta'], correcta: 2 },
+            { texto: '¿Qué ciudad de la Zona Centro es un importante puerto?', opciones: ['Rancagua', 'Talca', 'Valparaíso', 'Santiago'], correcta: 2 },
+            { texto: '¿Qué es el Censo?', opciones: ['Una encuesta a todos los hogares', 'Un tipo de mapa', 'Una celebración', 'Un libro de historia'], correcta: 0 },
+            { texto: '¿Qué región de Chile tiene los valles agrícolas más importantes?', opciones: ['Región de Atacama', 'Región del Maule', 'Región de Los Lagos', 'Región de Arica'], correcta: 1 },
+            { texto: '¿Qué ciudad es capital de la Región del Maule?', opciones: ['Rancagua', 'Talca', 'Curicó', 'Linares'], correcta: 1 },
+            { texto: '¿Qué puerto importante está en la Zona Centro?', opciones: ['Antofagasta', 'Iquique', 'San Antonio', 'Arica'], correcta: 2 },
+            { texto: '¿En qué zona de Chile vive la mayor parte de la población?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 1 },
+            { texto: '¿Qué tipo de paisaje predomina en la Zona Centro?', opciones: ['Desierto', 'Valles y ciudades', 'Lagos y volcanes', 'Hielo y nieve'], correcta: 1 },
+            { texto: '¿Qué se cultiva en los valles de la Región del Maule?', opciones: ['Uvas y frutas', 'Arroz', 'Cacao', 'Caña de azúcar'], correcta: 0 },
+            { texto: '¿Qué ciudad es la capital de Chile?', opciones: ['Valparaíso', 'Santiago', 'Concepción', 'La Serena'], correcta: 1 },
+            { texto: '¿Cuándo se realizó el último Censo en Chile?', opciones: ['2020', '2022', '2024', '2026'], correcta: 2 },
+            { texto: '¿Qué tipo de clima tiene la Zona Centro?', opciones: ['Clima desértico', 'Clima mediterráneo', 'Clima polar', 'Clima tropical'], correcta: 1 },
+            { texto: '¿Qué tiene la Zona Centro que la Zona Norte no tiene?', opciones: ['Desierto', 'Valles verdes y más lluvias', 'Altiplano', 'Salares'], correcta: 1 },
+            { texto: '¿Qué ciudad de la Zona Centro es famosa por su puerto?', opciones: ['Santiago', 'Rancagua', 'Valparaíso', 'Talca'], correcta: 2 },
+            { texto: '¿Cuál es la región más poblada de Chile?', opciones: ['Región de Valparaíso', 'Región del Biobío', 'Región Metropolitana', 'Región del Maule'], correcta: 2 },
+            { texto: '¿Qué actividad es importante en los valles de la Zona Centro?', opciones: ['Minería', 'Agricultura', 'Pesca', 'Ganadería'], correcta: 1 },
+            { texto: '¿Qué capital regional está en la Zona Centro?', opciones: ['Rancagua', 'Antofagasta', 'Puerto Montt', 'Arica'], correcta: 0 },
+            { texto: '¿Qué es el Censo 2024?', opciones: ['Un censo de población', 'Un censo de viviendas', 'Una encuesta a todos los hogares', 'Todas las anteriores'], correcta: 3 }
+        ];
+
+        const CLASE_ID = 'C5';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 13 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 13
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🏛️ Patrimonio e Instituciones</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre el patrimonio natural, cultural y las instituciones que lo protegen. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C13.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué es el patrimonio?', opciones: ['Conjunto de elementos que deben preservarse', 'Un tipo de comida', 'Un juego', 'Un animal'], correcta: 0 },
+            { texto: '¿Qué es el patrimonio natural?', opciones: ['Museos y bibliotecas', 'Parques nacionales, ríos y volcanes', 'Edificios antiguos', 'Tradiciones y costumbres'], correcta: 1 },
+            { texto: '¿Qué es el patrimonio cultural?', opciones: ['Bosques y ríos', 'Animales y plantas', 'Museos, iglesias y tradiciones', 'Playas y montañas'], correcta: 2 },
+            { texto: '¿Qué institución protege el medioambiente?', opciones: ['CONAF', 'Ministerio del Medio Ambiente', 'Ministerio de las Culturas', 'Biblioteca Nacional'], correcta: 1 },
+            { texto: '¿Qué institución protege el patrimonio cultural?', opciones: ['Ministerio del Medio Ambiente', 'CONAF', 'Ministerio de las Culturas, las Artes y el Patrimonio', 'Ministerio de Obras Públicas'], correcta: 2 },
+            { texto: '¿Qué es CONAF?', opciones: ['Corporación Nacional Forestal', 'Consejo Nacional de Fomento', 'Comisión Nacional de Arte', 'Comité de Cultura'], correcta: 0 },
+            { texto: '¿Qué institución protege los bosques de Chile?', opciones: ['Ministerio de las Culturas', 'CONAF', 'Ministerio del Medio Ambiente', 'Biblioteca Nacional'], correcta: 1 },
+            { texto: '¿Qué es un museo?', opciones: ['Un lugar donde se cuidan los patrimonios culturales', 'Una escuela', 'Una iglesia', 'Un parque'], correcta: 0 },
+            { texto: '¿Qué es un parque nacional?', opciones: ['Un lugar de juegos', 'Un área natural protegida', 'Un centro comercial', 'Una ciudad'], correcta: 1 },
+            { texto: '¿Qué patrimonio cultural es famoso en Rapa Nui?', opciones: ['Los volcanes', 'Los moáis', 'Las playas', 'Los bosques'], correcta: 1 },
+            { texto: '¿Qué es la Iglesia de Parinacota?', opciones: ['Un ejemplo de mezcla de cultura aymara y religión católica', 'Un museo', 'Un parque nacional', 'Una escuela'], correcta: 0 },
+            { texto: '¿Qué institución promueve la música nacional?', opciones: ['CONAF', 'Consejo de Fomento de la Música Nacional', 'Ministerio del Medio Ambiente', 'Biblioteca Nacional'], correcta: 1 },
+            { texto: '¿Qué institución promueve el libro y la lectura?', opciones: ['CONAF', 'Consejo Nacional del Libro y la Lectura', 'Ministerio del Medio Ambiente', 'Ministerio de Educación'], correcta: 1 },
+            { texto: '¿Qué debemos hacer para cuidar el patrimonio?', opciones: ['Destruirlo', 'Cuidarlo y preservarlo', 'Venderlo', 'Olvidarlo'], correcta: 1 },
+            { texto: '¿Qué es la flora?', opciones: ['Animales', 'Plantas', 'Minerales', 'Rocas'], correcta: 1 },
+            { texto: '¿Qué es la fauna?', opciones: ['Plantas', 'Animales', 'Minerales', 'Rocas'], correcta: 1 },
+            { texto: '¿Qué es el sincretismo cultural?', opciones: ['La mezcla de dos culturas', 'La separación de culturas', 'La eliminación de culturas', 'La creación de una nueva cultura sin mezcla'], correcta: 0 },
+            { texto: '¿Qué representa la bandera Wiphala?', opciones: ['Los colores del arcoíris andino', 'La bandera de Chile', 'La bandera de los inmigrantes', 'La bandera de Rapa Nui'], correcta: 0 },
+            { texto: '¿Qué es la Pachamama?', opciones: ['La Madre Tierra para los pueblos andinos', 'Un volcán', 'Un río', 'Una ciudad'], correcta: 0 },
+            { texto: '¿Qué institución educa sobre el medioambiente?', opciones: ['Ministerio de Educación', 'Ministerio del Medio Ambiente', 'Ministerio de Salud', 'Ministerio de Vivienda'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C13';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 8 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 8
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🌿 Pueblos Originarios del Centro y Sur</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los pueblos Mapuche, Chono, Yagán y Selk'nam. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C8.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Cómo se llama el idioma del pueblo Mapuche?', opciones: ['Quechua', 'Aymara', 'Mapuzugun', 'Rapa Nui'], correcta: 2 },
+            { texto: '¿En qué zona de Chile habitaba el pueblo Mapuche?', opciones: ['Solo en el norte', 'Centro y sur', 'Solo en la Antártica', 'En la Isla de Pascua'], correcta: 1 },
+            { texto: '¿Cómo se llama el fruto del pewén (araucaria)?', opciones: ['Maíz', 'Piñón', 'Zapallo', 'Papa'], correcta: 1 },
+            { texto: '¿Qué grupo Mapuche era nómada?', opciones: ['Mapuche', 'Pewenche', 'Williche', 'Lafkenche'], correcta: 1 },
+            { texto: '¿Cómo se llama la embarcación de los Chono?', opciones: ['Ánan', 'Dalca', 'Balsa', 'Canoa'], correcta: 1 },
+            { texto: '¿Qué hacían las mujeres Chono?', opciones: ['Tejían', 'Buceaban para recolectar mariscos', 'Cultivaban', 'Construían casas'], correcta: 1 },
+            { texto: '¿Cómo se llama la embarcación del pueblo Yagán?', opciones: ['Dalca', 'Ánan', 'Balsa', 'Góndola'], correcta: 1 },
+            { texto: '¿De qué material era el ánan de los Yagán?', opciones: ['Piedra', 'Corteza de árbol', 'Cuero de animal', 'Madera de pino'], correcta: 1 },
+            { texto: '¿Qué celebración selk\'nam incluía pintarse el cuerpo?', opciones: ['Año Nuevo', 'El hain', 'El guillatun', 'El machitun'], correcta: 1 },
+            { texto: '¿Cuántas personas se identifican como selk\'nam según el censo?', opciones: ['100', '500', 'Más de 1.400', '10.000'], correcta: 2 },
+            { texto: '¿Cómo se llama la ceremonia mapuche de oración?', opciones: ['Machitun', 'Guillatun', 'Llellipun', 'Hain'], correcta: 2 },
+            { texto: '¿Cómo se llama la ceremonia mapuche de sanación?', opciones: ['Machitun', 'Guillatun', 'Llellipun', 'Hain'], correcta: 0 },
+            { texto: '¿Qué tejido es típico del pueblo Mapuche?', opciones: ['Chalina', 'Poncho', 'Manta', 'Ropa de lana de oveja'], correcta: 1 },
+            { texto: '¿Dónde vivían los Yagán?', opciones: ['En el altiplano', 'En el extremo sur', 'En el desierto', 'En la Isla de Pascua'], correcta: 1 },
+            { texto: '¿Qué actividad realizaban los Chono?', opciones: ['Agricultura', 'Pesca y caza de lobos marinos', 'Alfarería', 'Textilería'], correcta: 1 },
+            { texto: '¿Cómo se llaman los grupos del pueblo Mapuche?', opciones: ['Aymara, Chango, Diaguita', 'Mapuche, Pewenche, Williche, Lafkenche, Puelche, Pikunche', 'Chono, Yagán, Selk\'nam', 'Rapa Nui, Chango'], correcta: 1 },
+            { texto: '¿Qué hacía el pueblo Chono para protegerse del frío?', opciones: ['Usaban abrigos de plumas', 'Llevaban fuego en sus embarcaciones', 'Se mudaban al norte', 'Hacían fogatas en la costa'], correcta: 1 },
+            { texto: '¿Qué material usaban los Yagán para sus viviendas?', opciones: ['Piedra y barro', 'Ramas y pieles', 'Madera y tejas', 'Huesos de ballena'], correcta: 1 },
+            { texto: '¿Qué significa "mapuzugun"?', opciones: ['Lengua de la tierra', 'Lengua del pueblo mapuche', 'Lengua del sur', 'Lengua de los antepasados'], correcta: 1 },
+            { texto: '¿Qué pueblo del sur es conocido por su cestería?', opciones: ['Mapuche', 'Chono', 'Yagán', 'Selk\'nam'], correcta: 2 }
+        ];
+
+        const CLASE_ID = 'C8';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

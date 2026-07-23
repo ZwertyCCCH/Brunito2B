@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 6 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 6
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🌊 La Zona Sur y Rapa Nui</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los lagos, volcanes, fiordos, glaciares y los moáis de Rapa Nui. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C6.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Cómo es el clima en la Zona Sur?', opciones: ['Siempre seco', 'Lluvias abundantes todo el año', 'Muy caluroso', 'Sin lluvias nunca'], correcta: 1 },
+            { texto: '¿Qué tipo de paisaje encontramos en la Zona Sur?', opciones: ['Desiertos y valles', 'Lagos, ríos, volcanes y fiordos', 'Ciudades muy grandes', 'Solo playas'], correcta: 1 },
+            { texto: '¿Cómo se llama el volcán famoso de la Zona Sur?', opciones: ['Lascar', 'Calbuco', 'San José', 'Llullaillaco'], correcta: 1 },
+            { texto: '¿Qué es la Patagonia chilena?', opciones: ['Un desierto', 'La zona sur de Chile', 'Una isla', 'Un volcán'], correcta: 1 },
+            { texto: '¿En qué continente está la Isla de Pascua (Rapa Nui)?', opciones: ['América', 'Oceanía', 'Antártica', 'Europa'], correcta: 1 },
+            { texto: '¿Cómo se llaman las famosas estatuas de Rapa Nui?', opciones: ['Tótems', 'Moáis', 'Pirámides', 'Esfinges'], correcta: 1 },
+            { texto: '¿Cuál es la ciudad principal de Rapa Nui?', opciones: ['Anakena', 'Hanga Roa', 'Santiago', 'Valparaíso'], correcta: 1 },
+            { texto: '¿Qué hay en la Zona Sur que en el norte no hay?', opciones: ['Desiertos', 'Glaciares y fiordos', 'Salares', 'Altiplano'], correcta: 1 },
+            { texto: '¿Cómo se llama el parque nacional famoso en la Patagonia?', opciones: ['Conguillío', 'Torres del Paine', 'La Campana', 'Vicuña Mackenna'], correcta: 1 },
+            { texto: '¿Qué caracteriza a la vegetación de la Zona Sur?', opciones: ['Es muy seca', 'Es abundante por las lluvias', 'No hay vegetación', 'Solo hay cactus'], correcta: 1 },
+            { texto: '¿Qué tiene Rapa Nui?', opciones: ['5 volcanes principales', 'Muchos ríos', 'Grandes desiertos', 'Frío extremo todo el año'], correcta: 0 },
+            { texto: '¿Qué representa un moái para el pueblo Rapa Nui?', opciones: ['Un juguete', 'El espíritu de sus antepasados', 'Una herramienta de caza', 'Una casa'], correcta: 1 },
+            { texto: '¿Cómo se llama la playa famosa de Rapa Nui?', opciones: ['Anakena', 'Viña del Mar', 'La Serena', 'Cartagena'], correcta: 0 },
+            { texto: '¿Qué hay en el extremo sur de Chile?', opciones: ['Desiertos', 'El Territorio Chileno Antártico', 'Grandes ciudades', 'Altiplano'], correcta: 1 },
+            { texto: '¿Qué tipo de vegetación hay en el Parque Nacional Pumalín?', opciones: ['Solo cactus', 'Abundante vegetación', 'Solo pasto seco', 'No hay vegetación'], correcta: 1 },
+            { texto: '¿Qué encontramos hacia el sur de la Zona Sur?', opciones: ['Más fiordos y glaciares', 'Solo desiertos', 'Grandes ciudades', 'Cultivos extensos'], correcta: 0 },
+            { texto: '¿Qué tipo de clima tiene Rapa Nui?', opciones: ['Temperaturas cálidas y lluvias', 'Frío extremo', 'Muy seco y caluroso', 'Nieve todo el año'], correcta: 0 },
+            { texto: '¿Qué es el Estrecho de Magallanes?', opciones: ['Un río', 'Un paso marítimo en el extremo sur', 'Una montaña', 'Una ciudad'], correcta: 1 },
+            { texto: '¿Qué tipo de actividad hay en la base chilena en la Antártica?', opciones: ['Investigación científica', 'Turismo', 'Agricultura', 'Minería'], correcta: 0 },
+            { texto: '¿Qué diferencia hay entre la Zona Norte y la Zona Sur?', opciones: ['El norte es lluvioso y el sur seco', 'El norte es seco y el sur lluvioso', 'Ambas son iguales', 'El norte es frío y el sur caluroso'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C6';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

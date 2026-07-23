@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 4 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 4
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🏜️ La Zona Norte de Chile</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre el desierto, el altiplano, los valles y las ciudades de la Zona Norte. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C4.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Cómo es el clima en la Zona Norte de Chile?', opciones: ['Lluvioso todo el año', 'Con escasas lluvias', 'Muy frío', 'Con nieve todo el año'], correcta: 1 },
+            { texto: '¿Cómo se llama el desierto más seco del mundo que está en Chile?', opciones: ['Desierto de Sahara', 'Desierto de Atacama', 'Desierto de Gobi', 'Desierto de Sonora'], correcta: 1 },
+            { texto: '¿Qué es el altiplano?', opciones: ['Un terreno plano en la cordillera de los Andes', 'Un desierto de arena', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
+            { texto: '¿Qué fenómeno ocurre en el desierto de Atacama cuando llueve?', opciones: ['Desierto florido', 'Inundaciones', 'Terremotos', 'Nevadas'], correcta: 0 },
+            { texto: '¿Qué se cultiva en los valles del norte de Chile?', opciones: ['Trigo y maíz', 'Uvas y frutas (Valle del Elqui)', 'Arroz y soya', 'Cacao y café'], correcta: 1 },
+            { texto: '¿Qué ciudad costera importante está en la Zona Norte?', opciones: ['Valparaíso', 'Antofagasta', 'Concepción', 'Puerto Montt'], correcta: 1 },
+            { texto: '¿Qué caracteriza a la Zona Norte en cuanto a vegetación?', opciones: ['Abundante vegetación', 'Poca vegetación', 'Bosques frondosos', 'Selvas tropicales'], correcta: 1 },
+            { texto: '¿Qué hay en el altiplano?', opciones: ['Playas', 'Terreno plano en altura', 'Grandes ríos', 'Ciudades muy grandes'], correcta: 1 },
+            { texto: '¿Cómo es la costa en la Zona Norte?', opciones: ['Tiene ciudades, puertos y playas', 'Solo hay acantilados', 'No hay costa', 'Solo hay bosques'], correcta: 0 },
+            { texto: '¿Qué tipo de agricultura se da en el Valle del Elqui?', opciones: ['Cultivo de arroz', 'Cultivo de uvas y frutas', 'Cultivo de algodón', 'Cultivo de caña de azúcar'], correcta: 1 },
+            { texto: '¿Por qué hay poca vegetación en la Zona Norte?', opciones: ['Porque hace mucho frío', 'Porque hay pocas lluvias', 'Porque hay muchos animales', 'Porque el suelo es muy fértil'], correcta: 1 },
+            { texto: '¿Qué encontramos al sur de la Zona Norte?', opciones: ['Valles con ríos y agricultura', 'Solo desierto', 'Solo hielo', 'Solo montañas'], correcta: 0 },
+            { texto: '¿Qué tipo de paisaje predomina en la Zona Norte?', opciones: ['Verde y frondoso', 'Árido y con poca vegetación', 'Cubierto de nieve', 'Con muchos lagos'], correcta: 1 },
+            { texto: '¿Qué volcán es famoso en el norte de Chile?', opciones: ['Volcán Calbuco', 'Volcán Llaima', 'Volcán Lascar', 'Volcán Villarrica'], correcta: 2 },
+            { texto: '¿Qué es el desierto florido?', opciones: ['Un desierto con flores todo el año', 'Flores que crecen después de las lluvias', 'Un jardín artificial', 'Un tipo de cacto'], correcta: 1 },
+            { texto: '¿En qué zona de Chile está el altiplano?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 0 },
+            { texto: '¿Qué actividad económica es importante en la Zona Norte?', opciones: ['Pesca y agricultura en valles', 'Industria textil', 'Silvicultura', 'Ganadería extensiva'], correcta: 0 },
+            { texto: '¿Cómo es el paisaje de la Zona Norte en general?', opciones: ['Muy verde', 'Seco y con poca vegetación', 'Cubierto de nieve', 'Con muchos bosques'], correcta: 1 },
+            { texto: '¿Qué tipo de clima tiene la Zona Norte?', opciones: ['Clima mediterráneo', 'Clima desértico', 'Clima polar', 'Clima tropical'], correcta: 1 },
+            { texto: '¿Qué hay al este de la Zona Norte?', opciones: ['El océano Pacífico', 'La cordillera de los Andes', 'Argentina', 'El desierto'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C4';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

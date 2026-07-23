@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 12 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 12
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">📋 Normas de Convivencia</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las normas en el colegio, espacios públicos, naturaleza y pueblos originarios. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C12.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué es una norma?', opciones: ['Una regla para convivir bien', 'Un juego', 'Una comida', 'Un animal'], correcta: 0 },
+            { texto: '¿Qué norma es importante en el colegio?', opciones: ['Correr en los pasillos', 'Levantar la mano para participar', 'Gritar en clases', 'No escuchar al profesor'], correcta: 1 },
+            { texto: '¿Qué debemos hacer para cuidar los espacios públicos?', opciones: ['Botar basura en la calle', 'Cuidar los juegos y plantas de las plazas', 'Pintar los grifos', 'No respetar las filas'], correcta: 1 },
+            { texto: '¿Qué norma ayuda a cuidar el medioambiente?', opciones: ['Usar recipientes desechables', 'Reutilizar residuos', 'Usar mucha energía', 'Botar la basura en la calle'], correcta: 1 },
+            { texto: '¿Qué son las normas de convivencia?', opciones: ['Reglas para portarse mal', 'Reglas para vivir en armonía', 'Reglas para comer', 'Reglas para jugar'], correcta: 1 },
+            { texto: '¿Qué debemos hacer al visitar una playa?', opciones: ['Dejar la basura', 'Llevarnos nuestra basura', 'Pintar las rocas', 'Hacer fuego'], correcta: 1 },
+            { texto: '¿Qué norma debemos seguir en la biblioteca?', opciones: ['Gritar', 'Correr', 'Guardar silencio', 'Comer'], correcta: 2 },
+            { texto: '¿Qué es un espacio público?', opciones: ['Un lugar privado', 'Un lugar abierto a toda la sociedad', 'Un lugar solo para niños', 'Un lugar sin personas'], correcta: 1 },
+            { texto: '¿Qué norma tienen los pueblos originarios?', opciones: ['No tienen normas', 'El admapu mapuche', 'Solo normas del gobierno', 'No existen normas'], correcta: 1 },
+            { texto: '¿Qué es el admapu?', opciones: ['Un plato típico', 'Normas heredadas de los antepasados mapuches', 'Un instrumento musical', 'Una danza'], correcta: 1 },
+            { texto: '¿Qué valor tiene el pueblo Aymara?', opciones: ['Respeto por los mayores', 'Falta de respeto', 'No cuidar la naturaleza', 'Trabajar solos'], correcta: 0 },
+            { texto: '¿Qué norma ayuda a aprender mejor?', opciones: ['No escuchar', 'Participar en clases', 'Interrumpir al profesor', 'No preguntar'], correcta: 1 },
+            { texto: '¿Qué debemos hacer en caso de emergencia?', opciones: ['Ignorar las señales', 'Reconocer las vías de escape', 'Correr sin rumbo', 'Esperar sin hacer nada'], correcta: 1 },
+            { texto: '¿Cómo debemos cuidar el agua?', opciones: ['Dejando grifos abiertos', 'Cerrando los grifos', 'Pintando los grifos', 'Jugando con agua'], correcta: 1 },
+            { texto: '¿Qué es el bien común?', opciones: ['Lo que beneficia a toda la comunidad', 'Lo que beneficia a una sola persona', 'Lo que perjudica a otros', 'Lo que no afecta a nadie'], correcta: 0 },
+            { texto: '¿Qué es el patrimonio natural?', opciones: ['Edificios antiguos', 'Parques nacionales y naturaleza', 'Museos', 'Bibliotecas'], correcta: 1 },
+            { texto: '¿Qué es el patrimonio cultural?', opciones: ['Bosques y ríos', 'Edificios, museos y tradiciones', 'Animales y plantas', 'Playas y montañas'], correcta: 1 },
+            { texto: '¿Qué institución protege el medioambiente?', opciones: ['Ministerio de Educación', 'Ministerio del Medio Ambiente', 'Ministerio de Salud', 'Ministerio de Vivienda'], correcta: 1 },
+            { texto: '¿Qué institución protege el patrimonio cultural?', opciones: ['Ministerio del Medio Ambiente', 'Ministerio de las Culturas, las Artes y el Patrimonio', 'Ministerio de Obras Públicas', 'Ministerio de Agricultura'], correcta: 1 },
+            { texto: '¿Por qué son importantes las normas?', opciones: ['Porque no sirven para nada', 'Porque ayudan a convivir mejor', 'Porque son aburridas', 'Porque no se deben cumplir'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C12';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 7 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 7
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🧑‍🌾 Pueblos Originarios del Norte</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los pueblos Aymara, Chango, Lickanantay y Diaguita. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C7.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Dónde habita el pueblo Aymara?', opciones: ['En la costa', 'En el altiplano', 'En la Zona Sur', 'En la Antártica'], correcta: 1 },
+            { texto: '¿Qué construyeron los Aymara para cultivar?', opciones: ['Canales', 'Terrazas de cultivo', 'Pozos de agua', 'Invernaderos'], correcta: 1 },
+            { texto: '¿De qué material eran las viviendas Aymara?', opciones: ['Madera y techo de paja', 'Piedra, adobe y paja', 'Ladrillo y cemento', 'Hielo y nieve'], correcta: 1 },
+            { texto: '¿A qué se dedica el pueblo Aymara en la actualidad?', opciones: ['Solo a la pesca', 'Ganadería y artesanía textil', 'A la caza de ballenas', 'A la minería'], correcta: 1 },
+            { texto: '¿Qué animal usan los Aymara para obtener lana?', opciones: ['Oveja y cabra', 'Alpaca y llama', 'Vaca y caballo', 'Cerdo y gallina'], correcta: 1 },
+            { texto: '¿Qué actividad realizaban los changos?', opciones: ['Agricultura', 'Pesca y recolección de mariscos', 'Caza de animales terrestres', 'Artesanía textil'], correcta: 1 },
+            { texto: '¿De qué hacían sus viviendas los changos?', opciones: ['Piedra y barro', 'Huesos de ballena y cuero de lobo marino', 'Madera y paja', 'Hielo y nieve'], correcta: 1 },
+            { texto: '¿Con qué cazaban ballenas los changos?', opciones: ['Con redes', 'Con arpones', 'Con trampas', 'Con lanzas'], correcta: 1 },
+            { texto: '¿Con qué pueblo intercambiaban productos los changos?', opciones: ['Con los Aymara', 'Con los Lickanantay', 'Con los Mapuches', 'Con los Rapa Nui'], correcta: 1 },
+            { texto: '¿Qué destacaba en la cultura Diaguita?', opciones: ['La pesca', 'La alfarería y vasijas de cerámica', 'La arquitectura de piedra', 'La textilería'], correcta: 1 },
+            { texto: '¿Dónde habitaban los Lickanantay?', opciones: ['En la costa', 'En el altiplano y valles', 'En la Zona Sur', 'En la Antártica'], correcta: 1 },
+            { texto: '¿Cómo viajaban los Lickanantay para intercambiar productos?', opciones: ['En balsas', 'En caravanas', 'En trenes', 'En aviones'], correcta: 1 },
+            { texto: '¿Qué tipo de vasijas hacían los Diaguita?', opciones: ['Con diseños geométricos', 'Con dibujos de animales', 'Con formas de personas', 'Sin ningún diseño'], correcta: 0 },
+            { texto: '¿Qué pueblo del norte es conocido por sus textiles?', opciones: ['Chango', 'Aymara', 'Diaguita', 'Lickanantay'], correcta: 1 },
+            { texto: '¿Qué pueblo del norte era pescador?', opciones: ['Aymara', 'Chango', 'Diaguita', 'Lickanantay'], correcta: 1 },
+            { texto: '¿Qué actividad realizaban las mujeres changas?', opciones: ['Tejían', 'Buceaban para recolectar mariscos', 'Cultivaban la tierra', 'Construían viviendas'], correcta: 1 },
+            { texto: '¿De qué estaban hechas las balsas de los changos?', opciones: ['Madera', 'Cuero de lobo marino inflado', 'Plástico', 'Piedra'], correcta: 1 },
+            { texto: '¿Qué pueblo del norte se dedicaba a la alfarería?', opciones: ['Aymara', 'Chango', 'Diaguita', 'Lickanantay'], correcta: 2 },
+            { texto: '¿Qué animal criaban los Aymara?', opciones: ['Alpacas y llamas', 'Vacas y caballos', 'Cerdos y gallinas', 'Perros y gatos'], correcta: 0 },
+            { texto: '¿Qué pueblo del norte vivía en el altiplano?', opciones: ['Chango', 'Aymara', 'Diaguita', 'Pueblo del sur'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C7';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

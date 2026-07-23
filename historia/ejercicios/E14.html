@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 14 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 14
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🚗 Medios de Transporte y Comunicación</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los medios de transporte, comunicación y el comercio. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C14.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué es un medio de transporte?', opciones: ['Permite trasladarse de un lugar a otro', 'Permite comunicarse', 'Es un tipo de comida', 'Es un animal'], correcta: 0 },
+            { texto: '¿Cuál es un medio de transporte terrestre?', opciones: ['Avión', 'Barco', 'Bus', 'Helicóptero'], correcta: 2 },
+            { texto: '¿Cuál es un medio de transporte aéreo?', opciones: ['Tren', 'Barco', 'Avión', 'Auto'], correcta: 2 },
+            { texto: '¿Cuál es un medio de transporte marítimo?', opciones: ['Auto', 'Avión', 'Barco', 'Metro'], correcta: 2 },
+            { texto: '¿Qué es un medio de comunicación?', opciones: ['Permite trasladarse', 'Permite informar y entretener', 'Es un tipo de comida', 'Es un deporte'], correcta: 1 },
+            { texto: '¿Cuál es un medio de comunicación?', opciones: ['Auto', 'Radio', 'Avión', 'Barco'], correcta: 1 },
+            { texto: '¿Cuál es un medio de comunicación?', opciones: ['Diario', 'Tren', 'Bus', 'Metro'], correcta: 0 },
+            { texto: '¿Qué es el comercio?', opciones: ['Actividad de comprar y vender productos', 'Un tipo de transporte', 'Un medio de comunicación', 'Una norma'], correcta: 0 },
+            { texto: '¿Qué es un almacén de barrio?', opciones: ['Un comercio pequeño', 'Un comercio grande', 'Un medio de transporte', 'Un medio de comunicación'], correcta: 0 },
+            { texto: '¿Qué es una feria?', opciones: ['Un lugar donde se compra y vende', 'Un medio de transporte', 'Un medio de comunicación', 'Una escuela'], correcta: 0 },
+            { texto: '¿Qué medio de comunicación usa ondas de radio?', opciones: ['Diario', 'Radio', 'Teléfono', 'Correo'], correcta: 1 },
+            { texto: '¿Qué medio de transporte es el más rápido?', opciones: ['Auto', 'Tren', 'Avión', 'Barco'], correcta: 2 },
+            { texto: '¿Qué medio de transporte es marítimo?', opciones: ['Metro', 'Avión', 'Ferri', 'Bus'], correcta: 2 },
+            { texto: '¿Qué medio de comunicación permite hablar a distancia?', opciones: ['Diario', 'Radio', 'Teléfono', 'Correo'], correcta: 2 },
+            { texto: '¿Qué es internet?', opciones: ['Un medio de transporte', 'Un medio de comunicación', 'Un tipo de comida', 'Un deporte'], correcta: 1 },
+            { texto: '¿Qué medio de transporte es terrestre?', opciones: ['Avioneta', 'Barco', 'Metro', 'Helicóptero'], correcta: 2 },
+            { texto: '¿Qué medio de transporte es aéreo?', opciones: ['Bus', 'Avioneta', 'Barco', 'Ferri'], correcta: 1 },
+            { texto: '¿Qué medio de comunicación es escrito?', opciones: ['Radio', 'Teléfono', 'Diario', 'Internet'], correcta: 2 },
+            { texto: '¿Qué tipo de comercio tiene grandes tiendas?', opciones: ['Almacén de barrio', 'Comercio grande', 'Feria', 'Bazar'], correcta: 1 },
+            { texto: '¿Qué necesitan los medios de transporte para funcionar?', opciones: ['Energía y/o combustible', 'Comida', 'Agua', 'Aire'], correcta: 0 }
+        ];
+
+        const CLASE_ID = 'C14';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

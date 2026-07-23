@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 10 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 10
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">⛵ La Llegada de los Españoles</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las expediciones, la línea de tiempo y el mestizaje. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C10.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿En qué año llegó Cristóbal Colón a América?', opciones: ['1492', '1520', '1536', '1540'], correcta: 0 },
+            { texto: '¿En qué año llegó Fernando de Magallanes al estrecho que lleva su nombre?', opciones: ['1492', '1520', '1536', '1540'], correcta: 1 },
+            { texto: '¿En qué año llegó Diego de Almagro al actual territorio chileno?', opciones: ['1492', '1520', '1536', '1540'], correcta: 2 },
+            { texto: '¿En qué año llegó Pedro de Valdivia a Chile?', opciones: ['1492', '1520', '1536', '1540'], correcta: 3 },
+            { texto: '¿Quién fundó las primeras ciudades de Chile?', opciones: ['Cristóbal Colón', 'Fernando de Magallanes', 'Diego de Almagro', 'Pedro de Valdivia'], correcta: 3 },
+            { texto: '¿Qué buscaban los españoles al venir a Chile?', opciones: ['Riquezas y tierras', 'Conocer nuevas culturas', 'Estudiar la naturaleza', 'Todas las anteriores'], correcta: 0 },
+            { texto: '¿Cómo se llama la mujer que acompañó a Pedro de Valdivia?', opciones: ['Cristina Calderón', 'Inés de Suárez', 'Isabel Allende', 'María Graham'], correcta: 1 },
+            { texto: '¿En qué condición llegaron las personas africanas a Chile?', opciones: ['Como turistas', 'Como esclavos', 'Como científicos', 'Como comerciantes'], correcta: 1 },
+            { texto: '¿Cómo se llama el proceso de mezcla entre españoles y pueblos originarios?', opciones: ['Mestizaje', 'Colonización', 'Conquista', 'Exploración'], correcta: 0 },
+            { texto: '¿Qué es el mestizaje?', opciones: ['Mezcla entre personas de distintos países y culturas', 'Una guerra', 'Una enfermedad', 'Un tipo de comercio'], correcta: 0 },
+            { texto: '¿Qué fundó Pedro de Valdivia?', opciones: ['La Universidad de Chile', 'Santiago y otras ciudades', 'El Congreso Nacional', 'El Museo de Historia'], correcta: 1 },
+            { texto: '¿Qué había en el actual territorio chileno antes de la llegada de los españoles?', opciones: ['Solo desierto', 'Pueblos originarios', 'Ciudades europeas', 'Nada'], correcta: 1 },
+            { texto: '¿Qué hicieron los españoles al llegar a Chile?', opciones: ['Se fueron rápido', 'Fundaron ciudades', 'Solo exploraron sin quedarse', 'Construyeron castillos'], correcta: 1 },
+            { texto: '¿Qué tradición española se mezcló con la cultura indígena?', opciones: ['La religión católica', 'El idioma', 'La comida', 'Todos los anteriores'], correcta: 3 },
+            { texto: '¿Cómo se llama el conjunto de elementos que se transmiten a las siguientes generaciones?', opciones: ['Mestizaje', 'Legado', 'Colonia', 'Patrimonio'], correcta: 1 },
+            { texto: '¿Qué es la esclavitud?', opciones: ['Una forma de trabajo libre', 'Quitar la libertad a las personas', 'Un tipo de vivienda', 'Una comida típica'], correcta: 1 },
+            { texto: '¿Qué pasó con la esclavitud con el tiempo?', opciones: ['Aumentó', 'Se prohibió', 'Siguió igual', 'Se extendió a otros países'], correcta: 1 },
+            { texto: '¿Cómo se llama el estrecho en el extremo sur de Chile?', opciones: ['Estrecho de Gibraltar', 'Estrecho de Magallanes', 'Estrecho de Bering', 'Estrecho de Dover'], correcta: 1 },
+            { texto: '¿Qué hizo Diego de Almagro?', opciones: ['Fundó Santiago', 'Llegó al territorio chileno por el norte', 'Navegó por el estrecho', 'Llegó a Rapa Nui'], correcta: 1 },
+            { texto: '¿Qué trajeron los españoles que no existía en América?', opciones: ['Papa', 'Trigo', 'Zapallo', 'Choclo'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C10';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

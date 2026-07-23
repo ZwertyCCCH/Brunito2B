@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 2 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 2
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🧭 Orientándonos con los Puntos Cardinales</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los puntos cardinales, la rosa de los vientos y cómo orientarnos. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C2.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Por dónde sale el Sol cada mañana?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+            { texto: '¿Por dónde se oculta el Sol al atardecer?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+            { texto: 'Si extiendes tu brazo derecho al este, ¿qué punto cardinal queda adelante?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+            { texto: '¿Qué punto cardinal queda atrás si miras al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+            { texto: '¿Cómo se llama el símbolo que indica los puntos cardinales en un mapa?', opciones: ['Brújula', 'Rosa de los vientos', 'Compás', 'Mapamundi'], correcta: 1 },
+            { texto: '¿Qué punto cardinal está entre el norte y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 0 },
+            { texto: '¿Qué punto cardinal está entre el sur y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 3 },
+            { texto: '¿Qué punto cardinal está opuesto al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+            { texto: '¿Qué punto cardinal está opuesto al este?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+            { texto: 'Si el sol está en el este, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 0 },
+            { texto: 'Si el sol está en el oeste, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 2 },
+            { texto: '¿Cuántos puntos cardinales principales existen?', opciones: ['2', '3', '4', '5'], correcta: 2 },
+            { texto: '¿Qué punto cardinal está entre el norte y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 1 },
+            { texto: '¿Qué punto cardinal está entre el sur y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 2 },
+            { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu izquierda?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+            { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu derecha?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+            { texto: '¿Qué utilizamos para orientarnos en un lugar desconocido?', opciones: ['Un mapa', 'Una brújula', 'Los puntos cardinales', 'Todas las anteriores'], correcta: 3 },
+            { texto: '¿Qué significa la palabra "este"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 2 },
+            { texto: '¿Qué significa la palabra "oeste"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 3 },
+            { texto: '¿Qué punto cardinal es el más frío en el hemisferio sur?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 }
+        ];
+
+        const CLASE_ID = 'C2';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 9 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 9
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">📜 El Legado de los Pueblos Originarios</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las palabras, alimentos, medicina y cosmovisión que nos dejaron los pueblos originarios. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C9.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué significa "guagua"?', opciones: ['Poquito', 'Bebé', 'Fiesta', 'Comida'], correcta: 1 },
+            { texto: '¿Qué significa "pichintún"?', opciones: ['Bebé', 'Poquito', 'Fiesta', 'Comida'], correcta: 1 },
+            { texto: '¿Qué significa "cahuín"?', opciones: ['Bebé', 'Poquito', 'Fiesta o reunión', 'Comida'], correcta: 2 },
+            { texto: '¿Qué palabra es de origen quechua?', opciones: ['Guagua', 'Cancha', 'Pichintún', 'Cahuín'], correcta: 1 },
+            { texto: '¿Qué alimento es de origen indígena?', opciones: ['Trigo', 'Papa', 'Arroz', 'Cebolla'], correcta: 1 },
+            { texto: '¿Qué alimento es de origen indígena?', opciones: ['Zapallo', 'Vaca', 'Cerdo', 'Gallo'], correcta: 0 },
+            { texto: '¿Qué alimento es de origen indígena?', opciones: ['Ajo', 'Choclo (maíz)', 'Cebolla', 'Trigo'], correcta: 1 },
+            { texto: '¿Cómo llaman los mapuches a la Madre Tierra?', opciones: ['Pachamama', 'Ñuke mapu', 'Tierra sagrada', 'Madre naturaleza'], correcta: 1 },
+            { texto: '¿Cómo llaman los pueblos andinos a la Madre Tierra?', opciones: ['Ñuke mapu', 'Pachamama', 'Tierra sagrada', 'Madre naturaleza'], correcta: 1 },
+            { texto: '¿Qué es un genh para el pueblo Mapuche?', opciones: ['Un dios', 'Un espíritu protector', 'Un animal', 'Una planta'], correcta: 1 },
+            { texto: '¿Por qué se enoja un genh según la cultura mapuche?', opciones: ['Por la lluvia', 'Por faltas de respeto a la naturaleza', 'Por los temblores', 'Por el viento'], correcta: 1 },
+            { texto: '¿Qué hierba medicinal es de origen indígena?', opciones: ['Manzanilla', 'Boldo', 'Menta', 'Todas las anteriores'], correcta: 3 },
+            { texto: '¿Qué técnica artesanal es de origen indígena?', opciones: ['Pintura al óleo', 'Telares', 'Escultura en metal', 'Cerámica vidriada'], correcta: 1 },
+            { texto: '¿Qué material usaban los indígenas para sus tejidos?', opciones: ['Lana de alpaca y llama', 'Algodón importado', 'Seda', 'Plástico'], correcta: 0 },
+            { texto: '¿Qué es la cosmovisión de los pueblos originarios?', opciones: ['Su forma de ver el mundo', 'Su idioma', 'Su ropa', 'Su comida'], correcta: 0 },
+            { texto: '¿Qué valores tienen los pueblos originarios?', opciones: ['Respeto por la naturaleza', 'Trabajo comunitario', 'Respeto por los mayores', 'Todos los anteriores'], correcta: 3 },
+            { texto: '¿Qué palabra es de origen aymara?', opciones: ['Guagua', 'Paya', 'Pichintún', 'Cancha'], correcta: 1 },
+            { texto: '¿Qué es el admapu?', opciones: ['Un plato típico', 'Normas heredadas de los antepasados mapuches', 'Un instrumento musical', 'Una danza'], correcta: 1 },
+            { texto: '¿Qué es el küme mogen?', opciones: ['Un principio de buen vivir', 'Una comida', 'Un baile', 'Un idioma'], correcta: 0 },
+            { texto: '¿Qué enseñanza nos dejaron los pueblos originarios?', opciones: ['Cuidar la naturaleza', 'Respetar a los mayores', 'Trabajar en comunidad', 'Todos los anteriores'], correcta: 3 }
+        ];
+
+        const CLASE_ID = 'C9';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>

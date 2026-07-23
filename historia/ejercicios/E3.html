@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✏️ Ejercicio 3 - Historia</title>
+    <link rel="stylesheet" href="../../css/estilo.css" />
+</head>
+<body>
+
+    <div class="contenido-clase">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
+            <span style="background:#2ecc71;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
+                ✏️ Ejercicio · Clase 3
+            </span>
+            <span style="font-size:0.9rem;color:#999;">⭐ 20 puntos posibles</span>
+        </div>
+
+        <h1 class="clase-titulo">🗺️ Leyendo Mapas y Vocabulario Geográfico</h1>
+        <p class="clase-subtitulo">Responde las siguientes preguntas sobre mapas, vocabulario geográfico y paisajes de Chile. ¡Cada respuesta correcta suma 1 punto!</p>
+
+        <div class="ejercicio-container">
+            <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
+            <div class="ejercicio-cuerpo"></div>
+        </div>
+
+        <div id="medalla-resultado"></div>
+
+        <div class="navegacion-clase" style="margin-top:20px;">
+            <a href="../clases/C3.html" class="btn-navegacion">📖 Volver a la Clase</a>
+            <a href="../index.html" class="btn-navegacion principal">🏠 Inicio</a>
+        </div>
+    </div>
+
+    <script src="../../js/scripts.js"></script>
+    <script>
+        const preguntas = [
+            { texto: '¿Qué es un mapa?', opciones: ['Una representación de la Tierra', 'Un dibujo de una ciudad', 'Una foto de un paisaje', 'Un libro de historia'], correcta: 0 },
+            { texto: '¿Qué nos indica el título de un mapa?', opciones: ['Quién lo hizo', 'Qué información entrega', 'Cuándo se hizo', 'Dónde se compró'], correcta: 1 },
+            { texto: '¿Qué es la toponimia en un mapa?', opciones: ['Los colores del mapa', 'Los nombres de lugares', 'La escala del mapa', 'El tipo de mapa'], correcta: 1 },
+            { texto: '¿Qué es una gran masa de agua salada?', opciones: ['Un río', 'Un lago', 'Un océano', 'Un fiordo'], correcta: 2 },
+            { texto: '¿Cómo se llama el terreno plano entre cerros, atravesado por un río?', opciones: ['Valle', 'Altiplano', 'Cordillera', 'Isla'], correcta: 0 },
+            { texto: '¿Qué es un archipiélago?', opciones: ['Un conjunto de montañas', 'Un conjunto de islas cercanas', 'Un río grande', 'Un desierto'], correcta: 1 },
+            { texto: '¿Qué es una ciudad?', opciones: ['Un lugar con pocas personas', 'Un lugar con miles de personas y muchas construcciones', 'Un lugar solo con naturaleza', 'Un lugar sin construcciones'], correcta: 1 },
+            { texto: '¿Qué son los cultivos?', opciones: ['Plantas sembradas para recolectar frutos', 'Animales de granja', 'Construcciones antiguas', 'Montañas altas'], correcta: 0 },
+            { texto: '¿Qué son las construcciones en un paisaje?', opciones: ['Árboles y flores', 'Edificios, puentes y carreteras', 'Ríos y lagos', 'Montañas y valles'], correcta: 1 },
+            { texto: '¿Qué es un fiordo?', opciones: ['Una entrada estrecha rodeada de montañas', 'Un gran océano', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
+            { texto: '¿Qué es un pueblo?', opciones: ['Más grande que una ciudad', 'Más pequeño que una ciudad', 'Igual que una ciudad', 'Un lugar sin personas'], correcta: 1 },
+            { texto: '¿Qué debemos leer primero en un mapa?', opciones: ['La leyenda', 'El título', 'La rosa de los vientos', 'La toponimia'], correcta: 1 },
+            { texto: '¿Para qué sirve la rosa de los vientos en un mapa?', opciones: ['Para decorar', 'Para indicar la orientación', 'Para mostrar la escala', 'Para poner colores'], correcta: 1 },
+            { texto: '¿Qué es un valle?', opciones: ['Terreno plano entre cerros', 'Montaña alta', 'Desierto arenoso', 'Océano profundo'], correcta: 0 },
+            { texto: '¿Qué es un océano?', opciones: ['Un río pequeño', 'Gran masa de agua salada', 'Lago de agua dulce', 'Glaciar de hielo'], correcta: 1 },
+            { texto: '¿Qué tipo de paisaje tiene más elementos culturales?', opciones: ['Paisaje natural', 'Paisaje rural', 'Paisaje urbano', 'Paisaje desértico'], correcta: 2 },
+            { texto: '¿Qué es un paisaje natural?', opciones: ['Lugar con muchas construcciones', 'Lugar donde el ser humano casi no ha intervenido', 'Lugar con cultivos', 'Lugar con carreteras'], correcta: 1 },
+            { texto: '¿Qué símbolo en un mapa explica el significado de los colores y símbolos?', opciones: ['El título', 'La rosa de los vientos', 'La leyenda o simbología', 'La toponimia'], correcta: 2 },
+            { texto: '¿Qué elemento del paisaje es natural?', opciones: ['Una casa', 'Un puente', 'Un río', 'Una carretera'], correcta: 2 },
+            { texto: '¿Qué elemento del paisaje es construido por el ser humano?', opciones: ['Un volcán', 'Un lago', 'Un edificio', 'Un bosque'], correcta: 2 }
+        ];
+
+        const CLASE_ID = 'C3';
+    </script>
+    <script src="../../js/ejercicio.js"></script>
+</body>
+</html>
