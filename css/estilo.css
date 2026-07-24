@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Comic Sans MS', 'Chalkboard SE', 'Segoe UI', cursive, sans-serif;
+    font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
     font-size: 18px; /* Tamaño base más grande para niños */
     background: #f0f7ff;
     min-height: 100vh;
