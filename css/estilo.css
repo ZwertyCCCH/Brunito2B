@@ -601,7 +601,7 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
     .opciones-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     .clases-grid {
         grid-template-columns: 1fr;
