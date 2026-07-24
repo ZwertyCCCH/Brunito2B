@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">📋 Normas de Convivencia</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las normas en el colegio, espacios públicos, naturaleza y pueblos originarios. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,137 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-9) ========
+
+            // 1. Definición de norma
             { texto: '¿Qué es una norma?', opciones: ['Una regla para convivir bien', 'Un juego', 'Una comida', 'Un animal'], correcta: 0 },
+
+            // 2. Norma en el colegio
             { texto: '¿Qué norma es importante en el colegio?', opciones: ['Correr en los pasillos', 'Levantar la mano para participar', 'Gritar en clases', 'No escuchar al profesor'], correcta: 1 },
+
+            // 3. Cuidado de espacios públicos
             { texto: '¿Qué debemos hacer para cuidar los espacios públicos?', opciones: ['Botar basura en la calle', 'Cuidar los juegos y plantas de las plazas', 'Pintar los grifos', 'No respetar las filas'], correcta: 1 },
+
+            // 4. Norma para cuidar el medioambiente
             { texto: '¿Qué norma ayuda a cuidar el medioambiente?', opciones: ['Usar recipientes desechables', 'Reutilizar residuos', 'Usar mucha energía', 'Botar la basura en la calle'], correcta: 1 },
+
+            // 5. Definición de normas de convivencia
             { texto: '¿Qué son las normas de convivencia?', opciones: ['Reglas para portarse mal', 'Reglas para vivir en armonía', 'Reglas para comer', 'Reglas para jugar'], correcta: 1 },
+
+            // 6. Norma en la playa
             { texto: '¿Qué debemos hacer al visitar una playa?', opciones: ['Dejar la basura', 'Llevarnos nuestra basura', 'Pintar las rocas', 'Hacer fuego'], correcta: 1 },
+
+            // 7. Norma en la biblioteca
             { texto: '¿Qué norma debemos seguir en la biblioteca?', opciones: ['Gritar', 'Correr', 'Guardar silencio', 'Comer'], correcta: 2 },
+
+            // 8. Definición de espacio público
             { texto: '¿Qué es un espacio público?', opciones: ['Un lugar privado', 'Un lugar abierto a toda la sociedad', 'Un lugar solo para niños', 'Un lugar sin personas'], correcta: 1 },
+
+            // 9. Normas de los pueblos originarios
             { texto: '¿Qué norma tienen los pueblos originarios?', opciones: ['No tienen normas', 'El admapu mapuche', 'Solo normas del gobierno', 'No existen normas'], correcta: 1 },
-            { texto: '¿Qué es el admapu?', opciones: ['Un plato típico', 'Normas heredadas de los antepasados mapuches', 'Un instrumento musical', 'Una danza'], correcta: 1 },
+
+            // ======== PREGUNTA 10 REEMPLAZADA ========
+            // 10. Cosmovisión del pueblo Aymara (NUEVA)
+            { texto: '¿Qué es la cosmovisión del pueblo Aymara?', opciones: ['Su forma de ver el mundo', 'Su idioma', 'Su comida', 'Su ropa'], correcta: 0 },
+
+            // 11. Valor del pueblo Aymara
             { texto: '¿Qué valor tiene el pueblo Aymara?', opciones: ['Respeto por los mayores', 'Falta de respeto', 'No cuidar la naturaleza', 'Trabajar solos'], correcta: 0 },
-            { texto: '¿Qué norma ayuda a aprender mejor?', opciones: ['No escuchar', 'Participar en clases', 'Interrumpir al profesor', 'No preguntar'], correcta: 1 },
+
+            // ======== PREGUNTA 12 REEMPLAZADA ========
+            // 12. Seguridad en el colegio (NUEVA)
+            { texto: '¿Qué debemos hacer en caso de incendio en el colegio?', opciones: ['Salir ordenadamente por la salida de emergencia', 'Correr sin rumbo', 'Escondernos', 'Ignorar la alarma'], correcta: 0 },
+
+            // 13. Norma en caso de emergencia
             { texto: '¿Qué debemos hacer en caso de emergencia?', opciones: ['Ignorar las señales', 'Reconocer las vías de escape', 'Correr sin rumbo', 'Esperar sin hacer nada'], correcta: 1 },
+
+            // 14. Cuidado del agua
             { texto: '¿Cómo debemos cuidar el agua?', opciones: ['Dejando grifos abiertos', 'Cerrando los grifos', 'Pintando los grifos', 'Jugando con agua'], correcta: 1 },
+
+            // 15. Bien común
             { texto: '¿Qué es el bien común?', opciones: ['Lo que beneficia a toda la comunidad', 'Lo que beneficia a una sola persona', 'Lo que perjudica a otros', 'Lo que no afecta a nadie'], correcta: 0 },
+
+            // 16. Patrimonio natural
             { texto: '¿Qué es el patrimonio natural?', opciones: ['Edificios antiguos', 'Parques nacionales y naturaleza', 'Museos', 'Bibliotecas'], correcta: 1 },
+
+            // 17. Patrimonio cultural
             { texto: '¿Qué es el patrimonio cultural?', opciones: ['Bosques y ríos', 'Edificios, museos y tradiciones', 'Animales y plantas', 'Playas y montañas'], correcta: 1 },
-            { texto: '¿Qué institución protege el medioambiente?', opciones: ['Ministerio de Educación', 'Ministerio del Medio Ambiente', 'Ministerio de Salud', 'Ministerio de Vivienda'], correcta: 1 },
+
+            // 18. CONAF
+            { texto: '¿Qué institución protege los bosques en Chile?', opciones: ['CONAF', 'Ministerio del Medio Ambiente', 'Ministerio de Educación', 'Biblioteca Nacional'], correcta: 0 },
+
+            // 19. Institución que protege el patrimonio cultural
             { texto: '¿Qué institución protege el patrimonio cultural?', opciones: ['Ministerio del Medio Ambiente', 'Ministerio de las Culturas, las Artes y el Patrimonio', 'Ministerio de Obras Públicas', 'Ministerio de Agricultura'], correcta: 1 },
-            { texto: '¿Por qué son importantes las normas?', opciones: ['Porque no sirven para nada', 'Porque ayudan a convivir mejor', 'Porque son aburridas', 'Porque no se deben cumplir'], correcta: 1 }
+
+            // 20. Importancia de las normas
+            { texto: '¿Por qué son importantes las normas?', opciones: ['Porque no sirven para nada', 'Porque ayudan a convivir mejor', 'Porque son aburridas', 'Porque no se deben cumplir'], correcta: 1 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-25) ========
+
+            // 21. Normas de tránsito
+            { texto: '¿Qué norma debemos respetar al cruzar la calle?', opciones: ['Cruzar por el paso de cebra', 'Cruzar corriendo', 'Cruzar sin mirar', 'Cruzar por cualquier lugar'], correcta: 0 },
+
+            // 22. Reciclaje
+            { texto: '¿Qué norma ayuda a reciclar?', opciones: ['Separar la basura en distintos contenedores', 'Mezclar toda la basura', 'Botar todo en el mismo lugar', 'No reciclar'], correcta: 0 },
+
+            // 23. Cuidado de los animales
+            { texto: '¿Qué norma debemos seguir con los animales?', opciones: ['Maltratarlos', 'Abandonarlos', 'Cuidarlos y respetarlos', 'Ignorarlos'], correcta: 2 },
+
+            // 24. Norma en la fila
+            { texto: '¿Qué debemos hacer cuando estamos en una fila?', opciones: ['Respetar el turno', 'Colarnos', 'Empujar a los demás', 'Gritar'], correcta: 0 },
+
+            // 25. Norma en el patio del colegio
+            { texto: '¿Qué norma es importante en el patio del colegio?', opciones: ['Correr peligrosamente', 'Jugar de manera brusca', 'Jugar sin empujar', 'Ignorar a los demás'], correcta: 2 },
+
+            // ======== PREGUNTA 26 REEMPLAZADA ========
+            // 26. Convivencia con compañeros (NUEVA)
+            { texto: '¿Cómo debemos tratar a los compañeros nuevos en el colegio?', opciones: ['Incluirlos y ayudarlos', 'Ignorarlos', 'Burlarse de ellos', 'Excluirlos'], correcta: 0 },
+
+            // 27. Respeto por los demás
+            { texto: '¿Qué norma nos ayuda a respetar a los demás?', opciones: ['Escuchar cuando hablan', 'Interrumpir siempre', 'Gritar sobre ellos', 'No prestar atención'], correcta: 0 },
+
+            // 28. Norma en el comedor
+            { texto: '¿Qué norma debemos seguir en el comedor?', opciones: ['Comer sin hacer ruido', 'Tirar la comida', 'Jugar con los cubiertos', 'Hablar con la boca llena'], correcta: 0 },
+
+            // 29. Norma en el baño
+            { texto: '¿Qué norma debemos seguir en el baño?', opciones: ['Dejarlo limpio', 'Dejarlo sucio', 'Jugar con agua', 'No tirar la cadena'], correcta: 0 },
+
+            // 30. Norma de convivencia en el hogar
+            { texto: '¿Qué norma es importante en el hogar?', opciones: ['Ordenar los juguetes', 'Dejar todo desordenado', 'Gritar todo el día', 'No ayudar en casa'], correcta: 0 },
+
+            // ======== PREGUNTA 31 REEMPLAZADA ========
+            // 31. Organización del tiempo (NUEVA)
+            { texto: '¿Qué norma ayuda a organizar el tiempo de estudio?', opciones: ['Hacer una rutina diaria', 'Dejar todo para último momento', 'No hacer tareas', 'Jugar todo el día'], correcta: 0 },
+
+            // 32. Respeto a los adultos mayores
+            { texto: '¿Qué norma debemos seguir con los adultos mayores?', opciones: ['Ignorarlos', 'Respetarlos y ayudarlos', 'Gritarles', 'Empujarlos'], correcta: 1 },
+
+            // ======== PREGUNTA 33 REEMPLAZADA ========
+            // 33. Uso responsable de la energía (NUEVA)
+            { texto: '¿Cómo debemos ahorrar energía en el colegio?', opciones: ['Apagar las luces al salir', 'Dejar las luces encendidas', 'Usar calefacción sin control', 'No preocuparse por la energía'], correcta: 0 },
+
+            // 34. Uso de la tecnología
+            { texto: '¿Qué norma debemos seguir con el celular en clases?', opciones: ['Usarlo solo cuando el profesor lo indique', 'Jugar con él todo el tiempo', 'Grabar al profesor', 'No prestar atención'], correcta: 0 },
+
+            // 35. Norma en el recreo
+            { texto: '¿Qué norma es importante en el recreo?', opciones: ['Compartir los juegos', 'Quitar los juguetes a otros', 'Golpear a los compañeros', 'Excluir a otros'], correcta: 0 },
+
+            // ======== PREGUNTA 36 REEMPLAZADA ========
+            // 36. Cuidado del entorno escolar (NUEVA)
+            { texto: '¿Qué debemos hacer para mantener limpio el colegio?', opciones: ['Botar la basura en los basureros', 'Tirar basura al suelo', 'Dejar los pasillos sucios', 'No preocuparse por la limpieza'], correcta: 0 },
+
+            // 37. Higiene personal
+            { texto: '¿Qué norma de higiene es importante?', opciones: ['Lavarse las manos antes de comer', 'No lavarse las manos', 'Comer sin lavarse', 'Tocar todo sin cuidado'], correcta: 0 },
+
+            // 38. Puntualidad en el colegio
+            { texto: '¿Qué norma debemos seguir con la hora de llegada al colegio?', opciones: ['Llegar temprano y puntual', 'Llegar tarde siempre', 'No importa la hora', 'Llegar cuando quieras'], correcta: 0 },
+
+            // 39. Norma en el transporte público
+            { texto: '¿Qué norma debemos seguir en el transporte público?', opciones: ['Ceder el asiento a personas mayores', 'Empujar a los demás', 'Gritar', 'Subir sin pagar'], correcta: 0 },
+
+            // 40. Norma de convivencia general
+            { texto: '¿Qué norma nos ayuda a convivir mejor?', opciones: ['Ser amable con los demás', 'Ser grosero', 'Ignorar a los otros', 'Pelear constantemente'], correcta: 0 }
         ];
 
         const CLASE_ID = 'C12';

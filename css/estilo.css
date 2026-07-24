@@ -370,7 +370,7 @@ body {
 /* Opciones de respuesta tipo botón */
 .opciones-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-template-columns: 1fr;
     gap: 10px;
     margin: 15px 0;
 }
@@ -522,7 +522,7 @@ footer {
         padding: 20px 15px;
     }
     .opciones-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 /* ==========================================

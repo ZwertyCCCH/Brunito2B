@@ -138,7 +138,7 @@ function renderizarPregunta(index) {
 
             <div style="flex:1;min-width:0;">
                 <p style="font-size:1.05rem;font-weight:600;color:#2c3e50;margin-bottom:12px;">${p.texto}</p>
-                <div class="opciones-grid" id="pregunta${index}" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                <div class="opciones-grid" id="pregunta${index}" style="display:grid;grid-template-columns:1fr;gap:10px;">
     `;
 
     p.opciones.forEach((opcion, i) => {
@@ -387,7 +387,7 @@ function irAPregunta(index) {
 
                 <div style="flex:1;min-width:0;">
                     <p style="font-size:1.05rem;font-weight:600;color:#2c3e50;margin-bottom:12px;">${p.texto}</p>
-                    <div class="opciones-grid" id="pregunta${index}" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                    <div class="opciones-grid" id="pregunta${index}" style="display:grid;grid-template-columns:1fr;gap:10px;">
         `;
 
         p.opciones.forEach((opcion, i) => {

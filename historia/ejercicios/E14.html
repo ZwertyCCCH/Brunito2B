@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🚗 Medios de Transporte y Comunicación</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los medios de transporte, comunicación y el comercio. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,134 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-10) ========
+
+            // 1. Definición de medio de transporte
             { texto: '¿Qué es un medio de transporte?', opciones: ['Permite trasladarse de un lugar a otro', 'Permite comunicarse', 'Es un tipo de comida', 'Es un animal'], correcta: 0 },
+
+            // 2. Medio de transporte terrestre (bus)
             { texto: '¿Cuál es un medio de transporte terrestre?', opciones: ['Avión', 'Barco', 'Bus', 'Helicóptero'], correcta: 2 },
+
+            // 3. Medio de transporte aéreo
             { texto: '¿Cuál es un medio de transporte aéreo?', opciones: ['Tren', 'Barco', 'Avión', 'Auto'], correcta: 2 },
+
+            // 4. Medio de transporte marítimo
             { texto: '¿Cuál es un medio de transporte marítimo?', opciones: ['Auto', 'Avión', 'Barco', 'Metro'], correcta: 2 },
+
+            // 5. Definición de medio de comunicación
             { texto: '¿Qué es un medio de comunicación?', opciones: ['Permite trasladarse', 'Permite informar y entretener', 'Es un tipo de comida', 'Es un deporte'], correcta: 1 },
+
+            // 6. Medio de comunicación (radio)
             { texto: '¿Cuál es un medio de comunicación?', opciones: ['Auto', 'Radio', 'Avión', 'Barco'], correcta: 1 },
+
+            // 7. Medio de comunicación (diario)
             { texto: '¿Cuál es un medio de comunicación?', opciones: ['Diario', 'Tren', 'Bus', 'Metro'], correcta: 0 },
+
+            // 8. Definición de comercio
             { texto: '¿Qué es el comercio?', opciones: ['Actividad de comprar y vender productos', 'Un tipo de transporte', 'Un medio de comunicación', 'Una norma'], correcta: 0 },
+
+            // 9. Almacén de barrio
             { texto: '¿Qué es un almacén de barrio?', opciones: ['Un comercio pequeño', 'Un comercio grande', 'Un medio de transporte', 'Un medio de comunicación'], correcta: 0 },
+
+            // 10. Definición de feria
             { texto: '¿Qué es una feria?', opciones: ['Un lugar donde se compra y vende', 'Un medio de transporte', 'Un medio de comunicación', 'Una escuela'], correcta: 0 },
-            { texto: '¿Qué medio de comunicación usa ondas de radio?', opciones: ['Diario', 'Radio', 'Teléfono', 'Correo'], correcta: 1 },
+
+            // ======== PREGUNTA 11 REEMPLAZADA ========
+            // 11. Medios de transporte en la ciudad (NUEVA)
+            { texto: '¿Qué medio de transporte es común en las calles de la ciudad?', opciones: ['Auto', 'Avión', 'Barco', 'Helicóptero'], correcta: 0 },
+
+            // 12. Medio de transporte más rápido
             { texto: '¿Qué medio de transporte es el más rápido?', opciones: ['Auto', 'Tren', 'Avión', 'Barco'], correcta: 2 },
+
+            // 13. Medio de transporte marítimo (ferri)
             { texto: '¿Qué medio de transporte es marítimo?', opciones: ['Metro', 'Avión', 'Ferri', 'Bus'], correcta: 2 },
+
+            // 14. Medio de comunicación para hablar a distancia
             { texto: '¿Qué medio de comunicación permite hablar a distancia?', opciones: ['Diario', 'Radio', 'Teléfono', 'Correo'], correcta: 2 },
+
+            // 15. Definición de internet
             { texto: '¿Qué es internet?', opciones: ['Un medio de transporte', 'Un medio de comunicación', 'Un tipo de comida', 'Un deporte'], correcta: 1 },
+
+            // 16. Medio de transporte terrestre (metro)
             { texto: '¿Qué medio de transporte es terrestre?', opciones: ['Avioneta', 'Barco', 'Metro', 'Helicóptero'], correcta: 2 },
-            { texto: '¿Qué medio de transporte es aéreo?', opciones: ['Bus', 'Avioneta', 'Barco', 'Ferri'], correcta: 1 },
+
+            // ======== PREGUNTA 17 REEMPLAZADA ========
+            // 17. Transporte de carga (NUEVA)
+            { texto: '¿Qué medio de transporte se usa para transportar mercancías por tierra?', opciones: ['Camión', 'Avión', 'Barco', 'Helicóptero'], correcta: 0 },
+
+            // 18. Medio de comunicación escrito
             { texto: '¿Qué medio de comunicación es escrito?', opciones: ['Radio', 'Teléfono', 'Diario', 'Internet'], correcta: 2 },
+
+            // 19. Comercio con grandes tiendas
             { texto: '¿Qué tipo de comercio tiene grandes tiendas?', opciones: ['Almacén de barrio', 'Comercio grande', 'Feria', 'Bazar'], correcta: 1 },
-            { texto: '¿Qué necesitan los medios de transporte para funcionar?', opciones: ['Energía y/o combustible', 'Comida', 'Agua', 'Aire'], correcta: 0 }
+
+            // 20. Combustible para transporte
+            { texto: '¿Qué necesitan los medios de transporte para funcionar?', opciones: ['Energía y/o combustible', 'Comida', 'Agua', 'Aire'], correcta: 0 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-31) ========
+
+            // 21. Bicicleta
+            { texto: '¿Qué tipo de medio de transporte es una bicicleta?', opciones: ['Terrestre', 'Aéreo', 'Marítimo', 'Subterráneo'], correcta: 0 },
+
+            // 22. Transporte público
+            { texto: '¿Qué medio de transporte es público en las ciudades?', opciones: ['Metro', 'Avión', 'Barco', 'Helicóptero'], correcta: 0 },
+
+            // 23. Transporte escolar
+            { texto: '¿Qué medio de transporte llevan los niños al colegio?', opciones: ['Bus escolar', 'Avión', 'Barco', 'Helicóptero'], correcta: 0 },
+
+            // 24. Correo electrónico
+            { texto: '¿Qué medio de comunicación permite enviar mensajes escritos por internet?', opciones: ['Correo electrónico', 'Radio', 'Teléfono', 'Diario'], correcta: 0 },
+
+            // 25. Redes sociales
+            { texto: '¿Qué medio de comunicación permite compartir fotos y videos?', opciones: ['Redes sociales', 'Diario', 'Radio', 'Teléfono fijo'], correcta: 0 },
+
+            // 26. Televisión
+            { texto: '¿Qué medio de comunicación transmite imágenes y sonido en vivo?', opciones: ['Televisión', 'Diario', 'Radio', 'Teléfono'], correcta: 0 },
+
+            // 27. Supermercado
+            { texto: '¿Qué tipo de comercio tiene variedad de productos y grandes espacios?', opciones: ['Supermercado', 'Almacén de barrio', 'Feria', 'Bazar'], correcta: 0 },
+
+            // 28. Camión
+            { texto: '¿Qué medio de transporte terrestre lleva mercancías grandes?', opciones: ['Camión', 'Auto', 'Bus', 'Bicicleta'], correcta: 0 },
+
+            // 29. Tren
+            { texto: '¿Qué medio de transporte terrestre viaja sobre rieles?', opciones: ['Tren', 'Bus', 'Auto', 'Bicicleta'], correcta: 0 },
+
+            // 30. Barco
+            { texto: '¿Qué medio de transporte marítimo lleva carga y pasajeros?', opciones: ['Barco', 'Avión', 'Auto', 'Metro'], correcta: 0 },
+
+            // 31. Transporte urbano
+            { texto: '¿Qué medio de transporte es común en las grandes ciudades?', opciones: ['Metro', 'Avión', 'Barco', 'Bicicleta'], correcta: 0 },
+
+            // ======== PREGUNTA 32 REEMPLAZADA ========
+            // 32. Medios de transporte antiguos (NUEVA)
+            { texto: '¿Qué medio de transporte usaban las personas antiguamente para viajar?', opciones: ['Caballo', 'Auto', 'Avión', 'Metro'], correcta: 0 },
+
+            // 33. Comercio justo
+            { texto: '¿Qué tipo de comercio busca pagar un precio justo a los productores?', opciones: ['Comercio justo', 'Comercio grande', 'Comercio pequeño', 'Comercio local'], correcta: 0 },
+
+            // 34. Consumo responsable
+            { texto: '¿Qué significa comprar de forma responsable?', opciones: ['Comprar solo lo que necesitas', 'Comprar todo', 'Comprar sin pensar', 'Comprar para acumular'], correcta: 0 },
+
+            // 35. Medios de transporte sostenibles
+            { texto: '¿Qué medio de transporte no contamina el medioambiente?', opciones: ['Bicicleta', 'Auto', 'Camión', 'Avión'], correcta: 0 },
+
+            // 36. Teléfono inteligente
+            { texto: '¿Qué medio de comunicación permite llamar y enviar mensajes de texto?', opciones: ['Teléfono inteligente', 'Diario', 'Radio', 'Televisión'], correcta: 0 },
+
+            // 37. Periódico
+            { texto: '¿Qué medio de comunicación se imprime en papel?', opciones: ['Periódico', 'Radio', 'Televisión', 'Teléfono'], correcta: 0 },
+
+            // 38. Transmisión de radio
+            { texto: '¿Qué medio de comunicación transmite solo sonido?', opciones: ['Radio', 'Televisión', 'Diario', 'Internet'], correcta: 0 },
+
+            // 39. Comercio electrónico
+            { texto: '¿Qué tipo de comercio se realiza por internet?', opciones: ['Comercio electrónico', 'Feria', 'Almacén de barrio', 'Supermercado'], correcta: 0 },
+
+            // 40. Importancia del comercio
+            { texto: '¿Por qué es importante el comercio?', opciones: ['Permite comprar y vender productos', 'Permite viajar', 'Permite comunicarse', 'Permite jugar'], correcta: 0 }
         ];
 
         const CLASE_ID = 'C14';

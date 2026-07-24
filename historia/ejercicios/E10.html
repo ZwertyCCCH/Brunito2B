@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">⛵ La Llegada de los Españoles</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las expediciones, la línea de tiempo y el mestizaje. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-25) ========
+
+            // 1. Llegada de Colón a América
             { texto: '¿En qué año llegó Cristóbal Colón a América?', opciones: ['1492', '1520', '1536', '1540'], correcta: 0 },
+
+            // 2. Llegada de Magallanes al estrecho
             { texto: '¿En qué año llegó Fernando de Magallanes al estrecho que lleva su nombre?', opciones: ['1492', '1520', '1536', '1540'], correcta: 1 },
+
+            // 3. Llegada de Diego de Almagro
             { texto: '¿En qué año llegó Diego de Almagro al actual territorio chileno?', opciones: ['1492', '1520', '1536', '1540'], correcta: 2 },
+
+            // 4. Llegada de Pedro de Valdivia
             { texto: '¿En qué año llegó Pedro de Valdivia a Chile?', opciones: ['1492', '1520', '1536', '1540'], correcta: 3 },
+
+            // 5. Fundador de las primeras ciudades
             { texto: '¿Quién fundó las primeras ciudades de Chile?', opciones: ['Cristóbal Colón', 'Fernando de Magallanes', 'Diego de Almagro', 'Pedro de Valdivia'], correcta: 3 },
+
+            // 6. Motivo de la llegada de los españoles
             { texto: '¿Qué buscaban los españoles al venir a Chile?', opciones: ['Riquezas y tierras', 'Conocer nuevas culturas', 'Estudiar la naturaleza', 'Todas las anteriores'], correcta: 0 },
+
+            // 7. Mujer que acompañó a Pedro de Valdivia
             { texto: '¿Cómo se llama la mujer que acompañó a Pedro de Valdivia?', opciones: ['Cristina Calderón', 'Inés de Suárez', 'Isabel Allende', 'María Graham'], correcta: 1 },
+
+            // 8. Condición de las personas africanas
             { texto: '¿En qué condición llegaron las personas africanas a Chile?', opciones: ['Como turistas', 'Como esclavos', 'Como científicos', 'Como comerciantes'], correcta: 1 },
+
+            // 9. Proceso de mezcla
             { texto: '¿Cómo se llama el proceso de mezcla entre españoles y pueblos originarios?', opciones: ['Mestizaje', 'Colonización', 'Conquista', 'Exploración'], correcta: 0 },
+
+            // 10. Definición de mestizaje
             { texto: '¿Qué es el mestizaje?', opciones: ['Mezcla entre personas de distintos países y culturas', 'Una guerra', 'Una enfermedad', 'Un tipo de comercio'], correcta: 0 },
+
+            // 11. Fundación de Pedro de Valdivia
             { texto: '¿Qué fundó Pedro de Valdivia?', opciones: ['La Universidad de Chile', 'Santiago y otras ciudades', 'El Congreso Nacional', 'El Museo de Historia'], correcta: 1 },
+
+            // 12. Territorio antes de los españoles
             { texto: '¿Qué había en el actual territorio chileno antes de la llegada de los españoles?', opciones: ['Solo desierto', 'Pueblos originarios', 'Ciudades europeas', 'Nada'], correcta: 1 },
+
+            // 13. Acción de los españoles al llegar
             { texto: '¿Qué hicieron los españoles al llegar a Chile?', opciones: ['Se fueron rápido', 'Fundaron ciudades', 'Solo exploraron sin quedarse', 'Construyeron castillos'], correcta: 1 },
+
+            // 14. Tradición española mezclada
             { texto: '¿Qué tradición española se mezcló con la cultura indígena?', opciones: ['La religión católica', 'El idioma', 'La comida', 'Todos los anteriores'], correcta: 3 },
+
+            // 15. Definición de legado
             { texto: '¿Cómo se llama el conjunto de elementos que se transmiten a las siguientes generaciones?', opciones: ['Mestizaje', 'Legado', 'Colonia', 'Patrimonio'], correcta: 1 },
+
+            // 16. Definición de esclavitud
             { texto: '¿Qué es la esclavitud?', opciones: ['Una forma de trabajo libre', 'Quitar la libertad a las personas', 'Un tipo de vivienda', 'Una comida típica'], correcta: 1 },
+
+            // 17. Prohibición de la esclavitud
             { texto: '¿Qué pasó con la esclavitud con el tiempo?', opciones: ['Aumentó', 'Se prohibió', 'Siguió igual', 'Se extendió a otros países'], correcta: 1 },
+
+            // 18. Estrecho en el extremo sur
             { texto: '¿Cómo se llama el estrecho en el extremo sur de Chile?', opciones: ['Estrecho de Gibraltar', 'Estrecho de Magallanes', 'Estrecho de Bering', 'Estrecho de Dover'], correcta: 1 },
+
+            // 19. Acción de Diego de Almagro
             { texto: '¿Qué hizo Diego de Almagro?', opciones: ['Fundó Santiago', 'Llegó al territorio chileno por el norte', 'Navegó por el estrecho', 'Llegó a Rapa Nui'], correcta: 1 },
-            { texto: '¿Qué trajeron los españoles que no existía en América?', opciones: ['Papa', 'Trigo', 'Zapallo', 'Choclo'], correcta: 1 }
+
+            // 20. Producto traído por los españoles
+            { texto: '¿Qué trajeron los españoles que no existía en América?', opciones: ['Papa', 'Trigo', 'Zapallo', 'Choclo'], correcta: 1 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-25) ========
+
+            // 21. Primer viaje de Colón
+            { texto: '¿Cuántos viajes realizó Cristóbal Colón a América?', opciones: ['1', '2', '3', '4'], correcta: 3 },
+
+            // 22. Navegación de Magallanes
+            { texto: '¿Qué demostró la expedición de Magallanes?', opciones: ['Que la Tierra es plana', 'Que se puede navegar alrededor del mundo', 'Que América es un continente', 'Que Chile es un país'], correcta: 1 },
+
+            // 23. Origen de los españoles
+            { texto: '¿De qué país europeo vinieron los conquistadores a Chile?', opciones: ['Portugal', 'España', 'Inglaterra', 'Francia'], correcta: 1 },
+
+            // 24. Nombre de las naves españolas
+            { texto: '¿Cómo se llamaban las naves que usaban los españoles?', opciones: ['Canoas', 'Carabelas', 'Dalcas', 'Balsas'], correcta: 1 },
+
+            // 25. Primer asentamiento español en Chile
+            { texto: '¿Cómo se llamó el primer asentamiento español en Chile?', opciones: ['Santiago', 'La Serena', 'Valparaíso', 'Concepción'], correcta: 0 },
+
+            // ======== PREGUNTA 26 REEMPLAZADA ========
+            // 26. Rey de España en la época de la conquista (NUEVA)
+            { texto: '¿Qué rey español gobernaba durante la conquista de Chile?', opciones: ['Carlos I', 'Felipe II', 'Fernando II', 'Isabel I'], correcta: 0 },
+
+            // 27. Gobernador de Chile
+            { texto: '¿Quién fue el primer gobernador de Chile?', opciones: ['Diego de Almagro', 'Pedro de Valdivia', 'Fernando de Magallanes', 'Cristóbal Colón'], correcta: 1 },
+
+            // 28. Relación con los pueblos originarios
+            { texto: '¿Cómo fue la relación inicial entre españoles y pueblos originarios?', opciones: ['Pacificó', 'Violenta y de conflicto', 'De colaboración', 'No hubo contacto'], correcta: 1 },
+
+            // 29. Encomienda
+            { texto: '¿Qué fue la encomienda en la época colonial?', opciones: ['Un sistema de trabajo forzado', 'Un tipo de vivienda', 'Una comida típica', 'Una danza'], correcta: 0 },
+
+            // 30. Evangelización
+            { texto: '¿Qué religión trajeron los españoles a Chile?', opciones: ['Catolicismo', 'Protestantismo', 'Judáísmo', 'Islam'], correcta: 0 },
+
+            // 31. Idioma español
+            { texto: '¿Qué idioma trajeron los españoles a Chile?', opciones: ['Español', 'Portugués', 'Inglés', 'Francés'], correcta: 0 },
+
+            // 32. Fundación de Valparaíso
+            { texto: '¿Quién fundó la ciudad de Valparaíso?', opciones: ['Pedro de Valdivia', 'Juan de Saavedra', 'Diego de Almagro', 'Fernando de Magallanes'], correcta: 1 },
+
+            // 33. Fundación de Concepción
+            { texto: '¿En qué año se fundó Concepción?', opciones: ['1540', '1550', '1555', '1560'], correcta: 1 },
+
+            // 34. Mestizaje cultural
+            { texto: '¿Qué elementos de la cultura indígena se mantuvieron en el mestizaje?', opciones: ['Alimentos', 'Palabras', 'Cosmovisión', 'Todos los anteriores'], correcta: 3 },
+
+            // 35. Gastronomía mestiza
+            { texto: '¿Qué plato chileno combina ingredientes españoles e indígenas?', opciones: ['Cazuela', 'Sopa de mariscos', 'Pastel de papa', 'Todas las anteriores'], correcta: 0 },
+
+            // 36. Ciudades fundadas por españoles
+            { texto: '¿Cuál de estas ciudades fue fundada por Pedro de Valdivia?', opciones: ['La Serena', 'Valparaíso', 'Santiago', 'Todas las anteriores'], correcta: 3 },
+
+            // ======== PREGUNTA 37 REEMPLAZADA ========
+            // 37. Instituciones coloniales (NUEVA)
+            { texto: '¿Qué institución española se estableció en Chile durante la colonia?', opciones: ['El Cabildo', 'La Universidad', 'El Banco', 'El Hospital'], correcta: 0 },
+
+            // 38. Legado arquitectónico español
+            { texto: '¿Qué estilo arquitectónico trajeron los españoles?', opciones: ['Estilo colonial', 'Estilo moderno', 'Estilo gótico', 'Estilo renacentista'], correcta: 0 },
+
+            // 39. Consecuencia del mestizaje
+            { texto: '¿Qué consecuencia tuvo el mestizaje en Chile?', opciones: ['Desaparición de culturas', 'Nacimiento de una nueva cultura', 'Aislamiento de pueblos', 'No tuvo consecuencias'], correcta: 1 },
+
+            // 40. Legado de los españoles
+            { texto: '¿Cuál es un legado español en Chile?', opciones: ['La lengua', 'La religión', 'La arquitectura', 'Todos los anteriores'], correcta: 3 }
         ];
 
         const CLASE_ID = 'C10';

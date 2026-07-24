@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🌍 Inmigrantes en Chile</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los inmigrantes del pasado y del presente en Chile. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,134 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-17) ========
+
+            // 1. Definición de inmigrante
             { texto: '¿Qué es un inmigrante?', opciones: ['Persona que nace en Chile', 'Persona que se traslada del lugar donde vive', 'Persona que nunca viaja', 'Persona que solo estudia'], correcta: 1 },
+
+            // 2. Inmigrantes en la Zona Sur
             { texto: '¿Qué inmigrantes llegaron a la Zona Sur de Chile?', opciones: ['Ingleses', 'Alemanes', 'Árabes', 'Haitianos'], correcta: 1 },
+
+            // 3. Aporte de los alemanes
             { texto: '¿Qué aportaron los alemanes a Chile?', opciones: ['El fútbol', 'La arquitectura y el kuchen', 'La salsa', 'El candombe'], correcta: 1 },
+
+            // 4. Aporte de los ingleses
             { texto: '¿Qué aportaron los ingleses a Chile?', opciones: ['El kuchen', 'El fútbol y los bomberos', 'La arquitectura', 'La cestería'], correcta: 1 },
+
+            // 5. Club de fútbol fundado por ingleses
             { texto: '¿Qué club de fútbol fue fundado por ingleses?', opciones: ['Colo-Colo', 'Santiago Wanderers', 'Universidad de Chile', 'Palestino'], correcta: 1 },
+
+            // 6. Países de origen de los árabes
             { texto: '¿De qué países vinieron los árabes a Chile?', opciones: ['Egipto y Marruecos', 'Palestina, Siria y Líbano', 'Arabia Saudita y Yemen', 'Turquía e Irán'], correcta: 1 },
+
+            // 7. Aporte de los árabes
             { texto: '¿Qué aportaron los árabes a Chile?', opciones: ['El fútbol', 'El comercio textil', 'La arquitectura', 'El kuchen'], correcta: 1 },
+
+            // 8. Club de fútbol fundado por árabes
             { texto: '¿Qué club de fútbol fue fundado por árabes?', opciones: ['Santiago Wanderers', 'Everton', 'Palestino', 'Colo-Colo'], correcta: 2 },
+
+            // 9. Pueblo afrodescendiente reconocido
             { texto: '¿Cómo se llama el pueblo afrodescendiente reconocido en Chile?', opciones: ['Pueblo Chango', 'Pueblo Tribal Afrodescendiente Chileno', 'Pueblo Mapuche', 'Pueblo Rapa Nui'], correcta: 1 },
+
+            // 10. Baile afrodescendiente
             { texto: '¿Qué baile es típico del Pueblo Tribal Afrodescendiente Chileno?', opciones: ['Cueca', 'Baile de Morenos de Paso', 'Salsa', 'Tango'], correcta: 1 },
+
+            // 11. Origen del ají de gallina
             { texto: '¿De qué país viene la comida "ají de gallina"?', opciones: ['Argentina', 'Perú', 'México', 'China'], correcta: 1 },
+
+            // 12. Idioma de los haitianos
             { texto: '¿Qué idioma hablan los haitianos?', opciones: ['Español', 'Creole', 'Portugués', 'Inglés'], correcta: 1 },
+
+            // 13. Inmigrantes recientes
             { texto: '¿Qué inmigrantes han llegado a Chile en los últimos años?', opciones: ['Alemanes', 'Haitianos y venezolanos', 'Ingleses', 'Árabes'], correcta: 1 },
+
+            // 14. Aporte de los inmigrantes chinos
             { texto: '¿Qué aporte han hecho los inmigrantes chinos en Chile?', opciones: ['La arquitectura', 'El comercio', 'El fútbol', 'El kuchen'], correcta: 1 },
+
+            // 15. Origen del Club Palestino
             { texto: '¿Qué país de origen tiene el Club Deportivo Palestino?', opciones: ['Argentina', 'Palestina', 'Inglaterra', 'Alemania'], correcta: 1 },
+
+            // 16. Migración climática
             { texto: '¿Qué es la migración climática?', opciones: ['Personas que se mudan por trabajo', 'Personas que dejan sus hogares por problemas ambientales', 'Personas que viajan de vacaciones', 'Personas que estudian en el extranjero'], correcta: 1 },
+
+            // 17. Problema ambiental que causa migración
             { texto: '¿Qué problema ambiental ha causado migración en Chile?', opciones: ['Terremotos', 'Sequía y falta de agua', 'Tsunamis', 'Erupciones volcánicas'], correcta: 1 },
-            { texto: '¿Qué comida es típica de la inmigración peruana?', opciones: ['Kuchen', 'Ají de gallina', 'Pizza', 'Sushi'], correcta: 1 },
+
+            // ======== PREGUNTA 18 REEMPLAZADA ========
+            // 18. Inmigrantes franceses (NUEVA)
+            { texto: '¿Qué inmigrantes europeos llegaron a Chile en el siglo XIX?', opciones: ['Franceses', 'Alemanes', 'Ingleses', 'Todos los anteriores'], correcta: 3 },
+
+            // 19. Deporte traído por los ingleses
             { texto: '¿Qué deporte trajeron los ingleses a Chile?', opciones: ['Tenis', 'Fútbol', 'Básquetbol', 'Voleibol'], correcta: 1 },
-            { texto: '¿Qué significa que Chile sea una sociedad multicultural?', opciones: ['Que todos hablan el mismo idioma', 'Que incluye diversas culturas', 'Que no hay inmigrantes', 'Que todos son iguales'], correcta: 1 }
+
+            // 20. Sociedad multicultural
+            { texto: '¿Qué significa que Chile sea una sociedad multicultural?', opciones: ['Que todos hablan el mismo idioma', 'Que incluye diversas culturas', 'Que no hay inmigrantes', 'Que todos son iguales'], correcta: 1 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-29) ========
+
+            // 21. Inmigrantes ingleses en Chile
+            { texto: '¿En qué ciudades se establecieron principalmente los ingleses en Chile?', opciones: ['Santiago y Valparaíso', 'Antofagasta y Punta Arenas', 'Concepción y Temuco', 'La Serena y Coquimbo'], correcta: 0 },
+
+            // 22. Inmigrantes alemanes en el sur
+            { texto: '¿En qué región de Chile se establecieron los alemanes?', opciones: ['Región de Valparaíso', 'Región de Los Lagos', 'Región de Atacama', 'Región de Arica'], correcta: 1 },
+
+            // 23. Comida árabe en Chile
+            { texto: '¿Qué comida de origen árabe es popular en Chile?', opciones: ['Kuchen', 'Couscous', 'Hummus', 'Todas las anteriores'], correcta: 3 },
+
+            // 24. Inmigrantes croatas
+            { texto: '¿Qué inmigrantes europeos llegaron a la Zona Austral de Chile?', opciones: ['Croatas', 'Alemanes', 'Ingleses', 'Franceses'], correcta: 0 },
+
+            // 25. Inmigrantes italianos
+            { texto: '¿Qué aporte cultural trajeron los inmigrantes italianos a Chile?', opciones: ['La pizza', 'El fútbol', 'El vino', 'Todos los anteriores'], correcta: 3 },
+
+            // 26. Inmigrantes suizos
+            { texto: '¿Qué inmigrantes europeos llegaron a la Zona Centro de Chile?', opciones: ['Suizos', 'Alemanes', 'Ingleses', 'Franceses'], correcta: 0 },
+
+            // 27. Comida china en Chile
+            { texto: '¿Qué comida china es popular en Chile?', opciones: ['Arroz chaufa', 'Sushi', 'Tacos', 'Paella'], correcta: 0 },
+
+            // 28. Inmigrantes venezolanos
+            { texto: '¿Por qué muchos venezolanos han emigrado a Chile?', opciones: ['Por razones económicas', 'Por razones climáticas', 'Por razones culturales', 'Por razones deportivas'], correcta: 0 },
+
+            // 29. Inmigrantes colombianos
+            { texto: '¿Qué aporte cultural traen los inmigrantes colombianos a Chile?', opciones: ['La salsa', 'El fútbol', 'La arquitectura', 'El kuchen'], correcta: 0 },
+
+            // ======== PREGUNTA 30 REEMPLAZADA ========
+            // 30. Religión de los inmigrantes (NUEVA)
+            { texto: '¿Qué religión trajeron los inmigrantes árabes a Chile?', opciones: ['Catolicismo', 'Islam', 'Judáísmo', 'Protestantismo'], correcta: 1 },
+
+            // 31. Migración interna en Chile
+            { texto: '¿Qué es la migración interna en Chile?', opciones: ['Personas que se mudan dentro del país', 'Personas que llegan de otro país', 'Personas que viajan al extranjero', 'Personas que no se mudan'], correcta: 0 },
+
+            // 32. Causas de la migración
+            { texto: '¿Cuál es una causa de la migración?', opciones: ['Mejores oportunidades económicas', 'Reunificación familiar', 'Conflictos en el país de origen', 'Todas las anteriores'], correcta: 3 },
+
+            // 33. Ley de inmigración en Chile
+            { texto: '¿Qué derecho tienen los niños inmigrantes en Chile?', opciones: ['Derecho a la educación', 'Derecho a trabajar', 'Derecho a votar', 'Derecho a conducir'], correcta: 0 },
+
+            // 34. Integración de inmigrantes
+            { texto: '¿Qué ayuda a los inmigrantes a integrarse en Chile?', opciones: ['Aprender español', 'Conocer la cultura chilena', 'Participar en la comunidad', 'Todos los anteriores'], correcta: 3 },
+
+            // 35. Aporte cultural de los inmigrantes
+            { texto: '¿Qué aporte cultural es importante en la sociedad chilena?', opciones: ['La música', 'La comida', 'Las tradiciones', 'Todos los anteriores'], correcta: 3 },
+
+            // 36. Inmigrantes argentinos
+            { texto: '¿Qué deporte trajeron los inmigrantes argentinos a Chile?', opciones: ['Fútbol', 'Tenis', 'Básquetbol', 'Voleibol'], correcta: 0 },
+
+            // 37. Inmigrantes españoles en el pasado
+            { texto: '¿Qué inmigrantes europeos llegaron a Chile en el pasado?', opciones: ['Españoles', 'Alemanes', 'Ingleses', 'Todos los anteriores'], correcta: 3 },
+
+            // 38. Comida de inmigrantes
+            { texto: '¿Qué comida es típica de los inmigrantes chinos?', opciones: ['Arroz con pollo', 'Wantán', 'Empanada', 'Pastel de choclo'], correcta: 1 },
+
+            // 39. Inmigrantes en la actualidad
+            { texto: '¿De qué países vienen muchos inmigrantes actuales a Chile?', opciones: ['Perú, Bolivia y Colombia', 'Alemania, Inglaterra y Francia', 'Japón, Corea y China', 'Australia, Nueva Zelanda y Fiji'], correcta: 0 },
+
+            // ======== PREGUNTA 40 REEMPLAZADA ========
+            // 40. Aporte de los inmigrantes en la economía (NUEVA)
+            { texto: '¿En qué sector económico han aportado los inmigrantes chinos en Chile?', opciones: ['Comercio', 'Agricultura', 'Minería', 'Pesca'], correcta: 0 }
         ];
 
         const CLASE_ID = 'C11';

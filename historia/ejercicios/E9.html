@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">📜 El Legado de los Pueblos Originarios</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las palabras, alimentos, medicina y cosmovisión que nos dejaron los pueblos originarios. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-36) ========
+
+            // 1. Significado de "guagua"
             { texto: '¿Qué significa "guagua"?', opciones: ['Poquito', 'Bebé', 'Fiesta', 'Comida'], correcta: 1 },
+
+            // 2. Significado de "pichintún"
             { texto: '¿Qué significa "pichintún"?', opciones: ['Bebé', 'Poquito', 'Fiesta', 'Comida'], correcta: 1 },
+
+            // 3. Significado de "cahuín"
             { texto: '¿Qué significa "cahuín"?', opciones: ['Bebé', 'Poquito', 'Fiesta o reunión', 'Comida'], correcta: 2 },
+
+            // 4. Palabra de origen quechua
             { texto: '¿Qué palabra es de origen quechua?', opciones: ['Guagua', 'Cancha', 'Pichintún', 'Cahuín'], correcta: 1 },
+
+            // 5. Alimento de origen indígena (papa)
             { texto: '¿Qué alimento es de origen indígena?', opciones: ['Trigo', 'Papa', 'Arroz', 'Cebolla'], correcta: 1 },
+
+            // 6. Alimento de origen indígena (zapallo)
             { texto: '¿Qué alimento es de origen indígena?', opciones: ['Zapallo', 'Vaca', 'Cerdo', 'Gallo'], correcta: 0 },
+
+            // 7. Alimento de origen indígena (choclo)
             { texto: '¿Qué alimento es de origen indígena?', opciones: ['Ajo', 'Choclo (maíz)', 'Cebolla', 'Trigo'], correcta: 1 },
+
+            // 8. Madre Tierra para los mapuches
             { texto: '¿Cómo llaman los mapuches a la Madre Tierra?', opciones: ['Pachamama', 'Ñuke mapu', 'Tierra sagrada', 'Madre naturaleza'], correcta: 1 },
+
+            // 9. Madre Tierra para los pueblos andinos
             { texto: '¿Cómo llaman los pueblos andinos a la Madre Tierra?', opciones: ['Ñuke mapu', 'Pachamama', 'Tierra sagrada', 'Madre naturaleza'], correcta: 1 },
+
+            // 10. Genh para el pueblo Mapuche
             { texto: '¿Qué es un genh para el pueblo Mapuche?', opciones: ['Un dios', 'Un espíritu protector', 'Un animal', 'Una planta'], correcta: 1 },
+
+            // 11. Enojo de un genh
             { texto: '¿Por qué se enoja un genh según la cultura mapuche?', opciones: ['Por la lluvia', 'Por faltas de respeto a la naturaleza', 'Por los temblores', 'Por el viento'], correcta: 1 },
+
+            // 12. Hierbas medicinales
             { texto: '¿Qué hierba medicinal es de origen indígena?', opciones: ['Manzanilla', 'Boldo', 'Menta', 'Todas las anteriores'], correcta: 3 },
+
+            // 13. Técnica artesanal indígena
             { texto: '¿Qué técnica artesanal es de origen indígena?', opciones: ['Pintura al óleo', 'Telares', 'Escultura en metal', 'Cerámica vidriada'], correcta: 1 },
+
+            // 14. Material para tejidos
             { texto: '¿Qué material usaban los indígenas para sus tejidos?', opciones: ['Lana de alpaca y llama', 'Algodón importado', 'Seda', 'Plástico'], correcta: 0 },
+
+            // 15. Cosmovisión de los pueblos originarios
             { texto: '¿Qué es la cosmovisión de los pueblos originarios?', opciones: ['Su forma de ver el mundo', 'Su idioma', 'Su ropa', 'Su comida'], correcta: 0 },
+
+            // 16. Valores de los pueblos originarios
             { texto: '¿Qué valores tienen los pueblos originarios?', opciones: ['Respeto por la naturaleza', 'Trabajo comunitario', 'Respeto por los mayores', 'Todos los anteriores'], correcta: 3 },
+
+            // 17. Palabra de origen aymara
             { texto: '¿Qué palabra es de origen aymara?', opciones: ['Guagua', 'Paya', 'Pichintún', 'Cancha'], correcta: 1 },
+
+            // 18. Admapu
             { texto: '¿Qué es el admapu?', opciones: ['Un plato típico', 'Normas heredadas de los antepasados mapuches', 'Un instrumento musical', 'Una danza'], correcta: 1 },
+
+            // 19. Küme mogen
             { texto: '¿Qué es el küme mogen?', opciones: ['Un principio de buen vivir', 'Una comida', 'Un baile', 'Un idioma'], correcta: 0 },
-            { texto: '¿Qué enseñanza nos dejaron los pueblos originarios?', opciones: ['Cuidar la naturaleza', 'Respetar a los mayores', 'Trabajar en comunidad', 'Todos los anteriores'], correcta: 3 }
+
+            // 20. Enseñanza de los pueblos originarios
+            { texto: '¿Qué enseñanza nos dejaron los pueblos originarios?', opciones: ['Cuidar la naturaleza', 'Respetar a los mayores', 'Trabajar en comunidad', 'Todos los anteriores'], correcta: 3 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-40) ========
+
+            // 21. Significado de "paya" (NUEVA)
+            { texto: '¿Qué significa la palabra "paya"?', opciones: ['Bebé', 'Poquito', 'Fiesta', 'Canción o poema'], correcta: 3 },
+
+            // 22. Alimento de origen indígena (porotos)
+            { texto: '¿Qué alimento es de origen indígena?', opciones: ['Porotos', 'Trigo', 'Arroz', 'Aceite'], correcta: 0 },
+
+            // 23. Medicina mapuche
+            { texto: '¿Cómo se llama la medicina tradicional mapuche?', opciones: ['Machitun', 'Guillatun', 'Llellipun', 'Admapu'], correcta: 0 },
+
+            // 24. Instrumento musical mapuche
+            { texto: '¿Qué instrumento musical es de origen mapuche?', opciones: ['Kultrún', 'Guitarra', 'Piano', 'Violín'], correcta: 0 },
+
+            // 25. Danza mapuche
+            { texto: '¿Qué danza tradicional es del pueblo Mapuche?', opciones: ['Cueca', 'Choique purrún', 'Salsa', 'Tango'], correcta: 1 },
+
+            // 26. Legado arquitectónico
+            { texto: '¿Qué técnica de construcción es de origen indígena?', opciones: ['Ruka mapuche', 'Casa de ladrillo', 'Edificio de hormigón', 'Casa de madera europea'], correcta: 0 },
+
+            // 27. Agricultura indígena
+            { texto: '¿Qué técnica de cultivo es de origen indígena?', opciones: ['Terrazas de cultivo', 'Invernaderos', 'Hidroponía', 'Agricultura de riego'], correcta: 0 },
+
+            // 28. Animales domesticados por indígenas
+            { texto: '¿Qué animal fue domesticado por los pueblos originarios?', opciones: ['Llama', 'Vaca', 'Caballo', 'Oveja'], correcta: 0 },
+
+            // 29. Cosmología indígena
+            { texto: '¿Qué representa la Wiphala?', opciones: ['Un instrumento musical', 'Un símbolo de los pueblos andinos', 'Una danza', 'Una comida típica'], correcta: 1 },
+
+            // 30. Alimento de origen indígena (quinua)
+            { texto: '¿Qué alimento es de origen indígena?', opciones: ['Quinua', 'Arroz', 'Avena', 'Cebada'], correcta: 0 },
+
+            // 31. Textilería mapuche
+            { texto: '¿Qué diseño es típico de la textilería mapuche?', opciones: ['Diseños geométricos', 'Diseños florales', 'Diseños de animales', 'Diseños abstractos'], correcta: 0 },
+
+            // 32. Cestería indígena
+            { texto: '¿Qué pueblo es conocido por su cestería?', opciones: ['Mapuche', 'Yagán', 'Aymara', 'Diaguita'], correcta: 1 },
+
+            // 33. Cerámica indígena
+            { texto: '¿Qué pueblo es conocido por su cerámica?', opciones: ['Chono', 'Diaguita', 'Mapuche', 'Selk\'nam'], correcta: 1 },
+
+            // 34. Cosmovisión andina
+            { texto: '¿Cómo se llama el concepto de "Madre Tierra" en quechua?', opciones: ['Ñuke mapu', 'Pachamama', 'Tierra sagrada', 'Madre naturaleza'], correcta: 1 },
+
+            // 35. Legado de los pueblos originarios (variante)
+            { texto: '¿Qué legado nos dejaron los pueblos originarios?', opciones: ['Palabras en nuestro idioma', 'Alimentos', 'Técnicas artesanales', 'Todos los anteriores'], correcta: 3 },
+
+            // 36. Platos típicos de origen indígena
+            { texto: '¿Qué plato típico chileno tiene origen indígena?', opciones: ['Cazuela', 'Empanada', 'Pastel de choclo', 'Todas las anteriores'], correcta: 3 },
+
+            // ======== PREGUNTA 37 REEMPLAZADA ========
+            // 37. Vestimenta indígena (NUEVA)
+            { texto: '¿Qué prenda de vestir es de origen indígena?', opciones: ['Chalina', 'Camisa', 'Pantalón', 'Chaqueta'], correcta: 0 },
+
+            // ======== PREGUNTA 38 REEMPLAZADA ========
+            // 38. Joyas y adornos indígenas (NUEVA)
+            { texto: '¿Qué material usaban los indígenas para hacer joyas?', opciones: ['Plata y cobre', 'Oro y platino', 'Plástico', 'Vidrio'], correcta: 0 },
+
+            // 39. Ñuke mapu
+            { texto: '¿Qué significa "Ñuke mapu" para el pueblo Mapuche?', opciones: ['Madre Tierra', 'Padre Cielo', 'Hermano Sol', 'Hermana Luna'], correcta: 0 },
+
+            // 40. Concepto de bien vivir
+            { texto: '¿Qué busca el "küme mogen" en la cultura mapuche?', opciones: ['El buen vivir', 'La riqueza', 'El poder', 'La guerra'], correcta: 0 }
         ];
 
         const CLASE_ID = 'C9';

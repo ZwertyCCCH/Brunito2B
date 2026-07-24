@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🏜️ La Zona Norte de Chile</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre el desierto, el altiplano, los valles y las ciudades de la Zona Norte. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,28 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
-            { texto: '¿Cómo es el clima en la Zona Norte de Chile?', opciones: ['Lluvioso todo el año', 'Con escasas lluvias', 'Muy frío', 'Con nieve todo el año'], correcta: 1 },
-            { texto: '¿Cómo se llama el desierto más seco del mundo que está en Chile?', opciones: ['Desierto de Sahara', 'Desierto de Atacama', 'Desierto de Gobi', 'Desierto de Sonora'], correcta: 1 },
-            { texto: '¿Qué es el altiplano?', opciones: ['Un terreno plano en la cordillera de los Andes', 'Un desierto de arena', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
-            { texto: '¿Qué fenómeno ocurre en el desierto de Atacama cuando llueve?', opciones: ['Desierto florido', 'Inundaciones', 'Terremotos', 'Nevadas'], correcta: 0 },
-            { texto: '¿Qué se cultiva en los valles del norte de Chile?', opciones: ['Trigo y maíz', 'Uvas y frutas (Valle del Elqui)', 'Arroz y soya', 'Cacao y café'], correcta: 1 },
-            { texto: '¿Qué ciudad costera importante está en la Zona Norte?', opciones: ['Valparaíso', 'Antofagasta', 'Concepción', 'Puerto Montt'], correcta: 1 },
-            { texto: '¿Qué caracteriza a la Zona Norte en cuanto a vegetación?', opciones: ['Abundante vegetación', 'Poca vegetación', 'Bosques frondosos', 'Selvas tropicales'], correcta: 1 },
-            { texto: '¿Qué hay en el altiplano?', opciones: ['Playas', 'Terreno plano en altura', 'Grandes ríos', 'Ciudades muy grandes'], correcta: 1 },
-            { texto: '¿Cómo es la costa en la Zona Norte?', opciones: ['Tiene ciudades, puertos y playas', 'Solo hay acantilados', 'No hay costa', 'Solo hay bosques'], correcta: 0 },
-            { texto: '¿Qué tipo de agricultura se da en el Valle del Elqui?', opciones: ['Cultivo de arroz', 'Cultivo de uvas y frutas', 'Cultivo de algodón', 'Cultivo de caña de azúcar'], correcta: 1 },
-            { texto: '¿Por qué hay poca vegetación en la Zona Norte?', opciones: ['Porque hace mucho frío', 'Porque hay pocas lluvias', 'Porque hay muchos animales', 'Porque el suelo es muy fértil'], correcta: 1 },
-            { texto: '¿Qué encontramos al sur de la Zona Norte?', opciones: ['Valles con ríos y agricultura', 'Solo desierto', 'Solo hielo', 'Solo montañas'], correcta: 0 },
-            { texto: '¿Qué tipo de paisaje predomina en la Zona Norte?', opciones: ['Verde y frondoso', 'Árido y con poca vegetación', 'Cubierto de nieve', 'Con muchos lagos'], correcta: 1 },
-            { texto: '¿Qué volcán es famoso en el norte de Chile?', opciones: ['Volcán Calbuco', 'Volcán Llaima', 'Volcán Lascar', 'Volcán Villarrica'], correcta: 2 },
-            { texto: '¿Qué es el desierto florido?', opciones: ['Un desierto con flores todo el año', 'Flores que crecen después de las lluvias', 'Un jardín artificial', 'Un tipo de cacto'], correcta: 1 },
-            { texto: '¿En qué zona de Chile está el altiplano?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 0 },
-            { texto: '¿Qué actividad económica es importante en la Zona Norte?', opciones: ['Pesca y agricultura en valles', 'Industria textil', 'Silvicultura', 'Ganadería extensiva'], correcta: 0 },
-            { texto: '¿Cómo es el paisaje de la Zona Norte en general?', opciones: ['Muy verde', 'Seco y con poca vegetación', 'Cubierto de nieve', 'Con muchos bosques'], correcta: 1 },
-            { texto: '¿Qué tipo de clima tiene la Zona Norte?', opciones: ['Clima mediterráneo', 'Clima desértico', 'Clima polar', 'Clima tropical'], correcta: 1 },
-            { texto: '¿Qué hay al este de la Zona Norte?', opciones: ['El océano Pacífico', 'La cordillera de los Andes', 'Argentina', 'El desierto'], correcta: 1 }
-        ];
+
+    const preguntasPool = [
+        // ======== PREGUNTAS ORIGINALES (1-20) ========
+
+        // 1. Clima de la Zona Norte
+        { texto: '¿Cómo es el clima en la Zona Norte de Chile?', opciones: ['Lluvioso todo el año', 'Con escasas lluvias', 'Muy frío', 'Con nieve todo el año'], correcta: 1 },
+
+        // 2. Desierto más seco del mundo
+        { texto: '¿Cómo se llama el desierto más seco del mundo que está en Chile?', opciones: ['Desierto de Sahara', 'Desierto de Atacama', 'Desierto de Gobi', 'Desierto de Sonora'], correcta: 1 },
+
+        // 3. Altiplano
+        { texto: '¿Qué es el altiplano?', opciones: ['Un terreno plano en la cordillera de los Andes', 'Un desierto de arena', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
+
+        // 4. Desierto florido
+        { texto: '¿Qué fenómeno ocurre en el desierto de Atacama cuando llueve?', opciones: ['Desierto florido', 'Inundaciones', 'Terremotos', 'Nevadas'], correcta: 0 },
+
+        // 5. Cultivos en valles del norte
+        { texto: '¿Qué se cultiva en los valles del norte de Chile?', opciones: ['Trigo y maíz', 'Uvas y frutas (Valle del Elqui)', 'Arroz y soya', 'Cacao y café'], correcta: 1 },
+
+        // 6. Ciudad costera importante
+        { texto: '¿Qué ciudad costera importante está en la Zona Norte?', opciones: ['Valparaíso', 'Antofagasta', 'Concepción', 'Puerto Montt'], correcta: 1 },
+
+        // 7. Vegetación de la Zona Norte
+        { texto: '¿Qué caracteriza a la Zona Norte en cuanto a vegetación?', opciones: ['Abundante vegetación', 'Poca vegetación', 'Bosques frondosos', 'Selvas tropicales'], correcta: 1 },
+
+        // 8. Características del altiplano
+        { texto: '¿Qué hay en el altiplano?', opciones: ['Playas', 'Terreno plano en altura', 'Grandes ríos', 'Ciudades muy grandes'], correcta: 1 },
+
+        // 9. Costa de la Zona Norte
+        { texto: '¿Cómo es la costa en la Zona Norte?', opciones: ['Tiene ciudades, puertos y playas', 'Solo hay acantilados', 'No hay costa', 'Solo hay bosques'], correcta: 0 },
+
+        // 10. Agricultura en el Valle del Elqui
+        { texto: '¿Qué tipo de agricultura se da en el Valle del Elqui?', opciones: ['Cultivo de arroz', 'Cultivo de uvas y frutas', 'Cultivo de algodón', 'Cultivo de caña de azúcar'], correcta: 1 },
+
+        // 11. Causa de poca vegetación
+        { texto: '¿Por qué hay poca vegetación en la Zona Norte?', opciones: ['Porque hace mucho frío', 'Porque hay pocas lluvias', 'Porque hay muchos animales', 'Porque el suelo es muy fértil'], correcta: 1 },
+
+        // 12. Sur de la Zona Norte
+        { texto: '¿Qué encontramos al sur de la Zona Norte?', opciones: ['Valles con ríos y agricultura', 'Solo desierto', 'Solo hielo', 'Solo montañas'], correcta: 0 },
+
+        // 13. Paisaje predominante
+        { texto: '¿Qué tipo de paisaje predomina en la Zona Norte?', opciones: ['Verde y frondoso', 'Árido y con poca vegetación', 'Cubierto de nieve', 'Con muchos lagos'], correcta: 1 },
+
+        // 14. Volcán del norte
+        { texto: '¿Qué volcán es famoso en el norte de Chile?', opciones: ['Volcán Calbuco', 'Volcán Llaima', 'Volcán Lascar', 'Volcán Villarrica'], correcta: 2 },
+
+        // 15. Desierto florido (definición)
+        { texto: '¿Qué es el desierto florido?', opciones: ['Un desierto con flores todo el año', 'Flores que crecen después de las lluvias', 'Un jardín artificial', 'Un tipo de cacto'], correcta: 1 },
+
+        // 16. Ubicación del altiplano
+        { texto: '¿En qué zona de Chile está el altiplano?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 0 },
+
+        // 17. Actividad económica importante
+        { texto: '¿Qué actividad económica es importante en la Zona Norte?', opciones: ['Pesca y agricultura en valles', 'Industria textil', 'Silvicultura', 'Ganadería extensiva'], correcta: 0 },
+
+        // 18. Paisaje general
+        { texto: '¿Cómo es el paisaje de la Zona Norte en general?', opciones: ['Muy verde', 'Seco y con poca vegetación', 'Cubierto de nieve', 'Con muchos bosques'], correcta: 1 },
+
+        // 19. Tipo de clima
+        { texto: '¿Qué tipo de clima tiene la Zona Norte?', opciones: ['Clima mediterráneo', 'Clima desértico', 'Clima polar', 'Clima tropical'], correcta: 1 },
+
+        // 20. Este de la Zona Norte
+        { texto: '¿Qué hay al este de la Zona Norte?', opciones: ['El océano Pacífico', 'La cordillera de los Andes', 'Argentina', 'El desierto'], correcta: 1 },
+
+
+        // ======== PREGUNTAS NUEVAS (21-40) ========
+
+        // 21. Ubicación de la Zona Norte
+        { texto: '¿Entre qué regiones se encuentra la Zona Norte de Chile?', opciones: ['Arica y Parinacota y Atacama', 'Atacama y Coquimbo', 'Arica y Parinacota y Coquimbo', 'Tarapacá y Antofagasta'], correcta: 0 },
+
+        // 22. Ciudades de la Zona Norte
+        { texto: '¿Cuál de estas ciudades NO está en la Zona Norte?', opciones: ['Arica', 'Iquique', 'Antofagasta', 'Valparaíso'], correcta: 3 },
+
+        // 23. Salares del norte
+        { texto: '¿Qué es un salar?', opciones: ['Un desierto de arena', 'Un terreno plano con sal', 'Un valle con cultivos', 'Un volcán activo'], correcta: 1 },
+
+        // 24. Flora de la Zona Norte
+        { texto: '¿Qué tipo de plantas predominan en la Zona Norte?', opciones: ['Árboles frondosos', 'Cactus y plantas adaptadas a la sequía', 'Bosques de pinos', 'Palmeras tropicales'], correcta: 1 },
+
+        // 25. Fauna de la Zona Norte
+        { texto: '¿Qué animal es característico de la Zona Norte de Chile?', opciones: ['Pingüino', 'Guanaco', 'Cóndor', 'Ballena'], correcta: 1 },
+
+        // 26. Minería en la Zona Norte
+        { texto: '¿Qué mineral es importante en la Zona Norte de Chile?', opciones: ['Oro', 'Plata', 'Cobre', 'Carbón'], correcta: 2 },
+
+        // 27. Salar de Atacama
+        { texto: '¿Dónde se encuentra el Salar de Atacama?', opciones: ['En la Zona Norte', 'En la Zona Centro', 'En la Zona Sur', 'En la Antártica'], correcta: 0 },
+
+        // 28. Geoglifos de la Zona Norte
+        { texto: '¿Qué son los geoglifos en la Zona Norte?', opciones: ['Dibujos hechos en la tierra', 'Pinturas rupestres', 'Cerámicas antiguas', 'Tejidos tradicionales'], correcta: 0 },
+
+        // 29. Pueblos originarios del norte
+        { texto: '¿Qué pueblo originario habitó en la Zona Norte de Chile?', opciones: ['Mapuche', 'Aymara', 'Rapa Nui', 'Selk\'nam'], correcta: 1 },
+
+        // 30. Turismo en la Zona Norte
+        { texto: '¿Qué atractivo turístico hay en la Zona Norte de Chile?', opciones: ['Torres del Paine', 'Valle de la Luna', 'Lago Llanquihue', 'Isla de Pascua'], correcta: 1 },
+
+        // 31. Observación astronómica
+        { texto: '¿Por qué la Zona Norte es ideal para la observación astronómica?', opciones: ['Por su clima lluvioso', 'Por su cielo despejado', 'Por su altura sobre el nivel del mar', 'Por su cercanía al Ecuador'], correcta: 1 },
+
+        // 32. ALMA en el norte
+        { texto: '¿Qué es ALMA en la Zona Norte de Chile?', opciones: ['Un desierto', 'Un observatorio astronómico', 'Una ciudad', 'Un volcán'], correcta: 1 },
+
+        // 33. Pueblos del altiplano
+        { texto: '¿Qué pueblo vive en el altiplano de la Zona Norte?', opciones: ['Chango', 'Aymara', 'Diaguita', 'Mapuche'], correcta: 1 },
+
+        // 34. Islas de la Zona Norte
+        { texto: '¿Qué isla pertenece a la Zona Norte de Chile?', opciones: ['Isla de Pascua', 'Isla de Chiloé', 'Isla San Félix', 'Isla Magdalena'], correcta: 2 },
+
+        // 35. Color del desierto de Atacama
+        { texto: '¿Qué colores predominan en el desierto de Atacama?', opciones: ['Verde y azul', 'Amarillo y naranjo', 'Blanco y rojo', 'Negro y gris'], correcta: 1 },
+
+        // 36. Geiseres del Tatio
+        { texto: '¿Dónde se encuentran los Geiseres del Tatio?', opciones: ['En la Zona Norte', 'En la Zona Centro', 'En la Zona Sur', 'En la Antártica'], correcta: 0 },
+
+        // 37. Chunchos y camélidos
+        { texto: '¿Qué animal es común en el altiplano de la Zona Norte?', opciones: ['Llama', 'Vaca', 'Oveja', 'Cerdo'], correcta: 0 },
+
+        // 38. Pueblos de la costa norte
+        { texto: '¿Qué pueblo originario habitó la costa de la Zona Norte?', opciones: ['Aymara', 'Chango', 'Diaguita', 'Mapuche'], correcta: 1 },
+
+        // 39. Límite norte de Chile
+        { texto: '¿Qué país limita con Chile por el norte?', opciones: ['Argentina', 'Bolivia', 'Perú', 'Ecuador'], correcta: 2 },
+
+        // 40. Océano que baña la Zona Norte
+        { texto: '¿Qué océano baña las costas de la Zona Norte de Chile?', opciones: ['Océano Atlántico', 'Océano Pacífico', 'Océano Índico', 'Océano Glacial Ártico'], correcta: 1 }
+    ];
 
         const CLASE_ID = 'C4';
     </script>

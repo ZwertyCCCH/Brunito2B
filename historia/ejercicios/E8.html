@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🌿 Pueblos Originarios del Centro y Sur</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los pueblos Mapuche, Chono, Yagán y Selk'nam. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,132 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-27) ========
+
+            // 1. Idioma del pueblo Mapuche
             { texto: '¿Cómo se llama el idioma del pueblo Mapuche?', opciones: ['Quechua', 'Aymara', 'Mapuzugun', 'Rapa Nui'], correcta: 2 },
+
+            // 2. Ubicación del pueblo Mapuche
             { texto: '¿En qué zona de Chile habitaba el pueblo Mapuche?', opciones: ['Solo en el norte', 'Centro y sur', 'Solo en la Antártica', 'En la Isla de Pascua'], correcta: 1 },
+
+            // 3. Fruto del pewén
             { texto: '¿Cómo se llama el fruto del pewén (araucaria)?', opciones: ['Maíz', 'Piñón', 'Zapallo', 'Papa'], correcta: 1 },
+
+            // 4. Grupo Mapuche nómada
             { texto: '¿Qué grupo Mapuche era nómada?', opciones: ['Mapuche', 'Pewenche', 'Williche', 'Lafkenche'], correcta: 1 },
+
+            // 5. Embarcación de los Chono
             { texto: '¿Cómo se llama la embarcación de los Chono?', opciones: ['Ánan', 'Dalca', 'Balsa', 'Canoa'], correcta: 1 },
+
+            // 6. Actividad de las mujeres Chono
             { texto: '¿Qué hacían las mujeres Chono?', opciones: ['Tejían', 'Buceaban para recolectar mariscos', 'Cultivaban', 'Construían casas'], correcta: 1 },
+
+            // 7. Embarcación del pueblo Yagán
             { texto: '¿Cómo se llama la embarcación del pueblo Yagán?', opciones: ['Dalca', 'Ánan', 'Balsa', 'Góndola'], correcta: 1 },
+
+            // 8. Material del ánan
             { texto: '¿De qué material era el ánan de los Yagán?', opciones: ['Piedra', 'Corteza de árbol', 'Cuero de animal', 'Madera de pino'], correcta: 1 },
+
+            // 9. Celebración selk'nam
             { texto: '¿Qué celebración selk\'nam incluía pintarse el cuerpo?', opciones: ['Año Nuevo', 'El hain', 'El guillatun', 'El machitun'], correcta: 1 },
+
+            // 10. Población selk'nam según censo
             { texto: '¿Cuántas personas se identifican como selk\'nam según el censo?', opciones: ['100', '500', 'Más de 1.400', '10.000'], correcta: 2 },
+
+            // 11. Ceremonia mapuche de oración
             { texto: '¿Cómo se llama la ceremonia mapuche de oración?', opciones: ['Machitun', 'Guillatun', 'Llellipun', 'Hain'], correcta: 2 },
+
+            // 12. Ceremonia mapuche de sanación
             { texto: '¿Cómo se llama la ceremonia mapuche de sanación?', opciones: ['Machitun', 'Guillatun', 'Llellipun', 'Hain'], correcta: 0 },
+
+            // 13. Tejido típico mapuche
             { texto: '¿Qué tejido es típico del pueblo Mapuche?', opciones: ['Chalina', 'Poncho', 'Manta', 'Ropa de lana de oveja'], correcta: 1 },
+
+            // 14. Ubicación de los Yagán
             { texto: '¿Dónde vivían los Yagán?', opciones: ['En el altiplano', 'En el extremo sur', 'En el desierto', 'En la Isla de Pascua'], correcta: 1 },
+
+            // 15. Actividad de los Chono
             { texto: '¿Qué actividad realizaban los Chono?', opciones: ['Agricultura', 'Pesca y caza de lobos marinos', 'Alfarería', 'Textilería'], correcta: 1 },
+
+            // 16. Grupos del pueblo Mapuche
             { texto: '¿Cómo se llaman los grupos del pueblo Mapuche?', opciones: ['Aymara, Chango, Diaguita', 'Mapuche, Pewenche, Williche, Lafkenche, Puelche, Pikunche', 'Chono, Yagán, Selk\'nam', 'Rapa Nui, Chango'], correcta: 1 },
+
+            // 17. Protección del frío en Chono
             { texto: '¿Qué hacía el pueblo Chono para protegerse del frío?', opciones: ['Usaban abrigos de plumas', 'Llevaban fuego en sus embarcaciones', 'Se mudaban al norte', 'Hacían fogatas en la costa'], correcta: 1 },
+
+            // 18. Viviendas Yagán
             { texto: '¿Qué material usaban los Yagán para sus viviendas?', opciones: ['Piedra y barro', 'Ramas y pieles', 'Madera y tejas', 'Huesos de ballena'], correcta: 1 },
+
+            // 19. Significado de "mapuzugun"
             { texto: '¿Qué significa "mapuzugun"?', opciones: ['Lengua de la tierra', 'Lengua del pueblo mapuche', 'Lengua del sur', 'Lengua de los antepasados'], correcta: 1 },
-            { texto: '¿Qué pueblo del sur es conocido por su cestería?', opciones: ['Mapuche', 'Chono', 'Yagán', 'Selk\'nam'], correcta: 2 }
+
+            // 20. Pueblo del sur con cestería
+            { texto: '¿Qué pueblo del sur es conocido por su cestería?', opciones: ['Mapuche', 'Chono', 'Yagán', 'Selk\'nam'], correcta: 2 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-40) ========
+
+            // 21. Ubicación de los Mapuche en la actualidad
+            { texto: '¿Dónde viven los Mapuche en la actualidad?', opciones: ['Solo en la Zona Sur', 'En varias regiones de Chile', 'Solo en la Zona Centro', 'En la Isla de Pascua'], correcta: 1 },
+
+            // 22. Cerámica mapuche
+            { texto: '¿Qué tipo de cerámica hacían los Mapuche?', opciones: ['Vasijas de barro', 'Esculturas de piedra', 'Figuras de madera', 'Collares de conchas'], correcta: 0 },
+
+            // 23. Viviendas mapuche
+            { texto: '¿Cómo se llama la vivienda tradicional mapuche?', opciones: ['Ruka', 'Uta', 'Hare paega', 'Dalca'], correcta: 0 },
+
+            // 24. Alimentación mapuche
+            { texto: '¿Qué alimento es importante para el pueblo Mapuche?', opciones: ['Quinua', 'Piñón de araucaria', 'Maíz', 'Papa'], correcta: 1 },
+
+            // 25. Vestimenta mapuche
+            { texto: '¿Qué prenda usan las mujeres mapuche?', opciones: ['Chamanto', 'Küpam', 'Poncho', 'Manta'], correcta: 1 },
+
+            // 26. Instrumentos musicales mapuche
+            { texto: '¿Qué instrumento musical usan los Mapuche?', opciones: ['Kultrún', 'Charango', 'Quena', 'Zampoña'], correcta: 0 },
+
+            // 27. Ubicación de los Chono
+            { texto: '¿Dónde habitaban los Chono?', opciones: ['En el altiplano', 'En el archipiélago sur', 'En el desierto', 'En la Isla de Pascua'], correcta: 1 },
+
+            // ======== PREGUNTA 28 REEMPLAZADA ========
+            // 28. Ubicación de los Chono (NUEVA)
+            { texto: '¿En qué zona de Chile habitaban los Chono?', opciones: ['En el norte', 'En el centro', 'En el sur', 'En el altiplano'], correcta: 2 },
+
+            // 29. Ubicación de los Selk'nam
+            { texto: '¿Dónde vivían los Selk\'nam?', opciones: ['En la Zona Norte', 'En la Zona Sur', 'En el altiplano', 'En la Isla de Pascua'], correcta: 1 },
+
+            // 30. Actividad de los Selk'nam
+            { texto: '¿Qué actividad realizaban los Selk\'nam?', opciones: ['Agricultura', 'Caza', 'Pesca', 'Tejido'], correcta: 1 },
+
+            // 31. Vestimenta Selk'nam
+            { texto: '¿Qué usaban los Selk\'nam para vestirse?', opciones: ['Pieles de animales', 'Lana de alpaca', 'Plumas de aves', 'Cuero de lobo marino'], correcta: 0 },
+
+            // 32. Extinción de los Selk'nam
+            { texto: '¿Qué pasó con el pueblo Selk\'nam?', opciones: ['Desapareció por enfermedades', 'Fue desplazado por colonos', 'Se mezcló con otros pueblos', 'Todas las anteriores'], correcta: 3 },
+
+            // 33. Ubicación de los Kawésqar
+            { texto: '¿Dónde habitaban los Kawésqar?', opciones: ['En el altiplano', 'En la Zona Sur', 'En el desierto', 'En la Isla de Pascua'], correcta: 1 },
+
+            // 34. Actividad de los Kawésqar
+            { texto: '¿Qué actividad realizaban los Kawésqar?', opciones: ['Agricultura', 'Pesca y recolección', 'Alfarería', 'Textilería'], correcta: 1 },
+
+            // 35. Viviendas Kawésqar
+            { texto: '¿Cómo eran las viviendas de los Kawésqar?', opciones: ['De piedra y barro', 'De ramas y pieles', 'De madera y tejas', 'De huesos de ballena'], correcta: 1 },
+
+            // 36. Grupos mapuche del norte
+            { texto: '¿Qué grupo mapuche habitaba la zona centro-norte?', opciones: ['Pikunche', 'Williche', 'Lafkenche', 'Pewenche'], correcta: 0 },
+
+            // 37. Grupos mapuche del sur
+            { texto: '¿Qué grupo mapuche habitaba la zona sur?', opciones: ['Pikunche', 'Williche', 'Pewenche', 'Lafkenche'], correcta: 1 },
+
+            // 38. Simbología mapuche
+            { texto: '¿Qué símbolo representa el sol en la cultura mapuche?', opciones: ['Antü', 'Meli', 'Küyen', 'Ngen'], correcta: 0 },
+
+            // 39. Autoridad mapuche
+            { texto: '¿Cómo se llama la autoridad tradicional del pueblo Mapuche?', opciones: ['Lonko', 'Toqui', 'Machí', 'Todas las anteriores'], correcta: 3 },
+
+            // 40. Día del pueblo mapuche
+            { texto: '¿Cuándo se celebra el Día Nacional de los Pueblos Indígenas en Chile?', opciones: ['21 de marzo', '21 de junio', '21 de septiembre', '21 de diciembre'], correcta: 1 }
         ];
 
         const CLASE_ID = 'C8';

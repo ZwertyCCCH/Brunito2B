@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🌊 La Zona Sur y Rapa Nui</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los lagos, volcanes, fiordos, glaciares y los moáis de Rapa Nui. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-20) ========
+
+            // 1. Clima de la Zona Sur
             { texto: '¿Cómo es el clima en la Zona Sur?', opciones: ['Siempre seco', 'Lluvias abundantes todo el año', 'Muy caluroso', 'Sin lluvias nunca'], correcta: 1 },
+
+            // 2. Paisaje de la Zona Sur
             { texto: '¿Qué tipo de paisaje encontramos en la Zona Sur?', opciones: ['Desiertos y valles', 'Lagos, ríos, volcanes y fiordos', 'Ciudades muy grandes', 'Solo playas'], correcta: 1 },
+
+            // 3. Volcán famoso de la Zona Sur
             { texto: '¿Cómo se llama el volcán famoso de la Zona Sur?', opciones: ['Lascar', 'Calbuco', 'San José', 'Llullaillaco'], correcta: 1 },
+
+            // 4. Patagonia chilena
             { texto: '¿Qué es la Patagonia chilena?', opciones: ['Un desierto', 'La zona sur de Chile', 'Una isla', 'Un volcán'], correcta: 1 },
+
+            // 5. Continente de Rapa Nui
             { texto: '¿En qué continente está la Isla de Pascua (Rapa Nui)?', opciones: ['América', 'Oceanía', 'Antártica', 'Europa'], correcta: 1 },
+
+            // 6. Estatuas de Rapa Nui
             { texto: '¿Cómo se llaman las famosas estatuas de Rapa Nui?', opciones: ['Tótems', 'Moáis', 'Pirámides', 'Esfinges'], correcta: 1 },
+
+            // 7. Ciudad principal de Rapa Nui
             { texto: '¿Cuál es la ciudad principal de Rapa Nui?', opciones: ['Anakena', 'Hanga Roa', 'Santiago', 'Valparaíso'], correcta: 1 },
+
+            // 8. Diferencia entre Norte y Sur
             { texto: '¿Qué hay en la Zona Sur que en el norte no hay?', opciones: ['Desiertos', 'Glaciares y fiordos', 'Salares', 'Altiplano'], correcta: 1 },
+
+            // 9. Parque nacional en la Patagonia
             { texto: '¿Cómo se llama el parque nacional famoso en la Patagonia?', opciones: ['Conguillío', 'Torres del Paine', 'La Campana', 'Vicuña Mackenna'], correcta: 1 },
+
+            // 10. Vegetación de la Zona Sur
             { texto: '¿Qué caracteriza a la vegetación de la Zona Sur?', opciones: ['Es muy seca', 'Es abundante por las lluvias', 'No hay vegetación', 'Solo hay cactus'], correcta: 1 },
+
+            // 11. Características de Rapa Nui
             { texto: '¿Qué tiene Rapa Nui?', opciones: ['5 volcanes principales', 'Muchos ríos', 'Grandes desiertos', 'Frío extremo todo el año'], correcta: 0 },
+
+            // 12. Significado de los moáis
             { texto: '¿Qué representa un moái para el pueblo Rapa Nui?', opciones: ['Un juguete', 'El espíritu de sus antepasados', 'Una herramienta de caza', 'Una casa'], correcta: 1 },
+
+            // 13. Playa de Rapa Nui
             { texto: '¿Cómo se llama la playa famosa de Rapa Nui?', opciones: ['Anakena', 'Viña del Mar', 'La Serena', 'Cartagena'], correcta: 0 },
+
+            // 14. Extremo sur de Chile
             { texto: '¿Qué hay en el extremo sur de Chile?', opciones: ['Desiertos', 'El Territorio Chileno Antártico', 'Grandes ciudades', 'Altiplano'], correcta: 1 },
+
+            // 15. Parque Nacional Pumalín
             { texto: '¿Qué tipo de vegetación hay en el Parque Nacional Pumalín?', opciones: ['Solo cactus', 'Abundante vegetación', 'Solo pasto seco', 'No hay vegetación'], correcta: 1 },
+
+            // 16. Sur de la Zona Sur
             { texto: '¿Qué encontramos hacia el sur de la Zona Sur?', opciones: ['Más fiordos y glaciares', 'Solo desiertos', 'Grandes ciudades', 'Cultivos extensos'], correcta: 0 },
+
+            // 17. Clima de Rapa Nui
             { texto: '¿Qué tipo de clima tiene Rapa Nui?', opciones: ['Temperaturas cálidas y lluvias', 'Frío extremo', 'Muy seco y caluroso', 'Nieve todo el año'], correcta: 0 },
+
+            // 18. Estrecho de Magallanes
             { texto: '¿Qué es el Estrecho de Magallanes?', opciones: ['Un río', 'Un paso marítimo en el extremo sur', 'Una montaña', 'Una ciudad'], correcta: 1 },
+
+            // 19. Actividad en la Antártica
             { texto: '¿Qué tipo de actividad hay en la base chilena en la Antártica?', opciones: ['Investigación científica', 'Turismo', 'Agricultura', 'Minería'], correcta: 0 },
-            { texto: '¿Qué diferencia hay entre la Zona Norte y la Zona Sur?', opciones: ['El norte es lluvioso y el sur seco', 'El norte es seco y el sur lluvioso', 'Ambas son iguales', 'El norte es frío y el sur caluroso'], correcta: 1 }
+
+            // 20. Diferencia entre Norte y Sur (variante)
+            { texto: '¿Qué diferencia hay entre la Zona Norte y la Zona Sur?', opciones: ['El norte es lluvioso y el sur seco', 'El norte es seco y el sur lluvioso', 'Ambas son iguales', 'El norte es frío y el sur caluroso'], correcta: 1 },
+
+
+            // ======== PREGUNTAS NUEVAS (21-40) ========
+
+            // 21. Ubicación de la Zona Sur
+            { texto: '¿Entre qué regiones se encuentra la Zona Sur de Chile?', opciones: ['O Higgins y Biobío', 'Biobío y Magallanes', 'Maule y La Araucanía', 'Valparaíso y Santiago'], correcta: 1 },
+
+            // 22. Ciudades de la Zona Sur
+            { texto: '¿Cuál de estas ciudades está en la Zona Sur?', opciones: ['Santiago', 'Concepción', 'Valparaíso', 'Antofagasta'], correcta: 1 },
+
+            // 23. Archipiélago de Chiloé
+            { texto: '¿Qué archipiélago importante está en la Zona Sur?', opciones: ['Archipiélago Juan Fernández', 'Archipiélago de Chiloé', 'Archipiélago de las Guaitecas', 'Archipiélago de los Chonos'], correcta: 1 },
+
+            // 24. Lago Llanquihue
+            { texto: '¿Dónde se encuentra el Lago Llanquihue?', opciones: ['En la Zona Norte', 'En la Zona Centro', 'En la Zona Sur', 'En la Antártica'], correcta: 2 },
+
+            // 25. Volcán Osorno
+            { texto: '¿Qué volcán famoso está cerca del Lago Llanquihue?', opciones: ['Volcán Osorno', 'Volcán Calbuco', 'Volcán Lascar', 'Volcán Llaima'], correcta: 0 },
+
+            // 26. Isla de Chiloé
+            { texto: '¿Qué isla grande está en la Zona Sur de Chile?', opciones: ['Isla de Pascua', 'Isla de Chiloé', 'Isla Robinson Crusoe', 'Isla Magdalena'], correcta: 1 },
+
+            // 27. Parques nacionales del sur
+            { texto: '¿Qué parque nacional está en la Zona Sur?', opciones: ['Parque Nacional La Campana', 'Parque Nacional Pumalín', 'Parque Nacional Fray Jorge', 'Parque Nacional Pan de Azúcar'], correcta: 1 },
+
+            // 28. Puerto de la Zona Sur
+            { texto: '¿Qué puerto importante está en la Zona Sur?', opciones: ['Valparaíso', 'San Antonio', 'Puerto Montt', 'Coquimbo'], correcta: 2 },
+
+            // 29. Fauna de la Zona Sur
+            { texto: '¿Qué animal es común en la Zona Sur de Chile?', opciones: ['Llama', 'Pudú', 'Guanaco', 'Cóndor'], correcta: 1 },
+
+            // 30. Cultura mapuche en el sur
+            { texto: '¿Qué pueblo originario habita la Zona Sur de Chile?', opciones: ['Aymara', 'Mapuche', 'Chango', 'Diaguita'], correcta: 1 },
+
+            // 31. Economía de la Zona Sur
+            { texto: '¿Qué actividad económica es importante en la Zona Sur?', opciones: ['Minería', 'Silvicultura y pesca', 'Agricultura', 'Ganadería'], correcta: 1 },
+
+            // 32. Selva Valdiviana
+            { texto: '¿Cómo se llama el bosque típico de la Zona Sur?', opciones: ['Selva Valdiviana', 'Bosque de Arrayanes', 'Bosque de Alerces', 'Bosque de Araucarias'], correcta: 0 },
+
+            // 33. Alerce
+            { texto: '¿Qué árbol milenario se encuentra en la Zona Sur?', opciones: ['Alerce', 'Araucaria', 'Pino', 'Roble'], correcta: 0 },
+
+            // 34. Turismo en la Zona Sur
+            { texto: '¿Qué actividad turística es común en la Zona Sur?', opciones: ['Turismo de sol y playa', 'Turismo de naturaleza y aventura', 'Turismo arqueológico', 'Turismo astronómico'], correcta: 1 },
+
+            // ======== PREGUNTA 35 REEMPLAZADA ========
+            // 35. Actividad agrícola en el sur (NUEVA)
+            { texto: '¿Qué actividad agrícola se desarrolla en la Zona Sur de Chile?', opciones: ['Cultivo de uvas', 'Cultivo de papas y hortalizas', 'Cultivo de algodón', 'Cultivo de arroz'], correcta: 1 },
+
+            // 36. Temperaturas en el sur
+            { texto: '¿Cómo son las temperaturas en la Zona Sur?', opciones: ['Muy altas', 'Disminuyen hacia el sur', 'Son iguales todo el año', 'Aumentan hacia el sur'], correcta: 1 },
+
+            // 37. Pingüinos en el sur
+            { texto: '¿Dónde se pueden ver pingüinos en la Zona Sur?', opciones: ['Isla de Pascua', 'Isla Magdalena', 'Archipiélago de Chiloé', 'Lago Llanquihue'], correcta: 1 },
+
+            // 38. Glaciar Pío XI
+            { texto: '¿Dónde se encuentra el Glaciar Pío XI?', opciones: ['En la Zona Norte', 'En la Zona Centro', 'En la Zona Sur', 'En la Antártica'], correcta: 2 },
+
+            // 39. Campo de hielo sur
+            { texto: '¿Qué es el Campo de Hielo Sur?', opciones: ['Un desierto', 'Una gran masa de hielo', 'Un lago', 'Una cordillera'], correcta: 1 },
+
+            // 40. Carretera Austral
+            { texto: '¿Qué ruta importante cruza la Zona Sur de Chile?', opciones: ['Carretera Austral', 'Ruta 5', 'Panamericana', 'Ruta de los Lagos'], correcta: 0 }
         ];
 
         const CLASE_ID = 'C6';

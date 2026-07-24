@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🏛️ Patrimonio e Instituciones</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre el patrimonio natural, cultural y las instituciones que lo protegen. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,27 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
+        const preguntasPool = [
+            // ======== PREGUNTAS ORIGINALES (1-21) ========
+
+            // 1. Definición de patrimonio
             { texto: '¿Qué es el patrimonio?', opciones: ['Conjunto de elementos que deben preservarse', 'Un tipo de comida', 'Un juego', 'Un animal'], correcta: 0 },
+
+            // 2. Patrimonio natural
             { texto: '¿Qué es el patrimonio natural?', opciones: ['Museos y bibliotecas', 'Parques nacionales, ríos y volcanes', 'Edificios antiguos', 'Tradiciones y costumbres'], correcta: 1 },
+
+            // 3. Patrimonio cultural
             { texto: '¿Qué es el patrimonio cultural?', opciones: ['Bosques y ríos', 'Animales y plantas', 'Museos, iglesias y tradiciones', 'Playas y montañas'], correcta: 2 },
+
+            // 4. Institución que protege el medioambiente
             { texto: '¿Qué institución protege el medioambiente?', opciones: ['CONAF', 'Ministerio del Medio Ambiente', 'Ministerio de las Culturas', 'Biblioteca Nacional'], correcta: 1 },
+
+            // 5. Institución que protege el patrimonio cultural
             { texto: '¿Qué institución protege el patrimonio cultural?', opciones: ['Ministerio del Medio Ambiente', 'CONAF', 'Ministerio de las Culturas, las Artes y el Patrimonio', 'Ministerio de Obras Públicas'], correcta: 2 },
+
+            // 6. Definición de CONAF
             { texto: '¿Qué es CONAF?', opciones: ['Corporación Nacional Forestal', 'Consejo Nacional de Fomento', 'Comisión Nacional de Arte', 'Comité de Cultura'], correcta: 0 },
+
+            // 7. Institución que protege los bosques
             { texto: '¿Qué institución protege los bosques de Chile?', opciones: ['Ministerio de las Culturas', 'CONAF', 'Ministerio del Medio Ambiente', 'Biblioteca Nacional'], correcta: 1 },
+
+            // 8. Definición de museo
             { texto: '¿Qué es un museo?', opciones: ['Un lugar donde se cuidan los patrimonios culturales', 'Una escuela', 'Una iglesia', 'Un parque'], correcta: 0 },
+
+            // 9. Definición de parque nacional
             { texto: '¿Qué es un parque nacional?', opciones: ['Un lugar de juegos', 'Un área natural protegida', 'Un centro comercial', 'Una ciudad'], correcta: 1 },
+
+            // 10. Patrimonio cultural en Rapa Nui
             { texto: '¿Qué patrimonio cultural es famoso en Rapa Nui?', opciones: ['Los volcanes', 'Los moáis', 'Las playas', 'Los bosques'], correcta: 1 },
+
+            // 11. Iglesia de Parinacota
             { texto: '¿Qué es la Iglesia de Parinacota?', opciones: ['Un ejemplo de mezcla de cultura aymara y religión católica', 'Un museo', 'Un parque nacional', 'Una escuela'], correcta: 0 },
+
+            // 12. Institución que promueve la música nacional
             { texto: '¿Qué institución promueve la música nacional?', opciones: ['CONAF', 'Consejo de Fomento de la Música Nacional', 'Ministerio del Medio Ambiente', 'Biblioteca Nacional'], correcta: 1 },
+
+            // 13. Institución que promueve el libro y la lectura
             { texto: '¿Qué institución promueve el libro y la lectura?', opciones: ['CONAF', 'Consejo Nacional del Libro y la Lectura', 'Ministerio del Medio Ambiente', 'Ministerio de Educación'], correcta: 1 },
+
+            // 14. Cuidado del patrimonio
             { texto: '¿Qué debemos hacer para cuidar el patrimonio?', opciones: ['Destruirlo', 'Cuidarlo y preservarlo', 'Venderlo', 'Olvidarlo'], correcta: 1 },
+
+            // 15. Definición de flora
             { texto: '¿Qué es la flora?', opciones: ['Animales', 'Plantas', 'Minerales', 'Rocas'], correcta: 1 },
+
+            // 16. Definición de fauna
             { texto: '¿Qué es la fauna?', opciones: ['Plantas', 'Animales', 'Minerales', 'Rocas'], correcta: 1 },
+
+            // 17. Sincretismo cultural
             { texto: '¿Qué es el sincretismo cultural?', opciones: ['La mezcla de dos culturas', 'La separación de culturas', 'La eliminación de culturas', 'La creación de una nueva cultura sin mezcla'], correcta: 0 },
+
+            // 18. Bandera Wiphala
             { texto: '¿Qué representa la bandera Wiphala?', opciones: ['Los colores del arcoíris andino', 'La bandera de Chile', 'La bandera de los inmigrantes', 'La bandera de Rapa Nui'], correcta: 0 },
+
+            // 19. Pachamama
             { texto: '¿Qué es la Pachamama?', opciones: ['La Madre Tierra para los pueblos andinos', 'Un volcán', 'Un río', 'Una ciudad'], correcta: 0 },
-            { texto: '¿Qué institución educa sobre el medioambiente?', opciones: ['Ministerio de Educación', 'Ministerio del Medio Ambiente', 'Ministerio de Salud', 'Ministerio de Vivienda'], correcta: 1 }
+
+            // 20. Institución que educa sobre el medioambiente
+            { texto: '¿Qué institución educa sobre el medioambiente?', opciones: ['Ministerio de Educación', 'Ministerio del Medio Ambiente', 'Ministerio de Salud', 'Ministerio de Vivienda'], correcta: 1 },
+
+            // 21. Tipos de patrimonio
+            { texto: '¿Cuántos tipos de patrimonio existen en Chile?', opciones: ['1', '2', '3', '4'], correcta: 1 },
+
+            // ======== PREGUNTA 22 REEMPLAZADA ========
+            // 22. Parque Nacional Lauca (NUEVA)
+            { texto: '¿Qué parque nacional se encuentra en el norte de Chile?', opciones: ['Parque Nacional Lauca', 'Parque Nacional Torres del Paine', 'Parque Nacional Pumalín', 'Parque Nacional La Campana'], correcta: 0 },
+
+            // ======== PREGUNTA 23 REEMPLAZADA ========
+            // 23. Bailes tradicionales (NUEVA)
+            { texto: '¿Qué baile tradicional es parte del patrimonio cultural chileno?', opciones: ['La cueca', 'La salsa', 'El tango', 'El rock'], correcta: 0 },
+
+            // ======== PREGUNTA 24 REEMPLAZADA ========
+            // 24. Consejo de Monumentos Nacionales (NUEVA)
+            { texto: '¿Qué institución protege los monumentos históricos en Chile?', opciones: ['Consejo de Monumentos Nacionales', 'CONAF', 'Ministerio de Educación', 'Biblioteca Nacional'], correcta: 0 },
+
+            // 25. Rol del Ministerio de las Culturas
+            { texto: '¿Qué hace el Ministerio de las Culturas, las Artes y el Patrimonio?', opciones: ['Cuidar los bosques', 'Proteger el patrimonio cultural', 'Educar sobre el medioambiente', 'Fomentar el deporte'], correcta: 1 },
+
+            // ======== PREGUNTA 26 REEMPLAZADA ========
+            // 26. Áreas protegidas (NUEVA)
+            { texto: '¿Qué son las áreas protegidas en Chile?', opciones: ['Lugares donde se cuida la naturaleza', 'Lugares donde se construyen casas', 'Lugares donde se hace minería', 'Lugares donde se cultiva'], correcta: 0 },
+
+            // 27. Consejo Nacional del Libro
+            { texto: '¿Qué promueve el Consejo Nacional del Libro y la Lectura?', opciones: ['La música', 'El deporte', 'La lectura', 'La pintura'], correcta: 2 },
+
+            // 28. Consejo de Fomento de la Música
+            { texto: '¿Qué promueve el Consejo de Fomento de la Música Nacional?', opciones: ['La lectura', 'La música chilena', 'El deporte', 'El cine'], correcta: 1 },
+
+            // 29. Importancia del patrimonio
+            { texto: '¿Por qué es importante cuidar el patrimonio?', opciones: ['Para que las futuras generaciones lo conozcan', 'Para venderlo', 'Para destruirlo', 'Para olvidarlo'], correcta: 0 },
+
+            // 30. Flora nativa de Chile
+            { texto: '¿Qué planta es parte de la flora nativa de Chile?', opciones: ['El alerce', 'El pino', 'El eucalipto', 'El roble'], correcta: 0 },
+
+            // 31. Fauna nativa de Chile
+            { texto: '¿Qué animal es parte de la fauna nativa de Chile?', opciones: ['El pudú', 'El león', 'El elefante', 'El tigre'], correcta: 0 },
+
+            // 32. Patrimonio de la humanidad
+            { texto: '¿Qué sitio chileno es considerado Patrimonio de la Humanidad?', opciones: ['El Parque Nacional Torres del Paine', 'El Desierto de Atacama', 'El Valle del Elqui', 'La Isla de Chiloé'], correcta: 0 },
+
+            // ======== PREGUNTA 33 REEMPLAZADA ========
+            // 33. Parque Nacional Rapa Nui (NUEVA)
+            { texto: '¿Qué parque nacional protege los moáis de Rapa Nui?', opciones: ['Parque Nacional Rapa Nui', 'Parque Nacional Torres del Paine', 'Parque Nacional Lauca', 'Parque Nacional Pumalín'], correcta: 0 },
+
+            // 34. Ciudades patrimonio
+            { texto: '¿Qué ciudad chilena es considerada Patrimonio de la Humanidad?', opciones: ['Santiago', 'Valparaíso', 'Concepción', 'Antofagasta'], correcta: 1 },
+
+            // 35. Iglesia de Chiloé
+            { texto: '¿Qué iglesias chilenas son Patrimonio de la Humanidad?', opciones: ['Las iglesias de Chiloé', 'La Catedral de Santiago', 'La Iglesia de San Francisco', 'Todas las anteriores'], correcta: 0 },
+
+            // 36. Pueblos originarios y patrimonio
+            { texto: '¿Qué elemento del patrimonio cultural es de origen mapuche?', opciones: ['Los moáis', 'El poncho', 'El kultrún', 'La Wiphala'], correcta: 2 },
+
+            // 37. Educación ambiental
+            { texto: '¿Quién es responsable de la educación ambiental en Chile?', opciones: ['El Ministerio de Educación', 'El Ministerio del Medio Ambiente', 'Ambos', 'Ninguno'], correcta: 2 },
+
+            // 38. Preservación del patrimonio
+            { texto: '¿Qué podemos hacer para preservar el patrimonio?', opciones: ['Visitar museos', 'Cuidar los parques nacionales', 'Aprender sobre la historia', 'Todos los anteriores'], correcta: 3 },
+
+            // 39. Patrimonio natural en riesgo
+            { texto: '¿Qué amenaza al patrimonio natural en Chile?', opciones: ['La contaminación', 'La deforestación', 'El cambio climático', 'Todos los anteriores'], correcta: 3 },
+
+            // 40. Patrimonio cultural en riesgo
+            { texto: '¿Qué amenaza al patrimonio cultural en Chile?', opciones: ['El abandono', 'La falta de fondos', 'El vandalismo', 'Todos los anteriores'], correcta: 3 }
         ];
 
         const CLASE_ID = 'C13';

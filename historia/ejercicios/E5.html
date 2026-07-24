@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🌆 La Zona Centro de Chile</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre las ciudades, valles, puertos y el Censo en la Zona Centro. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,28 +34,135 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
-            { texto: '¿Cómo son los veranos en la Zona Central?', opciones: ['Fríos y lluviosos', 'Calurosos y secos', 'Muy fríos con nieve', 'Lluviosos todo el año'], correcta: 1 },
-            { texto: '¿Cómo son los inviernos en la Zona Central?', opciones: ['Calurosos y secos', 'Fríos y lluviosos', 'Muy cálidos', 'Siempre con nieve'], correcta: 1 },
-            { texto: '¿Cuál es la capital de Chile?', opciones: ['Valparaíso', 'Concepción', 'Santiago', 'Antofagasta'], correcta: 2 },
-            { texto: '¿Qué ciudad de la Zona Centro es un importante puerto?', opciones: ['Rancagua', 'Talca', 'Valparaíso', 'Santiago'], correcta: 2 },
-            { texto: '¿Qué es el Censo?', opciones: ['Una encuesta a todos los hogares', 'Un tipo de mapa', 'Una celebración', 'Un libro de historia'], correcta: 0 },
-            { texto: '¿Qué región de Chile tiene los valles agrícolas más importantes?', opciones: ['Región de Atacama', 'Región del Maule', 'Región de Los Lagos', 'Región de Arica'], correcta: 1 },
-            { texto: '¿Qué ciudad es capital de la Región del Maule?', opciones: ['Rancagua', 'Talca', 'Curicó', 'Linares'], correcta: 1 },
-            { texto: '¿Qué puerto importante está en la Zona Centro?', opciones: ['Antofagasta', 'Iquique', 'San Antonio', 'Arica'], correcta: 2 },
-            { texto: '¿En qué zona de Chile vive la mayor parte de la población?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 1 },
-            { texto: '¿Qué tipo de paisaje predomina en la Zona Centro?', opciones: ['Desierto', 'Valles y ciudades', 'Lagos y volcanes', 'Hielo y nieve'], correcta: 1 },
-            { texto: '¿Qué se cultiva en los valles de la Región del Maule?', opciones: ['Uvas y frutas', 'Arroz', 'Cacao', 'Caña de azúcar'], correcta: 0 },
-            { texto: '¿Qué ciudad es la capital de Chile?', opciones: ['Valparaíso', 'Santiago', 'Concepción', 'La Serena'], correcta: 1 },
-            { texto: '¿Cuándo se realizó el último Censo en Chile?', opciones: ['2020', '2022', '2024', '2026'], correcta: 2 },
-            { texto: '¿Qué tipo de clima tiene la Zona Centro?', opciones: ['Clima desértico', 'Clima mediterráneo', 'Clima polar', 'Clima tropical'], correcta: 1 },
-            { texto: '¿Qué tiene la Zona Centro que la Zona Norte no tiene?', opciones: ['Desierto', 'Valles verdes y más lluvias', 'Altiplano', 'Salares'], correcta: 1 },
-            { texto: '¿Qué ciudad de la Zona Centro es famosa por su puerto?', opciones: ['Santiago', 'Rancagua', 'Valparaíso', 'Talca'], correcta: 2 },
-            { texto: '¿Cuál es la región más poblada de Chile?', opciones: ['Región de Valparaíso', 'Región del Biobío', 'Región Metropolitana', 'Región del Maule'], correcta: 2 },
-            { texto: '¿Qué actividad es importante en los valles de la Zona Centro?', opciones: ['Minería', 'Agricultura', 'Pesca', 'Ganadería'], correcta: 1 },
-            { texto: '¿Qué capital regional está en la Zona Centro?', opciones: ['Rancagua', 'Antofagasta', 'Puerto Montt', 'Arica'], correcta: 0 },
-            { texto: '¿Qué es el Censo 2024?', opciones: ['Un censo de población', 'Un censo de viviendas', 'Una encuesta a todos los hogares', 'Todas las anteriores'], correcta: 3 }
-        ];
+
+    const preguntasPool = [
+        // ======== PREGUNTAS ORIGINALES (1-11) ========
+
+        // 1. Veranos en la Zona Central
+        { texto: '¿Cómo son los veranos en la Zona Central?', opciones: ['Fríos y lluviosos', 'Calurosos y secos', 'Muy fríos con nieve', 'Lluviosos todo el año'], correcta: 1 },
+
+        // 2. Inviernos en la Zona Central
+        { texto: '¿Cómo son los inviernos en la Zona Central?', opciones: ['Calurosos y secos', 'Fríos y lluviosos', 'Muy cálidos', 'Siempre con nieve'], correcta: 1 },
+
+        // 3. Capital de Chile
+        { texto: '¿Cuál es la capital de Chile?', opciones: ['Valparaíso', 'Concepción', 'Santiago', 'Antofagasta'], correcta: 2 },
+
+        // 4. Puerto importante de la Zona Centro
+        { texto: '¿Qué ciudad de la Zona Centro es un importante puerto?', opciones: ['Rancagua', 'Talca', 'Valparaíso', 'Santiago'], correcta: 2 },
+
+        // 5. Definición de Censo
+        { texto: '¿Qué es el Censo?', opciones: ['Una encuesta a todos los hogares', 'Un tipo de mapa', 'Una celebración', 'Un libro de historia'], correcta: 0 },
+
+        // 6. Valles agrícolas importantes
+        { texto: '¿Qué región de Chile tiene los valles agrícolas más importantes?', opciones: ['Región de Atacama', 'Región del Maule', 'Región de Los Lagos', 'Región de Arica'], correcta: 1 },
+
+        // 7. Capital de la Región del Maule
+        { texto: '¿Qué ciudad es capital de la Región del Maule?', opciones: ['Rancagua', 'Talca', 'Curicó', 'Linares'], correcta: 1 },
+
+        // 8. Puerto importante de la Zona Centro (variante)
+        { texto: '¿Qué puerto importante está en la Zona Centro?', opciones: ['Antofagasta', 'Iquique', 'San Antonio', 'Arica'], correcta: 2 },
+
+        // 9. Población de la Zona Centro
+        { texto: '¿En qué zona de Chile vive la mayor parte de la población?', opciones: ['Norte', 'Centro', 'Sur', 'Antártica'], correcta: 1 },
+
+        // 10. Paisaje predominante
+        { texto: '¿Qué tipo de paisaje predomina en la Zona Centro?', opciones: ['Desierto', 'Valles y ciudades', 'Lagos y volcanes', 'Hielo y nieve'], correcta: 1 },
+
+        // 11. Cultivos en la Región del Maule
+        { texto: '¿Qué se cultiva en los valles de la Región del Maule?', opciones: ['Uvas y frutas', 'Arroz', 'Cacao', 'Caña de azúcar'], correcta: 0 },
+
+        // ======== PREGUNTA 12 REEMPLAZADA ========
+        // 12. Regiones de la Zona Centro (NUEVA)
+        { texto: '¿Cuántas regiones tiene la Zona Centro de Chile?', opciones: ['2', '3', '4', '5'], correcta: 2 },
+
+        // 13. Último Censo
+        { texto: '¿Cuándo se realizó el último Censo en Chile?', opciones: ['2020', '2022', '2024', '2026'], correcta: 2 },
+
+        // 14. Clima de la Zona Centro
+        { texto: '¿Qué tipo de clima tiene la Zona Centro?', opciones: ['Clima desértico', 'Clima mediterráneo', 'Clima polar', 'Clima tropical'], correcta: 1 },
+
+        // 15. Diferencia con Zona Norte
+        { texto: '¿Qué tiene la Zona Centro que la Zona Norte no tiene?', opciones: ['Desierto', 'Valles verdes y más lluvias', 'Altiplano', 'Salares'], correcta: 1 },
+
+        // ======== PREGUNTA 16 REEMPLAZADA ========
+        // 16. Festival de la Zona Centro (NUEVA)
+        { texto: '¿Qué festival importante se realiza en la Zona Centro de Chile?', opciones: ['Festival de la Pampilla', 'Festival de Viña del Mar', 'Carnaval de la Tirana', 'Fiesta de la Vendimia'], correcta: 1 },
+
+        // 17. Región más poblada
+        { texto: '¿Cuál es la región más poblada de Chile?', opciones: ['Región de Valparaíso', 'Región del Biobío', 'Región Metropolitana', 'Región del Maule'], correcta: 2 },
+
+        // 18. Actividad en los valles
+        { texto: '¿Qué actividad es importante en los valles de la Zona Centro?', opciones: ['Minería', 'Agricultura', 'Pesca', 'Ganadería'], correcta: 1 },
+
+        // 19. Capital regional en la Zona Centro
+        { texto: '¿Qué capital regional está en la Zona Centro?', opciones: ['Rancagua', 'Antofagasta', 'Puerto Montt', 'Arica'], correcta: 0 },
+
+        // 20. Censo 2024
+        { texto: '¿Qué es el Censo 2024?', opciones: ['Un censo de población', 'Un censo de viviendas', 'Una encuesta a todos los hogares', 'Todas las anteriores'], correcta: 3 },
+
+
+        // ======== PREGUNTAS NUEVAS (21-40) ========
+
+        // 21. Región Metropolitana
+        { texto: '¿Cuál es la capital de la Región Metropolitana?', opciones: ['Valparaíso', 'Santiago', 'Rancagua', 'Talca'], correcta: 1 },
+
+        // 22. Ciudades de la Zona Centro
+        { texto: '¿Cuál de estas ciudades NO está en la Zona Centro?', opciones: ['Santiago', 'Valparaíso', 'Concepción', 'Rancagua'], correcta: 2 },
+
+        // 23. Ríos de la Zona Centro
+        { texto: '¿Qué río importante atraviesa la Zona Centro de Chile?', opciones: ['Río Loa', 'Río Maipo', 'Río Biobío', 'Río Calle-Calle'], correcta: 1 },
+
+        // 24. Cordillera de la Costa
+        { texto: '¿Qué cordillera está al oeste de la Zona Centro?', opciones: ['Cordillera de los Andes', 'Cordillera de la Costa', 'Cordillera del Pacífico', 'Cordillera de los Apalaches'], correcta: 1 },
+
+        // 25. Cordillera de los Andes
+        { texto: '¿Qué cordillera está al este de la Zona Centro?', opciones: ['Cordillera de la Costa', 'Cordillera de los Andes', 'Cordillera del Pacífico', 'Cordillera de los Apalaches'], correcta: 1 },
+
+        // 26. Población de la Zona Centro
+        { texto: '¿Qué porcentaje aproximado de la población chilena vive en la Zona Centro?', opciones: ['Menos del 10%', 'Alrededor del 30%', 'Más del 60%', 'Menos del 5%'], correcta: 2 },
+
+        // 27. Actividad portuaria
+        { texto: '¿Qué actividad es importante en los puertos de la Zona Centro?', opciones: ['Pesca', 'Comercio marítimo', 'Turismo', 'Minería'], correcta: 1 },
+
+        // 28. Vinos de la Zona Centro
+        { texto: '¿Qué producto es famoso en los valles de la Zona Centro?', opciones: ['Vino', 'Cerveza', 'Aceite', 'Queso'], correcta: 0 },
+
+        // 29. Parques nacionales de la Zona Centro
+        { texto: '¿Qué parque nacional está en la Zona Centro?', opciones: ['Parque Nacional La Campana', 'Parque Nacional Torres del Paine', 'Parque Nacional Pumalín', 'Parque Nacional Rapa Nui'], correcta: 0 },
+
+        // 30. Flora de la Zona Centro
+        { texto: '¿Qué tipo de vegetación predomina en la Zona Centro?', opciones: ['Cactus y arbustos', 'Bosques nativos', 'Pastizales', 'Selva tropical'], correcta: 0 },
+
+        // 31. Fauna de la Zona Centro
+        { texto: '¿Qué animal es común en la Zona Centro de Chile?', opciones: ['Guanaco', 'Pudú', 'Cóndor', 'Flamenco'], correcta: 1 },
+
+        // 32. Cultivos de exportación
+        { texto: '¿Qué frutas se exportan desde la Zona Centro?', opciones: ['Plátanos', 'Uvas y arándanos', 'Papayas', 'Mangos'], correcta: 1 },
+
+        // 33. Pueblos originarios de la Zona Centro
+        { texto: '¿Qué pueblo originario habitó la Zona Centro de Chile?', opciones: ['Aymara', 'Mapuche', 'Chango', 'Diaguita'], correcta: 1 },
+
+        // 34. Conquista española
+        { texto: '¿Qué ciudad fundó Pedro de Valdivia en la Zona Centro?', opciones: ['Valparaíso', 'Santiago', 'Concepción', 'La Serena'], correcta: 1 },
+
+        // 35. Terremotos en la Zona Centro
+        { texto: '¿Por qué la Zona Centro está expuesta a terremotos?', opciones: ['Por el clima', 'Por su ubicación en el cinturón de fuego del Pacífico', 'Por los volcanes', 'Por la cordillera de la Costa'], correcta: 1 },
+
+        // 36. Cerro Santa Lucía
+        { texto: '¿Dónde se encuentra el Cerro Santa Lucía?', opciones: ['En Valparaíso', 'En Santiago', 'En Rancagua', 'En Talca'], correcta: 1 },
+
+        // 37. Centro histórico de Santiago
+        { texto: '¿Cómo se llama el centro histórico de Santiago?', opciones: ['Plaza de Armas', 'Plaza Mayor', 'Plaza de la Constitución', 'Plaza Italia'], correcta: 0 },
+
+        // 38. Puente de la Zona Centro
+        { texto: '¿Qué puente conecta la Zona Centro con otras zonas?', opciones: ['Puente del Biobío', 'Puente del Maipo', 'Puente del Loa', 'Puente del Elqui'], correcta: 1 },
+
+        // 39. Actividad cultural
+        { texto: '¿Qué actividad cultural es importante en la Zona Centro?', opciones: ['Fiestas patrias', 'Festival de Viña del Mar', 'Carnaval', 'Feria de la Pampilla'], correcta: 1 },
+
+        // 40. Educación en la Zona Centro
+        { texto: '¿Qué universidad importante está en la Zona Centro?', opciones: ['Universidad de Chile', 'Universidad de Concepción', 'Universidad de Antofagasta', 'Universidad de La Serena'], correcta: 0 }
+    ];
 
         const CLASE_ID = 'C5';
     </script>

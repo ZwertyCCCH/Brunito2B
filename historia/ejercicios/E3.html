@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🗺️ Leyendo Mapas y Vocabulario Geográfico</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre mapas, vocabulario geográfico y paisajes de Chile. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,28 +34,133 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
-            { texto: '¿Qué es un mapa?', opciones: ['Una representación de la Tierra', 'Un dibujo de una ciudad', 'Una foto de un paisaje', 'Un libro de historia'], correcta: 0 },
-            { texto: '¿Qué nos indica el título de un mapa?', opciones: ['Quién lo hizo', 'Qué información entrega', 'Cuándo se hizo', 'Dónde se compró'], correcta: 1 },
-            { texto: '¿Qué es la toponimia en un mapa?', opciones: ['Los colores del mapa', 'Los nombres de lugares', 'La escala del mapa', 'El tipo de mapa'], correcta: 1 },
-            { texto: '¿Qué es una gran masa de agua salada?', opciones: ['Un río', 'Un lago', 'Un océano', 'Un fiordo'], correcta: 2 },
-            { texto: '¿Cómo se llama el terreno plano entre cerros, atravesado por un río?', opciones: ['Valle', 'Altiplano', 'Cordillera', 'Isla'], correcta: 0 },
-            { texto: '¿Qué es un archipiélago?', opciones: ['Un conjunto de montañas', 'Un conjunto de islas cercanas', 'Un río grande', 'Un desierto'], correcta: 1 },
-            { texto: '¿Qué es una ciudad?', opciones: ['Un lugar con pocas personas', 'Un lugar con miles de personas y muchas construcciones', 'Un lugar solo con naturaleza', 'Un lugar sin construcciones'], correcta: 1 },
-            { texto: '¿Qué son los cultivos?', opciones: ['Plantas sembradas para recolectar frutos', 'Animales de granja', 'Construcciones antiguas', 'Montañas altas'], correcta: 0 },
-            { texto: '¿Qué son las construcciones en un paisaje?', opciones: ['Árboles y flores', 'Edificios, puentes y carreteras', 'Ríos y lagos', 'Montañas y valles'], correcta: 1 },
-            { texto: '¿Qué es un fiordo?', opciones: ['Una entrada estrecha rodeada de montañas', 'Un gran océano', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
-            { texto: '¿Qué es un pueblo?', opciones: ['Más grande que una ciudad', 'Más pequeño que una ciudad', 'Igual que una ciudad', 'Un lugar sin personas'], correcta: 1 },
-            { texto: '¿Qué debemos leer primero en un mapa?', opciones: ['La leyenda', 'El título', 'La rosa de los vientos', 'La toponimia'], correcta: 1 },
-            { texto: '¿Para qué sirve la rosa de los vientos en un mapa?', opciones: ['Para decorar', 'Para indicar la orientación', 'Para mostrar la escala', 'Para poner colores'], correcta: 1 },
-            { texto: '¿Qué es un valle?', opciones: ['Terreno plano entre cerros', 'Montaña alta', 'Desierto arenoso', 'Océano profundo'], correcta: 0 },
-            { texto: '¿Qué es un océano?', opciones: ['Un río pequeño', 'Gran masa de agua salada', 'Lago de agua dulce', 'Glaciar de hielo'], correcta: 1 },
-            { texto: '¿Qué tipo de paisaje tiene más elementos culturales?', opciones: ['Paisaje natural', 'Paisaje rural', 'Paisaje urbano', 'Paisaje desértico'], correcta: 2 },
-            { texto: '¿Qué es un paisaje natural?', opciones: ['Lugar con muchas construcciones', 'Lugar donde el ser humano casi no ha intervenido', 'Lugar con cultivos', 'Lugar con carreteras'], correcta: 1 },
-            { texto: '¿Qué símbolo en un mapa explica el significado de los colores y símbolos?', opciones: ['El título', 'La rosa de los vientos', 'La leyenda o simbología', 'La toponimia'], correcta: 2 },
-            { texto: '¿Qué elemento del paisaje es natural?', opciones: ['Una casa', 'Un puente', 'Un río', 'Una carretera'], correcta: 2 },
-            { texto: '¿Qué elemento del paisaje es construido por el ser humano?', opciones: ['Un volcán', 'Un lago', 'Un edificio', 'Un bosque'], correcta: 2 }
-        ];
+
+    const preguntasPool = [
+        // ======== PREGUNTAS ORIGINALES (1-20) ========
+
+        // 1. Definición de mapa
+        { texto: '¿Qué es un mapa?', opciones: ['Una representación de la Tierra', 'Un dibujo de una ciudad', 'Una foto de un paisaje', 'Un libro de historia'], correcta: 0 },
+
+        // 2. Título del mapa
+        { texto: '¿Qué nos indica el título de un mapa?', opciones: ['Quién lo hizo', 'Qué información entrega', 'Cuándo se hizo', 'Dónde se compró'], correcta: 1 },
+
+        // 3. Toponimia
+        { texto: '¿Qué es la toponimia en un mapa?', opciones: ['Los colores del mapa', 'Los nombres de lugares', 'La escala del mapa', 'El tipo de mapa'], correcta: 1 },
+
+        // 4. Masa de agua salada
+        { texto: '¿Qué es una gran masa de agua salada?', opciones: ['Un río', 'Un lago', 'Un océano', 'Un fiordo'], correcta: 2 },
+
+        // 5. Terreno plano entre cerros
+        { texto: '¿Cómo se llama el terreno plano entre cerros, atravesado por un río?', opciones: ['Valle', 'Altiplano', 'Cordillera', 'Isla'], correcta: 0 },
+
+        // 6. Archipiélago
+        { texto: '¿Qué es un archipiélago?', opciones: ['Un conjunto de montañas', 'Un conjunto de islas cercanas', 'Un río grande', 'Un desierto'], correcta: 1 },
+
+        // 7. Ciudad
+        { texto: '¿Qué es una ciudad?', opciones: ['Un lugar con pocas personas', 'Un lugar con miles de personas y muchas construcciones', 'Un lugar solo con naturaleza', 'Un lugar sin construcciones'], correcta: 1 },
+
+        // 8. Cultivos
+        { texto: '¿Qué son los cultivos?', opciones: ['Plantas sembradas para recolectar frutos', 'Animales de granja', 'Construcciones antiguas', 'Montañas altas'], correcta: 0 },
+
+        // 9. Construcciones
+        { texto: '¿Qué son las construcciones en un paisaje?', opciones: ['Árboles y flores', 'Edificios, puentes y carreteras', 'Ríos y lagos', 'Montañas y valles'], correcta: 1 },
+
+        // 10. Fiordo
+        { texto: '¿Qué es un fiordo?', opciones: ['Una entrada estrecha rodeada de montañas', 'Un gran océano', 'Un valle con cultivos', 'Una ciudad costera'], correcta: 0 },
+
+        // 11. Pueblo
+        { texto: '¿Qué es un pueblo?', opciones: ['Más grande que una ciudad', 'Más pequeño que una ciudad', 'Igual que una ciudad', 'Un lugar sin personas'], correcta: 1 },
+
+        // 12. Lectura de un mapa
+        { texto: '¿Qué debemos leer primero en un mapa?', opciones: ['La leyenda', 'El título', 'La rosa de los vientos', 'La toponimia'], correcta: 1 },
+
+        // 13. Rosa de los vientos
+        { texto: '¿Para qué sirve la rosa de los vientos en un mapa?', opciones: ['Para decorar', 'Para indicar la orientación', 'Para mostrar la escala', 'Para poner colores'], correcta: 1 },
+
+        // 14. Valle
+        { texto: '¿Qué es un valle?', opciones: ['Terreno plano entre cerros', 'Montaña alta', 'Desierto arenoso', 'Océano profundo'], correcta: 0 },
+
+        // 15. Océano
+        { texto: '¿Qué es un océano?', opciones: ['Un río pequeño', 'Gran masa de agua salada', 'Lago de agua dulce', 'Glaciar de hielo'], correcta: 1 },
+
+        // 16. Paisaje urbano
+        { texto: '¿Qué tipo de paisaje tiene más elementos culturales?', opciones: ['Paisaje natural', 'Paisaje rural', 'Paisaje urbano', 'Paisaje desértico'], correcta: 2 },
+
+        // 17. Paisaje natural
+        { texto: '¿Qué es un paisaje natural?', opciones: ['Lugar con muchas construcciones', 'Lugar donde el ser humano casi no ha intervenido', 'Lugar con cultivos', 'Lugar con carreteras'], correcta: 1 },
+
+        // 18. Leyenda del mapa
+        { texto: '¿Qué símbolo en un mapa explica el significado de los colores y símbolos?', opciones: ['El título', 'La rosa de los vientos', 'La leyenda o simbología', 'La toponimia'], correcta: 2 },
+
+        // 19. Elemento natural del paisaje
+        { texto: '¿Qué elemento del paisaje es natural?', opciones: ['Una casa', 'Un puente', 'Un río', 'Una carretera'], correcta: 2 },
+
+        // 20. Elemento construido por humanos
+        { texto: '¿Qué elemento del paisaje es construido por el ser humano?', opciones: ['Un volcán', 'Un lago', 'Un edificio', 'Un bosque'], correcta: 2 },
+
+
+        // ======== PREGUNTAS NUEVAS (21-40) ========
+
+        // 21. Elementos naturales y culturales
+        { texto: '¿Cuál de estos es un elemento natural del paisaje?', opciones: ['Un puente', 'Una montaña', 'Una carretera', 'Una ciudad'], correcta: 1 },
+
+        // 22. Elementos culturales
+        { texto: '¿Cuál de estos es un elemento construido por el ser humano?', opciones: ['Un río', 'Un volcán', 'Una carretera', 'Un bosque'], correcta: 2 },
+
+        // 23. Paisaje rural
+        { texto: '¿Qué tipo de paisaje tiene cultivos y animales de granja?', opciones: ['Paisaje urbano', 'Paisaje rural', 'Paisaje natural', 'Paisaje desértico'], correcta: 1 },
+
+        // 24. Paisaje costero
+        { texto: '¿Qué tipo de paisaje se encuentra cerca del mar?', opciones: ['Paisaje de montaña', 'Paisaje costero', 'Paisaje desértico', 'Paisaje urbano'], correcta: 1 },
+
+        // 25. Paisaje de montaña
+        { texto: '¿Qué tipo de paisaje tiene montañas altas y nieve?', opciones: ['Paisaje costero', 'Paisaje de montaña', 'Paisaje desértico', 'Paisaje rural'], correcta: 1 },
+
+        // 26. Paisaje desértico
+        { texto: '¿Qué tipo de paisaje tiene poca vegetación y arena?', opciones: ['Paisaje rural', 'Paisaje costero', 'Paisaje desértico', 'Paisaje de montaña'], correcta: 2 },
+
+        // 27. Elemento del mapa: escala
+        { texto: '¿Qué indica la escala en un mapa?', opciones: ['Los colores del mapa', 'La relación entre la distancia real y la del mapa', 'Los nombres de lugares', 'La orientación del mapa'], correcta: 1 },
+
+        // 28. Elemento del mapa: orientación
+        { texto: '¿Qué elemento de un mapa indica la orientación norte-sur?', opciones: ['El título', 'La leyenda', 'La rosa de los vientos', 'La escala'], correcta: 2 },
+
+        // 29. Lago
+        { texto: '¿Qué es un lago?', opciones: ['Una masa de agua salada', 'Una masa de agua rodeada de tierra', 'Un río que fluye al mar', 'Una entrada de mar en la costa'], correcta: 1 },
+
+        // 30. Río
+        { texto: '¿Qué es un río?', opciones: ['Una masa de agua estancada', 'Una corriente de agua que fluye', 'Una gran masa de agua salada', 'Un terreno plano entre cerros'], correcta: 1 },
+
+        // 31. Isla
+        { texto: '¿Qué es una isla?', opciones: ['Un terreno rodeado de agua', 'Un terreno plano entre cerros', 'Una gran masa de agua', 'Un conjunto de montañas'], correcta: 0 },
+
+        // 32. Península
+        { texto: '¿Qué es una península?', opciones: ['Un terreno rodeado de agua', 'Un terreno que está rodeado de agua por tres lados', 'Un conjunto de islas', 'Una gran masa de agua'], correcta: 1 },
+
+        // 33. Cordillera
+        { texto: '¿Qué es una cordillera?', opciones: ['Un terreno plano', 'Una gran masa de agua', 'Un conjunto de montañas', 'Un terreno rodeado de agua'], correcta: 2 },
+
+        // 34. Desierto
+        { texto: '¿Qué es un desierto?', opciones: ['Un lugar con mucha vegetación', 'Un lugar con pocas lluvias y poca vegetación', 'Un lugar con montañas altas', 'Un lugar rodeado de agua'], correcta: 1 },
+
+        // 35. Zona geográfica de Chile
+        { texto: '¿Cuántas zonas geográficas principales tiene Chile?', opciones: ['2', '3', '4', '5'], correcta: 1 },
+
+        // 36. Zona Norte de Chile
+        { texto: '¿Qué tipo de paisaje predomina en la Zona Norte de Chile?', opciones: ['Verde y frondoso', 'Árido y con poca vegetación', 'Cubierto de nieve', 'Con muchos lagos'], correcta: 1 },
+
+        // 37. Zona Centro de Chile
+        { texto: '¿Qué tipo de paisaje predomina en la Zona Centro de Chile?', opciones: ['Desierto', 'Valles y ciudades', 'Lagos y volcanes', 'Hielo y nieve'], correcta: 1 },
+
+        // 38. Zona Sur de Chile
+        { texto: '¿Qué tipo de paisaje encontramos en la Zona Sur de Chile?', opciones: ['Desiertos', 'Lagos, ríos, volcanes y fiordos', 'Ciudades muy grandes', 'Solo playas'], correcta: 1 },
+
+        // 39. Rapa Nui
+        { texto: '¿Qué tipo de paisaje tiene Rapa Nui (Isla de Pascua)?', opciones: ['Paisaje desértico', 'Paisaje costero con volcanes', 'Paisaje de montaña', 'Paisaje rural'], correcta: 1 },
+
+        // 40. Paisaje de Chile
+        { texto: '¿Por qué Chile tiene paisajes tan diversos?', opciones: ['Por su ubicación', 'Por su larga extensión de norte a sur', 'Por sus países vecinos', 'Por su idioma'], correcta: 1 }
+    ];
 
         const CLASE_ID = 'C3';
     </script>

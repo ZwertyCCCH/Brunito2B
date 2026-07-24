@@ -17,7 +17,7 @@
         </div>
 
         <h1 class="clase-titulo">🧭 Orientándonos con los Puntos Cardinales</h1>
-        <p class="clase-subtitulo">Responde las siguientes preguntas sobre los puntos cardinales, la rosa de los vientos y cómo orientarnos. ¡Cada respuesta correcta suma 1 punto!</p>
+        <p class="clase-subtitulo">Responde las siguientes preguntas. ¡Cada respuesta correcta suma 1 punto!</p>
 
         <div class="ejercicio-container">
             <div class="ejercicio-titulo">📝 Pregunta 1 de 20</div>
@@ -34,28 +34,132 @@
 
     <script src="../../js/scripts.js"></script>
     <script>
-        const preguntas = [
-            { texto: '¿Por dónde sale el Sol cada mañana?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
-            { texto: '¿Por dónde se oculta el Sol al atardecer?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
-            { texto: 'Si extiendes tu brazo derecho al este, ¿qué punto cardinal queda adelante?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
-            { texto: '¿Qué punto cardinal queda atrás si miras al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
-            { texto: '¿Cómo se llama el símbolo que indica los puntos cardinales en un mapa?', opciones: ['Brújula', 'Rosa de los vientos', 'Compás', 'Mapamundi'], correcta: 1 },
-            { texto: '¿Qué punto cardinal está entre el norte y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 0 },
-            { texto: '¿Qué punto cardinal está entre el sur y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 3 },
-            { texto: '¿Qué punto cardinal está opuesto al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
-            { texto: '¿Qué punto cardinal está opuesto al este?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
-            { texto: 'Si el sol está en el este, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 0 },
-            { texto: 'Si el sol está en el oeste, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 2 },
-            { texto: '¿Cuántos puntos cardinales principales existen?', opciones: ['2', '3', '4', '5'], correcta: 2 },
-            { texto: '¿Qué punto cardinal está entre el norte y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 1 },
-            { texto: '¿Qué punto cardinal está entre el sur y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 2 },
-            { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu izquierda?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
-            { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu derecha?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
-            { texto: '¿Qué utilizamos para orientarnos en un lugar desconocido?', opciones: ['Un mapa', 'Una brújula', 'Los puntos cardinales', 'Todas las anteriores'], correcta: 3 },
-            { texto: '¿Qué significa la palabra "este"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 2 },
-            { texto: '¿Qué significa la palabra "oeste"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 3 },
-            { texto: '¿Qué punto cardinal es el más frío en el hemisferio sur?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 }
-        ];
+    const preguntasPool = [
+        // ======== PREGUNTAS BÁSICAS (1-20) ========
+
+        // 1. Salida del sol
+        { texto: '¿Por dónde sale el Sol cada mañana?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+
+        // 2. Ocultación del sol
+        { texto: '¿Por dónde se oculta el Sol al atardecer?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+
+        // 3. Punto cardinal adelante
+        { texto: 'Si extiendes tu brazo derecho al este, ¿qué punto cardinal queda adelante?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 4. Punto cardinal atrás
+        { texto: '¿Qué punto cardinal queda atrás si miras al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+
+        // 5. Símbolo de los puntos cardinales
+        { texto: '¿Cómo se llama el símbolo que indica los puntos cardinales en un mapa?', opciones: ['Brújula', 'Rosa de los vientos', 'Compás', 'Mapamundi'], correcta: 1 },
+
+        // 6. Punto intermedio: noreste
+        { texto: '¿Qué punto cardinal está entre el norte y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 0 },
+
+        // 7. Punto intermedio: suroeste
+        { texto: '¿Qué punto cardinal está entre el sur y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 3 },
+
+        // 8. Opuesto al norte
+        { texto: '¿Qué punto cardinal está opuesto al norte?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+
+        // 9. Opuesto al este
+        { texto: '¿Qué punto cardinal está opuesto al este?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+
+        // 10. Hora del día: este = amanecer
+        { texto: 'Si el sol está en el este, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 0 },
+
+        // 11. Hora del día: oeste = atardecer
+        { texto: 'Si el sol está en el oeste, ¿qué hora del día es aproximadamente?', opciones: ['Amanecer', 'Mediodía', 'Atardecer', 'Noche'], correcta: 2 },
+
+        // 12. Número de puntos cardinales
+        { texto: '¿Cuántos puntos cardinales principales existen?', opciones: ['2', '3', '4', '5'], correcta: 2 },
+
+        // 13. Punto intermedio: noroeste
+        { texto: '¿Qué punto cardinal está entre el norte y el oeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 1 },
+
+        // 14. Punto intermedio: sureste
+        { texto: '¿Qué punto cardinal está entre el sur y el este?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Suroeste'], correcta: 2 },
+
+        // 15. Izquierda mirando al sur
+        { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu izquierda?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+
+        // 16. Derecha mirando al sur
+        { texto: 'Si estás mirando al sur, ¿qué punto cardinal está a tu derecha?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+
+        // 17. Herramientas de orientación
+        { texto: '¿Qué utilizamos para orientarnos en un lugar desconocido?', opciones: ['Un mapa', 'Una brújula', 'Los puntos cardinales', 'Todas las anteriores'], correcta: 3 },
+
+        // 18. Significado de "este"
+        { texto: '¿Qué significa la palabra "este"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 2 },
+
+        // 19. Significado de "oeste"
+        { texto: '¿Qué significa la palabra "oeste"?', opciones: ['Norte', 'Sur', 'Oriente', 'Poniente'], correcta: 3 },
+
+        // 20. Punto cardinal más frío en el sur
+        { texto: 'Si estás mirando al oeste ¿qué punto cardinal está a tu izquierda?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+
+
+        // ======== PREGUNTAS NUEVAS (21-40) ========
+
+        // 21. Punto cardinal opuesto al sur
+        { texto: '¿Qué punto cardinal está opuesto al sur?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 22. Punto cardinal opuesto al oeste
+        { texto: '¿Qué punto cardinal está opuesto al oeste?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+
+        // 23. Instrumento de orientación
+        { texto: '¿Qué instrumento utiliza una aguja imantada para señalar el norte?', opciones: ['Mapa', 'Brújula', 'Rosa de los vientos', 'GPS'], correcta: 1 },
+
+        // 24. Punto cardinal opuesto al sureste (NUEVA)
+        { texto: '¿Qué punto cardinal es opuesto al sureste?', opciones: ['Noreste', 'Noroeste', 'Suroeste', 'Oeste'], correcta: 2 },
+
+        // 25. Punto cardinal opuesto al suroeste (NUEVA)
+        { texto: '¿Qué punto cardinal es opuesto al suroeste?', opciones: ['Noreste', 'Noroeste', 'Sureste', 'Este'], correcta: 0 },
+
+        // 26. Punto cardinal opuesto al noroeste (NUEVA)
+        { texto: '¿Qué punto cardinal es opuesto al noroeste?', opciones: ['Noreste', 'Sureste', 'Suroeste', 'Sur'], correcta: 1 },
+
+        // 27. Punto cardinal opuesto al noreste (NUEVA)
+        { texto: '¿Qué punto cardinal es opuesto al noreste?', opciones: ['Noroeste', 'Sureste', 'Suroeste', 'Norte'], correcta: 1 },
+
+        // 28. Ubicación de Chile respecto de Argentina
+        { texto: '¿En qué punto cardinal está Chile respecto de Argentina?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 3 },
+
+        // 29. Ubicación de Argentina respecto de Chile
+        { texto: '¿En qué punto cardinal está Argentina respecto de Chile?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 2 },
+
+        // 30. Dirección del sol al mediodía
+        { texto: '¿Hacia qué punto cardinal apunta el sol al mediodía en el hemisferio sur?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 31. Punto cardinal en la parte superior del mapa (NUEVA)
+        { texto: '¿Qué punto cardinal se encuentra en la parte superior de un mapa?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 32. Punto cardinal que señala el norte en la rosa de los vientos (NUEVA)
+        { texto: '¿Qué punto cardinal señala el norte en una rosa de los vientos?', opciones: ['Arriba', 'Abajo', 'Derecha', 'Izquierda'], correcta: 0 },
+
+        // 33. Dirección del viento
+        { texto: 'Si estoy en Santiago. ¿en qué punto cardinal está Temuco?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 1 },
+
+        // 34. Movimiento de la Tierra
+        { texto: 'El sol sale por el este porque la Tierra gira hacia...', opciones: ['El este', 'El oeste', 'El norte', 'El sur'], correcta: 0 },
+
+        // 35. País al norte de Chile
+        { texto: '¿Qué país está al norte de Chile?', opciones: ['Argentina', 'Bolivia', 'Perú', 'Paraguay'], correcta: 2 },
+
+        // 36. Extremo sur de Chile
+        { texto: 'Si estoy en Santiago. ¿en qué punto cardinal está Antofagasta?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 37. Cordillera de los Andes al este (NUEVA)
+        { texto: '¿Qué cordillera se encuentra al este de Chile?', opciones: ['Cordillera de la Costa', 'Cordillera de los Andes', 'Cordillera del Pacífico', 'Cordillera de los Apalaches'], correcta: 1 },
+
+        // 38. Océano Pacífico al oeste (NUEVA)
+        { texto: '¿Qué océano se encuentra al oeste de Chile?', opciones: ['Atlántico', 'Pacífico', 'Índico', 'Glacial'], correcta: 1 },
+
+        // 39. Ubicación de Rapa Nui
+        { texto: 'Si estoy en Punta Arenas. ¿en qué punto cardinal está Santiago?', opciones: ['Norte', 'Sur', 'Este', 'Oeste'], correcta: 0 },
+
+        // 40. NO es un punto cardinal intermedio
+        { texto: '¿Cuál de estos NO es un punto cardinal intermedio?', opciones: ['Noreste', 'Noroeste', 'Mediodía', 'Suroeste'], correcta: 2 }
+    ];
 
         const CLASE_ID = 'C2';
     </script>
