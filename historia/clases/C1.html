@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>🌎 Clase 1 - Historia</title>
+    <title>🌍 Clase 1 - Historia</title>
     <link rel="stylesheet" href="../../css/estilo.css" />
 </head>
 <body>
@@ -18,43 +18,182 @@
         </div>
 
         <h1 class="clase-titulo">🌎 ¿Dónde está Chile?</h1>
-        <p class="clase-subtitulo">Aprende a ubicar nuestro país en el mundo y sus países vecinos</p>
 
-        <!-- CONTENIDO DE LA CLASE -->
-        <div class="clase-cuerpo">
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>Chile</strong> es un país muy largo y delgado. Está en el continente <strong>América</strong>, en la parte sur llamada <strong>América del Sur</strong>.</p>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p>Pero Chile también tiene territorio en otros continentes:</p>
-            <ul>
-                <li>🌎 <strong>América</strong> (la mayor parte)</li>
-                <li>❄️ <strong>Antártica</strong> (una base en el polo sur)</li>
-                <li>🏝️ <strong>Oceanía</strong> (la Isla de Pascua o Rapa Nui)</li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🌎 ¿Dónde está Chile?</h2>
+                    <p>Chile es un país <strong>muy largo y delgado</strong>. Se extiende desde el norte hasta el sur de América del Sur.</p>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/dJbjhqpV/image.png" 
+                             alt="Mapa de América del Sur con Chile destacado" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Chile tiene más de 4.000 km de largo?</p>
+                </div>
+            </div>
 
-            <p>Por eso decimos que Chile es un país <strong>tricontinental</strong> (tiene territorio en tres continentes).</p>
+            <!-- Slide 2: Chile es tricontinental -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🌍 Chile es tricontinental</h2>
+                    <p>Chile tiene territorio en <strong>tres continentes</strong> diferentes:</p>
+                    <ul class="slide-lista">
+                        <li>🌎 <strong>América</strong> — la mayor parte del país</li>
+                        <li>🏝️ <strong>Oceanía</strong> — la Isla de Pascua (Rapa Nui)</li>
+                        <li>❄️ <strong>Antártica</strong> — una base científica chilena</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/8L9rb2SR/image.png" 
+                             alt="Chile en tres continentes" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Chile es uno de los pocos países del mundo que tiene territorio en tres continentes.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>📌 Países vecinos de Chile:</strong></p>
-            <ul>
-                <li>⬆️ <strong>Perú</strong> (al norte)</li>
-                <li>⬆️➡️ <strong>Bolivia</strong> (al norte y este)</li>
-                <li>➡️ <strong>Argentina</strong> (al este)</li>
-                <li>⬅️ <strong>Océano Pacífico</strong> (al oeste)</li>
-            </ul>
+            <!-- Slide 3: Países vecinos -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🗺️ Países vecinos de Chile</h2>
+                    <p>Chile comparte fronteras con tres países:</p>
+                    <ul class="slide-lista">
+                        <li>⬆️ <strong>Perú</strong> — al norte</li>
+                        <li>⬆️➡️ <strong>Bolivia</strong> — al noreste</li>
+                        <li>➡️ <strong>Argentina</strong> — al este</li>
+                    </ul>
+                    <p>Y al oeste, Chile está bañado por el <strong>Océano Pacífico</strong>.</p>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/qM2kBTLz/image.png" 
+                             alt="Países limítrofes de Chile" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
 
-            <div style="background:#f0f7ff;padding:15px;border-radius:15px;margin:15px 0;border-left:6px solid #F5A623;">
-                <p><strong>🧭 Puntos cardinales:</strong> El <strong>este</strong> es por donde sale el sol. El <strong>oeste</strong> es por donde se esconde. El <strong>norte</strong> queda adelante y el <strong>sur</strong> atrás.</p>
+            <!-- Slide 4: Puntos cardinales -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🧭 Puntos cardinales</h2>
+                    <p>Los puntos cardinales nos ayudan a ubicarnos:</p>
+                    <ul class="slide-lista">
+                        <li>🌅 <strong>Este</strong> — por donde sale el sol</li>
+                        <li>🌇 <strong>Oeste</strong> — por donde se oculta el sol</li>
+                        <li>⬆️ <strong>Norte</strong> — arriba en el mapa</li>
+                        <li>⬇️ <strong>Sur</strong> — abajo en el mapa</li>
+                    </ul>
+                    <div class="slide-truco">
+                        💡 <strong>Truco:</strong> Extiende tu brazo derecho al este y el izquierdo al oeste. ¡El norte queda adelante!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: ACTIVIDAD - Drag & Drop (sin orden) -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Completa el texto</h2>
+                    <p>Arrastra las palabras a los espacios en blanco. ¡Puedes colocarlas en cualquier orden!</p>
+                    <div id="actividad-dragdrop"></div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con la ubicación de Chile.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Resumen -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ Chile está en <strong>América del Sur</strong></div>
+                        <div class="resumen-item">✅ Chile es <strong>tricontinental</strong> (América, Oceanía y Antártica)</div>
+                        <div class="resumen-item">✅ Los países vecinos son <strong>Perú, Bolivia y Argentina</strong></div>
+                        <div class="resumen-item">✅ Los puntos cardinales son <strong>Norte, Sur, Este y Oeste</strong></div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <!-- NAVEGACIÓN -->
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E1.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E1.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C1
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA DRAG & DROP (SIN ORDEN)
+        // ==========================================
+        const datosDragDrop = {
+            opciones: ['América', 'Oceanía', 'Antártica', 'Perú', 'Bolivia', 'Argentina'],
+            espacios: [
+                { id: 'espacio1', palabraCorrecta: 'América', pista: 'Es el continente donde vivimos' },
+                { id: 'espacio2', palabraCorrecta: 'Oceanía', pista: 'Aquí está la Isla de Pascua' },
+                { id: 'espacio3', palabraCorrecta: 'Antártica', pista: 'Aquí hay una base científica chilena' }
+            ],
+            texto: 'Chile tiene territorio en ______, ______ y ______.'
+        };
+
+        // ==========================================
+        // 2. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['CHILE', 'PERU', 'BOLIVIA', 'ARGENTINA', 'PACIFICO'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Drag & Drop (sin orden)
+            iniciarDragDrop('actividad-dragdrop', datosDragDrop);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

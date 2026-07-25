@@ -867,3 +867,994 @@ img, svg {
         filter: brightness(1.3);
     }
 }
+
+/* ==========================================
+   ESTILOS PARA DIAPOSITIVAS (SLIDES)
+   ========================================== */
+
+/* Contenedor principal de slides */
+.slides-container {
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+/* Cada diapositiva */
+.diapositiva {
+    display: none;
+    animation: fadeSlide 0.5s ease forwards;
+    padding: 10px 5px;
+}
+
+.diapositiva.activa {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Contenido de la diapositiva */
+.slide-contenido {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 2px solid #e8f0fe;
+}
+
+.slide-contenido h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.slide-contenido p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.slide-contenido ul.slide-lista {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0;
+}
+
+.slide-contenido ul.slide-lista li {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f8faff;
+    border-radius: 12px;
+    border-left: 4px solid #F5A623;
+    font-size: 1.05rem;
+}
+
+.slide-contenido ul.slide-lista li strong {
+    color: #2c3e50;
+}
+
+/* Imagen placeholder en slides */
+.slide-imagen {
+    margin: 15px 0;
+}
+
+.placeholder-imagen {
+    background: #e8f0fe;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #4A90D9;
+    border: 2px dashed #b0c4de;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dato curioso en slides */
+.slide-dato {
+    background: #fff8e7;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border-left: 4px solid #F5A623;
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.slide-dato strong {
+    color: #2c3e50;
+}
+
+/* Truco en slides */
+.slide-truco {
+    background: #e8f5e9;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border-left: 4px solid #2ecc71;
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.slide-truco strong {
+    color: #1a7a3a;
+}
+
+/* Pregunta en slides */
+.slide-pregunta {
+    background: #f0f7ff;
+    padding: 12px 18px;
+    border-radius: 12px;
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Resumen final */
+.slide-resumen {
+    margin: 15px 0;
+}
+
+.resumen-item {
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f0f7ff;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    border-left: 4px solid #4A90D9;
+}
+
+.resumen-item strong {
+    color: #2c3e50;
+}
+
+.slide-fin {
+    text-align: center;
+    padding: 20px;
+    background: #fff8e7;
+    border-radius: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #F5A623;
+    margin-top: 15px;
+}
+
+/* ==========================================
+   FOOTER DE DIAPOSITIVAS (fijo)
+   ========================================== */
+
+.footer-slides {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    border: 2px solid #e8f0fe;
+    z-index: 10;
+}
+
+.footer-slides .btn-slide {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 3px solid #4A90D9;
+    background: white;
+    color: #4A90D9;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-slides .btn-slide:hover:not(:disabled) {
+    background: #e8f0fe;
+}
+
+.footer-slides .btn-slide:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.footer-slides .btn-slide:active:not(:disabled) {
+    transform: scale(0.92);
+}
+
+.footer-slides .slide-contador {
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+/* Puntos indicadores */
+.indicador-slides {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.punto-slide {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d0e0fc;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    padding: 0;
+}
+
+.punto-slide.activo {
+    background: #4A90D9;
+    transform: scale(1.2);
+}
+
+.punto-slide:hover {
+    background: #4A90D9;
+}
+
+/* Acciones finales en última slide */
+.acciones-finales {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.acciones-finales .btn-accion {
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.acciones-finales .btn-volver {
+    background: #e8f0fe;
+    color: #4A90D9;
+}
+
+.acciones-finales .btn-volver:hover {
+    background: #d0e0fc;
+}
+
+.acciones-finales .btn-ejercicio {
+    background: #F5A623;
+    color: white;
+}
+
+.acciones-finales .btn-ejercicio:hover {
+    background: #E09600;
+}
+
+/* ==========================================
+   ACTIVIDAD: DRAG & DROP (completar texto)
+   ========================================== */
+
+.dragdrop-texto {
+    font-size: 1.1rem;
+    line-height: 2.2;
+    padding: 15px;
+    background: #f8faff;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    min-height: 80px;
+    border: 2px dashed #d0e0fc;
+}
+
+.dragdrop-espacio {
+    display: inline-block;
+    min-width: 80px;
+    padding: 4px 12px;
+    border: 3px dashed #b0c4de;
+    border-radius: 10px;
+    background: white;
+    color: #999;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    min-height: 36px;
+    vertical-align: middle;
+}
+
+.dragdrop-espacio.completado {
+    border: 3px solid #2ecc71;
+    background: #e8f5e9;
+    color: #1a7a3a;
+}
+
+.dragdrop-espacio.correcto {
+    border-color: #2ecc71;
+    background: #d5f5e3;
+    color: #1a7a3a;
+}
+
+.dragdrop-espacio.incorrecto {
+    border-color: #e74c3c;
+    background: #fadbd8;
+    color: #922b21;
+    animation: shake 0.4s ease;
+}
+
+.dragdrop-espacio.incompleto {
+    border-color: #f39c12;
+    background: #fdebd0;
+    animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-8px); }
+    40% { transform: translateX(8px); }
+    60% { transform: translateX(-4px); }
+    80% { transform: translateX(4px); }
+}
+
+.dragdrop-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 15px;
+    background: white;
+    border-radius: 15px;
+    border: 2px solid #e8f0fe;
+    margin-bottom: 15px;
+    min-height: 60px;
+}
+
+.dragdrop-opcion {
+    padding: 10px 20px;
+    background: #4A90D9;
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: grab;
+    user-select: none;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(74, 144, 217, 0.2);
+}
+
+.dragdrop-opcion:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+.dragdrop-opcion:active {
+    cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.dragdrop-opcion.usada {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+}
+
+.btn-dragdrop-verificar {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn-dragdrop-verificar:hover {
+    background: #27ae60;
+}
+
+.btn-dragdrop-verificar:active {
+    transform: scale(0.95);
+}
+
+.dragdrop-feedback {
+    margin-top: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feedback-correcto {
+    padding: 12px 20px;
+    background: #d5f5e3;
+    border-radius: 12px;
+    color: #1a7a3a;
+    border: 2px solid #2ecc71;
+}
+
+.feedback-incorrecto {
+    padding: 12px 20px;
+    background: #fadbd8;
+    border-radius: 12px;
+    color: #922b21;
+    border: 2px solid #e74c3c;
+}
+
+.feedback-parcial {
+    padding: 12px 20px;
+    background: #fdebd0;
+    border-radius: 12px;
+    color: #935e38;
+    border: 2px solid #f39c12;
+}
+
+/* ==========================================
+   ACTIVIDAD: ORDENAR SECUENCIA
+   ========================================== */
+
+.ordenar-container {
+    padding: 10px 0;
+}
+
+.ordenar-instruccion {
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.ordenar-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ordenar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: white;
+    border: 3px solid #d0e0fc;
+    border-radius: 12px;
+    cursor: grab;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.ordenar-item:hover {
+    border-color: #4A90D9;
+    background: #f8faff;
+}
+
+.ordenar-item:active {
+    cursor: grabbing;
+    transform: scale(0.98);
+}
+
+.ordenar-item.correcto {
+    border-color: #2ecc71;
+    background: #e8f5e9;
+}
+
+.ordenar-item.incorrecto {
+    border-color: #e74c3c;
+    background: #fadbd8;
+    animation: shake 0.4s ease;
+}
+
+.ordenar-numero {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #4A90D9;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.ordenar-texto {
+    flex: 1;
+    color: #2c3e50;
+}
+
+.btn-ordenar-verificar {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: block;
+    margin: 10px auto;
+}
+
+.btn-ordenar-verificar:hover {
+    background: #27ae60;
+}
+
+.btn-ordenar-verificar:active {
+    transform: scale(0.95);
+}
+
+.ordenar-feedback {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ==========================================
+   ACTIVIDAD: LÍNEA DE TIEMPO INTERACTIVA
+   ========================================== */
+
+.linea-tiempo-container {
+    padding: 10px 0;
+}
+
+.linea-tiempo-linea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.linea-tiempo-conector {
+    flex: 1;
+    height: 4px;
+    background: #d0e0fc;
+    min-width: 20px;
+    border-radius: 2px;
+}
+
+.linea-tiempo-punto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px 8px;
+    border-radius: 12px;
+    min-width: 50px;
+}
+
+.linea-tiempo-punto:hover {
+    background: #f0f7ff;
+}
+
+.linea-tiempo-punto.activo {
+    background: #fff8e7;
+}
+
+.linea-tiempo-punto .linea-tiempo-año {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #d0e0fc;
+    color: #4A90D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+}
+
+.linea-tiempo-punto.activo .linea-tiempo-año {
+    background: #4A90D9;
+    color: white;
+    border-color: #F5A623;
+    transform: scale(1.1);
+}
+
+.linea-tiempo-punto:hover .linea-tiempo-año {
+    border-color: #4A90D9;
+}
+
+.linea-tiempo-detalle {
+    margin-top: 15px;
+    padding: 20px;
+    background: #f8faff;
+    border-radius: 15px;
+    border: 2px solid #e8f0fe;
+    min-height: 100px;
+}
+
+.linea-tiempo-info h3 {
+    color: #2c3e50;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.linea-tiempo-info p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.linea-tiempo-info img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.linea-tiempo-fecha {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #4A90D9;
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   ACTIVIDAD: SOPA DE LETRAS
+   ========================================== */
+
+.sopa-letras-container {
+    padding: 10px 0;
+}
+
+.sopa-letras-instruccion {
+    text-align: center;
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.sopa-letras-palabras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 15px;
+    padding: 12px;
+    background: #f8faff;
+    border-radius: 12px;
+    border: 2px solid #e8f0fe;
+}
+
+.sopa-letras-palabra {
+    padding: 6px 16px;
+    background: white;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    border: 2px solid #d0e0fc;
+    transition: all 0.3s;
+}
+
+.sopa-letras-palabra.encontrada {
+    background: #2ecc71;
+    color: white;
+    border-color: #2ecc71;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.sopa-letras-celda:hover {
+    background: #e8f0fe;
+    border-color: #4A90D9;
+}
+
+.sopa-letras-celda.seleccionada {
+    background: #4A90D9;
+    color: white;
+    border-color: #4A90D9;
+}
+
+.sopa-letras-celda.encontrada {
+    background: #2ecc71;
+    color: white;
+    border-color: #2ecc71;
+}
+
+.sopa-letras-feedback {
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVE PARA DIAPOSITIVAS Y ACTIVIDADES
+   ========================================== */
+
+@media (max-width: 600px) {
+    .slide-contenido {
+        padding: 18px 15px;
+    }
+
+    .slide-contenido h2 {
+        font-size: 1.3rem;
+    }
+
+    .slide-contenido p {
+        font-size: 0.95rem;
+    }
+
+    .slide-contenido ul.slide-lista li {
+        font-size: 0.95rem;
+        padding: 8px 12px;
+    }
+
+    .footer-slides {
+        padding: 10px 15px;
+        gap: 10px;
+        border-radius: 15px;
+    }
+
+    .footer-slides .btn-slide {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .footer-slides .slide-contador {
+        font-size: 0.85rem;
+        min-width: 50px;
+    }
+
+    .acciones-finales .btn-accion {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .dragdrop-texto {
+        font-size: 0.95rem;
+        padding: 10px;
+        line-height: 2;
+    }
+
+    .dragdrop-espacio {
+        min-width: 60px;
+        padding: 2px 8px;
+        font-size: 0.9rem;
+        min-height: 30px;
+    }
+
+    .dragdrop-opcion {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+
+    .dragdrop-opciones {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .linea-tiempo-punto .linea-tiempo-año {
+        width: 38px;
+        height: 38px;
+        font-size: 0.75rem;
+    }
+
+    .linea-tiempo-punto {
+        min-width: 40px;
+    }
+
+    .sopa-letras-palabra {
+        font-size: 0.8rem;
+        padding: 4px 12px;
+    }
+
+    .ordenar-item {
+        padding: 10px 14px;
+        font-size: 0.9rem;
+    }
+
+    .ordenar-numero {
+        width: 26px;
+        height: 26px;
+        font-size: 0.8rem;
+    }
+
+    .btn-dragdrop-verificar,
+    .btn-ordenar-verificar {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+        width: 100%;
+    }
+
+    .linea-tiempo-detalle {
+        padding: 15px;
+    }
+
+    .linea-tiempo-info h3 {
+        font-size: 1rem;
+    }
+
+    .linea-tiempo-info p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .slide-contenido {
+        padding: 15px 12px;
+    }
+
+    .slide-contenido h2 {
+        font-size: 1.1rem;
+    }
+
+    .footer-slides {
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .footer-slides .btn-slide {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .footer-slides .slide-contador {
+        font-size: 0.8rem;
+        min-width: 40px;
+    }
+
+    .acciones-finales .btn-accion {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .dragdrop-texto {
+        font-size: 0.85rem;
+    }
+
+    .dragdrop-espacio {
+        min-width: 50px;
+        font-size: 0.8rem;
+        padding: 2px 6px;
+    }
+
+    .dragdrop-opcion {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* ==========================================
+   TRANSICIÓN ENTRE SLIDES
+   ========================================== */
+
+.diapositiva {
+    animation-duration: 0.4s;
+}
+
+/* ==========================================
+   SOPORTE PARA DRAG & DROP EN MÓVILES (touch)
+   ========================================== */
+
+@media (pointer: coarse) {
+    .dragdrop-opcion {
+        cursor: default;
+        touch-action: manipulation;
+    }
+
+    .dragdrop-opcion:active {
+        transform: scale(0.92);
+    }
+
+    .ordenar-item {
+        cursor: default;
+        touch-action: manipulation;
+    }
+
+    .ordenar-item:active {
+        transform: scale(0.96);
+    }
+}
+/* ==========================================
+   CORRECCIONES RESPONSIVE - SOPA DE LETRAS
+   ========================================== */
+
+.sopa-letras-grid {
+    display: grid;
+    gap: 4px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+    background: #f8faff;
+    border-radius: 15px;
+    border: 2px solid #e8f0fe;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.sopa-letras-celda {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #2c3e50;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 2px solid transparent;
+    user-select: none;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 45px;
+    max-height: 45px;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .sopa-letras-grid {
+        max-width: 320px;
+        gap: 3px;
+        padding: 8px;
+    }
+    
+    .sopa-letras-celda {
+        font-size: 0.85rem;
+        min-width: 24px;
+        min-height: 24px;
+        max-width: 36px;
+        max-height: 36px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sopa-letras-grid {
+        max-width: 250px;
+        gap: 2px;
+        padding: 6px;
+    }
+    
+    .sopa-letras-celda {
+        font-size: 0.7rem;
+        min-width: 18px;
+        min-height: 18px;
+        max-width: 28px;
+        max-height: 28px;
+        border-radius: 4px;
+    }
+    
+    .sopa-letras-palabra {
+        font-size: 0.75rem;
+        padding: 3px 8px;
+    }
+}
