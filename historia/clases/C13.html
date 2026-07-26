@@ -9,62 +9,255 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 13
+                🏛️ Historia · Clase 13
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
         <h1 class="clase-titulo">🏛️ Patrimonio e Instituciones</h1>
-        <p class="clase-subtitulo">Conoce el patrimonio natural y cultural, y quiénes lo protegen</p>
 
-        <div class="clase-cuerpo">
-            <p>El <strong>patrimonio</strong> es el conjunto de elementos que deben preservarse por la importancia que tienen para una comunidad.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🌿 Patrimonio natural:</strong></p>
-            <ul>
-                <li>🌳 <strong>Parques nacionales</strong> (ej. Torres del Paine, Pumalín)</li>
-                <li>🌋 <strong>Volcanes, lagos, ríos y glaciares</strong></li>
-                <li>🦙 <strong>Flora y fauna</strong> nativa</li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🏛️ Patrimonio cultural:</strong></p>
-            <ul>
-                <li>🗿 <strong>Moáis</strong> de Rapa Nui</li>
-                <li>⛪ <strong>Iglesias</strong> (ej. Iglesia de Parinacota)</li>
-                <li>🎭 <strong>Tradiciones y costumbres</strong></li>
-                <li>📜 <strong>Museos, bibliotecas y archivos</strong></li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🏛️ ¿Qué es el patrimonio?</h2>
+                    <p>El <strong>patrimonio</strong> es el conjunto de elementos que debemos preservar por su importancia para nuestra comunidad.</p>
+                    <ul class="slide-lista">
+                        <li>🌿 <strong>Patrimonio natural</strong> — la naturaleza (parques, ríos, volcanes)</li>
+                        <li>🏛️ <strong>Patrimonio cultural</strong> — lo creado por humanos (museos, iglesias, tradiciones)</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El patrimonio nos conecta con nuestra historia y nuestra identidad.
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Chile tiene lugares declarados Patrimonio de la Humanidad por la UNESCO?</p>
+                </div>
+            </div>
 
-            <p><strong>🏛️ Instituciones que protegen el patrimonio:</strong></p>
+            <!-- Slide 2: Patrimonio natural -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🌿 Patrimonio natural</h2>
+                    <p>El <strong>patrimonio natural</strong> está formado por los elementos de la naturaleza:</p>
+                    <ul class="slide-lista">
+                        <li>🏔️ <strong>Parques nacionales</strong> — como Torres del Paine y Lauca</li>
+                        <li>🌊 <strong>Ríos, lagos y volcanes</strong></li>
+                        <li>🌳 <strong>Flora</strong> — plantas nativas como el alerce</li>
+                        <li>🦙 <strong>Fauna</strong> — animales como el pudú y el guanaco</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/T3722qd/image.png" 
+                             alt="Parque Nacional 7 tazas" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El alerce es un árbol que puede vivir más de 3.000 años.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🌱 Ministerio del Medio Ambiente</strong></p>
-            <ul>
-                <li>Protege y preserva el <strong>medioambiente</strong> y los <strong>recursos naturales</strong></li>
-                <li>Educa a la población en temas ambientales</li>
-            </ul>
+            <!-- Slide 3: Patrimonio cultural -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🏛️ Patrimonio cultural</h2>
+                    <p>El <strong>patrimonio cultural</strong> está formado por lo que los humanos han creado:</p>
+                    <ul class="slide-lista">
+                        <li>🏛️ <strong>Museos</strong> — donde se conservan objetos históricos</li>
+                        <li>⛪ <strong>Iglesias</strong> — como la Iglesia de Parinacota</li>
+                        <li>🗿 <strong>Moáis</strong> — las estatuas de Rapa Nui</li>
+                        <li>🎭 <strong>Tradiciones</strong> — como la cueca y las fiestas costumbristas</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los moáis de Rapa Nui son Patrimonio de la Humanidad.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🎨 Ministerio de las Culturas, las Artes y el Patrimonio</strong></p>
-            <ul>
-                <li>Protege y difunde el <strong>patrimonio cultural</strong></li>
-                <li>Administra <strong>museos, bibliotecas y archivos</strong></li>
-            </ul>
+            <!-- Slide 4: Instituciones que protegen el patrimonio -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🏛️ Instituciones que protegen el patrimonio</h2>
+                    <p>Varias instituciones protegen nuestro patrimonio:</p>
+                    <ul class="slide-lista">
+                        <li>🌱 <strong>Ministerio del Medio Ambiente</strong> — protege la naturaleza</li>
+                        <li>🌳 <strong>CONAF</strong> — cuida los bosques y parques nacionales</li>
+                        <li>🎨 <strong>Ministerio de las Culturas</strong> — protege el patrimonio cultural</li>
+                        <li>📚 <strong>Consejo Nacional del Libro</strong> — promueve la lectura</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> CONAF también se encarga de prevenir incendios forestales.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🌳 Otras instituciones:</strong></p>
-            <ul>
-                <li>🌲 <strong>CONAF</strong> (Corporación Nacional Forestal)</li>
-                <li>📚 <strong>Consejo Nacional del Libro y la Lectura</strong></li>
-                <li>🎵 <strong>Consejo de Fomento de la Música Nacional</strong></li>
-            </ul>
+            <!-- Slide 5: ¿Cómo cuidamos el patrimonio? -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🤝 ¿Cómo cuidamos el patrimonio?</h2>
+                    <p>Todos podemos ayudar a cuidar el patrimonio:</p>
+                    <ul class="slide-lista">
+                        <li>🗑️ <strong>No botar basura</strong> en parques y playas</li>
+                        <li>🏛️ <strong>Visitar museos</strong> y aprender sobre nuestra historia</li>
+                        <li>🌳 <strong>Cuidar la naturaleza</strong> y no dañar los ecosistemas</li>
+                        <li>📖 <strong>Conocer y valorar</strong> nuestras tradiciones</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Cuidar el patrimonio es una responsabilidad de todos.
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Pequeñas acciones como reciclar ayudan a proteger el patrimonio natural?</p>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona las instituciones</h2>
+                    <p>Haz clic en una institución de la izquierda y luego en su función de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con el patrimonio y las instituciones.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ El <strong>patrimonio</strong> puede ser natural o cultural</div>
+                        <div class="resumen-item">✅ El <strong>patrimonio natural</strong> incluye parques, ríos y volcanes</div>
+                        <div class="resumen-item">✅ El <strong>patrimonio cultural</strong> incluye museos, iglesias y tradiciones</div>
+                        <div class="resumen-item">✅ <strong>CONAF</strong> y el <strong>Ministerio de las Culturas</strong> protegen el patrimonio</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E13.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E13.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C13
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'El patrimonio natural incluye parques nacionales, ríos y volcanes.', 
+                respuestaCorrecta: true,
+                explicacion: 'El patrimonio natural son los elementos de la naturaleza que debemos preservar.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'Los museos son parte del patrimonio natural de Chile.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los museos son parte del patrimonio cultural, no del natural.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'CONAF es la institución que quema los bosques y parques nacionales.', 
+                respuestaCorrecta: false,
+                explicacion: 'CONAF es la Corporación Nacional Forestal que cuida los bosques de Chile.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El Ministerio de las Culturas protege el transporte público.', 
+                respuestaCorrecta: false,
+                explicacion: 'El Ministerio de las Culturas, las Artes y el Patrimonio protege el patrimonio cultural.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'La flora y fauna no son parte del patrimonio natural.', 
+                respuestaCorrecta: false,
+                explicacion: 'La flora (plantas) y la fauna (animales) son parte importante del patrimonio natural.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Ministerio del Medio Ambiente', derecha: 'Protege la naturaleza y los recursos' },
+            { id: '2', izquierda: 'CONAF', derecha: 'Cuida los bosques y parques nacionales' },
+            { id: '3', izquierda: 'Ministerio de las Culturas', derecha: 'Protege el patrimonio cultural' },
+            { id: '4', izquierda: 'Consejo del Libro', derecha: 'Promueve la lectura' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['PATRIMONIO', 'NATURAL', 'CULTURAL', 'CONAF', 'MUSEO', 'PARQUE', 'FLORA'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

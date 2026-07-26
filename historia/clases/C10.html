@@ -9,55 +9,299 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 10
+                ⛵ Historia · Clase 10
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
-        <h1 class="clase-titulo">⛵ La Llegada de los Españoles</h1>
-        <p class="clase-subtitulo">Expediciones, línea de tiempo y el mestizaje</p>
+        <h1 class="clase-titulo">⛵ Llegada de los Españoles</h1>
 
-        <div class="clase-cuerpo">
-            <p><strong>📅 Línea de tiempo de la llegada de los españoles:</strong></p>
-            <ul>
-                <li><strong>1492</strong> → Cristóbal Colón llega a América</li>
-                <li><strong>1520</strong> → Fernando de Magallanes navega por el <strong>estrecho de Magallanes</strong></li>
-                <li><strong>1536</strong> → Diego de Almagro llega al actual territorio chileno</li>
-                <li><strong>1540</strong> → Pedro de Valdivia llega a Chile y funda las primeras ciudades</li>
-            </ul>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>¿Por qué vinieron?</strong></p>
-            <ul>
-                <li>💎 Buscar <strong>riquezas</strong> (oro, plata)</li>
-                <li>🌾 Buscar <strong>tierras</strong> para cultivar</li>
-                <li>⚔️ Buscar <strong>poder y aventuras</strong></li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>👥 Personas importantes:</strong></p>
-            <ul>
-                <li><strong>Pedro de Valdivia</strong> → fundó Santiago y otras ciudades</li>
-                <li><strong>Inés de Suárez</strong> → acompañó a Valdivia</li>
-            </ul>
-
-            <p><strong>⚠️ Personas africanas:</strong></p>
-            <ul>
-                <li>Llegaron en <strong>condición de esclavos</strong></li>
-                <li>Sus descendientes hoy son reconocidos como <strong>Pueblo Tribal Afrodescendiente Chileno</strong></li>
-            </ul>
-
-            <div style="background:#f0f7ff;padding:15px;border-radius:15px;margin:15px 0;border-left:6px solid #F5A623;">
-                <p><strong>🔍 Mestizaje:</strong> La mezcla entre españoles y pueblos originarios dio origen a la <strong>cultura chilena mestiza</strong>.</p>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>⛵ La llegada de los españoles</h2>
+                    <p>En el siglo XVI, <strong>expediciones españolas</strong> llegaron al territorio que hoy es Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🚢 <strong>1492</strong> — Colón llega a América</li>
+                        <li>🚢 <strong>1520</strong> — Magallanes navega el estrecho</li>
+                        <li>🚢 <strong>1536</strong> — Almagro llega a Chile</li>
+                        <li>🚢 <strong>1540</strong> — Valdivia llega a Chile</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/SDFQhJPJ/image.png" 
+                             alt="llegada españoles" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Los españoles llamaron "Nuevo Mundo" al continente americano?</p>
+                </div>
             </div>
+
+            <!-- Slide 2: La conquista española -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>⚔️ La conquista española</h2>
+                    <p>La llegada de los españoles cambió para siempre la historia de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🏛️ Fundaron <strong>ciudades</strong> como Santiago, Valparaíso y Concepción</li>
+                        <li>⛪ Trajeron la <strong>religión católica</strong> y construyeron iglesias</li>
+                        <li>🗣️ Impusieron el <strong>idioma español</strong> como oficial</li>
+                        <li>🔄 Se produjo el <strong>mestizaje</strong> entre españoles y pueblos originarios</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los españoles también trajeron animales que no existían en América, como vacas, caballos y ovejas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: ¿Por qué vinieron? -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>💎 ¿Por qué vinieron?</h2>
+                    <p>Los españoles vinieron por varias razones:</p>
+                    <ul class="slide-lista">
+                        <li>💎 <strong>Riquezas</strong> — buscaban oro y plata</li>
+                        <li>🌾 <strong>Tierras</strong> — para cultivar y vivir</li>
+                        <li>⚔️ <strong>Poder</strong> — para conquistar territorios</li>
+                        <li>⛪ <strong>Religión</strong> — para difundir el catolicismo</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/sdh381rV/image.png" 
+                             alt="riquezas" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los españoles también buscaban la "ciudad de oro" llamada El Dorado.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Personas importantes -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>👤 Personas importantes</h2>
+                    <p>Estos son los personajes clave en la llegada de los españoles a Chile:</p>
+                    <ul class="slide-lista">
+                        <li>
+                            <strong>👤 Pedro de Valdivia</strong><br>
+                            Fue el <strong>conquistador español</strong> que llegó a Chile en <strong>1540</strong>.
+                            Fundó las primeras ciudades, incluyendo <strong>Santiago</strong> en 1541.
+                            También fundó Concepción, La Serena y Valdivia.
+                        </li>
+                        <li>
+                            <strong>👤 Inés de Suárez</strong><br>
+                            Fue la <strong>primera mujer española</strong> en llegar a Chile.
+                            Acompañó a Pedro de Valdivia en su expedición.
+                            Participó en la <strong>defensa de Santiago</strong> durante un ataque mapuche.
+                        </li>
+                        <li>
+                            <strong>👤 Diego de Almagro</strong><br>
+                            Fue un <strong>explorador español</strong> que llegó a Chile en <strong>1536</strong>.
+                            Recorrió el territorio desde el norte hasta el río Maule.
+                            Fue el <strong>primer español</strong> en pisar el actual territorio chileno.
+                        </li>
+                        <li>
+                            <strong>👤 Fernando de Magallanes</strong><br>
+                            Fue un <strong>navegante portugués</strong> al servicio de España.
+                            En <strong>1520</strong> descubrió el <strong>estrecho que lleva su nombre</strong>.
+                            Fue el primero en navegar desde el océano Atlántico hasta el Pacífico por el sur de América.
+                        </li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/yFb5C1CG/Chat-GPT-Image-Jul-26-2026-02-08-23-AM.png" 
+                             alt="personajes" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Pedro de Valdivia llamó "Santiago del Nuevo Extremo" a la ciudad que fundó.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Mestizaje -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🔄 Mestizaje</h2>
+                    <p>El <strong>mestizaje</strong> es la mezcla entre españoles y pueblos originarios.</p>
+                    <ul class="slide-lista">
+                        <li>🌍 Mezcla de <strong>culturas</strong></li>
+                        <li>🗣️ Mezcla de <strong>idiomas</strong></li>
+                        <li>🍲 Mezcla de <strong>comidas</strong></li>
+                        <li>⛪ Mezcla de <strong>religiones</strong></li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El mestizaje dio origen a la cultura chilena actual.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Línea de tiempo -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📅 Actividad: Línea de tiempo</h2>
+                    <p>Explora los eventos importantes de la historia de Chile.</p>
+                    <div id="actividad-lineatiempo"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con la llegada de los españoles.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ Los españoles llegaron en el <strong>siglo XVI</strong></div>
+                        <div class="resumen-item">✅ <strong>Colón</strong> llegó a América en <strong>1492</strong></div>
+                        <div class="resumen-item">✅ <strong>Valdivia</strong> fundó Santiago en <strong>1541</strong></div>
+                        <div class="resumen-item">✅ El <strong>mestizaje</strong> mezcló culturas</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E10.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E10.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C10
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'Cristóbal Colón llegó a América en el año 1452.', 
+                respuestaCorrecta: false,
+                explicacion: 'Colón llegó a América en 1492, iniciando el contacto entre Europa y América.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'Pedro de Valdivia llegó a Chile en el año 1492.', 
+                respuestaCorrecta: false,
+                explicacion: 'Pedro de Valdivia llegó a Chile en 1540, no en 1492.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Los españoles vinieron a Chile buscando riquezas y tierras.', 
+                respuestaCorrecta: true,
+                explicacion: 'Los españoles buscaban oro, plata, tierras y poder.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El mestizaje es la mezcla entre españoles y pueblos originarios.', 
+                respuestaCorrecta: true,
+                explicacion: 'El mestizaje dio origen a la cultura chilena actual.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'Diego de Almagro fundó la ciudad de Santiago.', 
+                respuestaCorrecta: false,
+                explicacion: 'Pedro de Valdivia fundó Santiago. Diego de Almagro exploró el territorio.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA LÍNEA DE TIEMPO
+        // ==========================================
+        const datosLineaTiempo = [
+            { 
+                año: '1492', 
+                titulo: 'Cristóbal Colón llega a América', 
+                descripcion: 'Colón llega al continente americano, iniciando el contacto entre Europa y América.'
+            },
+            { 
+                año: '1520', 
+                titulo: 'Magallanes navega el estrecho', 
+                descripcion: 'Fernando de Magallanes navega por el estrecho que lleva su nombre.'
+            },
+            { 
+                año: '1536', 
+                titulo: 'Diego de Almagro llega a Chile', 
+                descripcion: 'Diego de Almagro llega al actual territorio chileno por el norte.'
+            },
+            { 
+                año: '1540', 
+                titulo: 'Pedro de Valdivia llega a Chile', 
+                descripcion: 'Pedro de Valdivia llega a Chile y funda las primeras ciudades.'
+            }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['COLON', 'VALDIVIA', 'ALMAGRO', 'MAGALLANES', 'MESTIZAJE', 'CONQUISTA', 'SANTIAGO'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Línea de tiempo
+            iniciarLineaTiempo('actividad-lineatiempo', datosLineaTiempo);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

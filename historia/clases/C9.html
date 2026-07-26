@@ -9,58 +9,263 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 9
+                📜 Historia · Clase 9
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
         <h1 class="clase-titulo">📜 Legado de los Pueblos Originarios</h1>
-        <p class="clase-subtitulo">Palabras, alimentos, medicina y cosmovisión que nos dejaron</p>
 
-        <div class="clase-cuerpo">
-            <p>El <strong>legado</strong> es el conjunto de elementos que se transmiten a las siguientes generaciones. Los pueblos originarios nos dejaron un gran legado.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>📝 Palabras de origen indígena:</strong></p>
-            <ul>
-                <li><strong>Guagua</strong> (bebé) → del mapuzugun</li>
-                <li><strong>Pichintún</strong> (poquito) → del mapuzugun</li>
-                <li><strong>Cancha</strong> → del quechua</li>
-                <li><strong>Paya</strong> → del aymara</li>
-                <li><strong>Cahuín</strong> (fiesta o reunión) → del mapuzugun</li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🍲 Alimentos y hierbas medicinales:</strong></p>
-            <ul>
-                <li>🌽 <strong>Choclo</strong> (maíz)</li>
-                <li>🥔 <strong>Papa</strong></li>
-                <li>🎃 <strong>Zapallo</strong></li>
-                <li>🫘 <strong>Porotos</strong></li>
-                <li>🌿 <strong>Hierbas medicinales</strong> (manzanilla, boldo, etc.)</li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>📜 ¿Qué es el legado?</h2>
+                    <p>El <strong>legado</strong> es el conjunto de elementos que se transmiten de generación en generación.</p>
+                    <ul class="slide-lista">
+                        <li>📝 <strong>Palabras</strong> que usamos en nuestro idioma</li>
+                        <li>🍲 <strong>Alimentos</strong> que consumimos</li>
+                        <li>🧶 <strong>Técnicas artesanales</strong> que aún se usan</li>
+                        <li>🌎 <strong>Valores</strong> como el respeto por la naturaleza</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El legado de los pueblos originarios está presente en nuestra vida cotidiana sin que siempre lo notemos.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🧶 Artesanía:</strong></p>
-            <ul>
-                <li><strong>Telares</strong> mapuches y aymaras</li>
-                <li><strong>Joyas</strong> de plata y cobre</li>
-                <li><strong>Cestería</strong> yagán</li>
-            </ul>
+            <!-- Slide 2: Palabras de origen indígena -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>📝 Palabras de origen indígena</h2>
+                    <p>Muchas palabras que usamos a diario vienen de los pueblos originarios:</p>
+                    <ul class="slide-lista">
+                        <li>👶 <strong>Guagua</strong> (bebé) — del mapuzugun</li>
+                        <li>📏 <strong>Pichintún</strong> (poquito) — del mapuzugun</li>
+                        <li>🎉 <strong>Cahuín</strong> (fiesta o reunión) — del mapuzugun</li>
+                        <li>🏟️ <strong>Cancha</strong> — del quechua</li>
+                        <li>🎵 <strong>Paya</strong> — del aymara</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> La palabra "cancha" significa "campo de juego" en quechua.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🌎 Cosmovisión:</strong></p>
-            <ul>
-                <li><strong>Pachamama</strong> o <strong>Ñuke mapu</strong> → "Madre Tierra"</li>
-                <li>Respeto profundo por la <strong>naturaleza</strong></li>
-                <li>Creencia en <strong>espíritus protectores</strong> (genh)</li>
-            </ul>
+            <!-- Slide 3: Alimentos de origen indígena -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🍲 Alimentos de origen indígena</h2>
+                    <p>Muchos alimentos que consumimos son de origen indígena:</p>
+                    <ul class="slide-lista">
+                        <li>🥔 <strong>Papa</strong></li>
+                        <li>🎃 <strong>Zapallo</strong></li>
+                        <li>🌽 <strong>Choclo</strong> (maíz)</li>
+                        <li>🫘 <strong>Porotos</strong></li>
+                        <li>🌾 <strong>Quinua</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/4nTJkKLB/Chat-GPT-Image-Jul-26-2026-01-56-47-AM.png" 
+                             alt="Alimentos" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> La papa es originaria de los Andes y hay más de 4.000 variedades.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Cosmovisión y valores -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🌎 Cosmovisión y valores</h2>
+                    <p>Los pueblos originarios nos enseñaron importantes valores:</p>
+                    <ul class="slide-lista">
+                        <li>🌍 <strong>Respeto por la naturaleza</strong></li>
+                        <li>🤝 <strong>Trabajo en comunidad</strong></li>
+                        <li>👴 <strong>Respeto por los mayores</strong></li>
+                        <li>🌱 <strong>Cuidado de la Madre Tierra</strong> (Pachamama o Ñuke mapu)</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/xKyHBHfD/image.png" 
+                             alt="Cosmovisión" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Para los mapuches, el concepto de "küme mogen" significa "buen vivir".
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Técnicas artesanales -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🧶 Técnicas artesanales</h2>
+                    <p>Los pueblos originarios desarrollaron técnicas que aún se usan:</p>
+                    <ul class="slide-lista">
+                        <li>🧵 <strong>Telares</strong> — tejidos de lana de alpaca y llama</li>
+                        <li>🏺 <strong>Cerámica</strong> — vasijas de barro con diseños geométricos</li>
+                        <li>🧺 <strong>Cestería</strong> — canastos y utensilios tejidos</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/chrGv1SV/image.png" 
+                             alt="Artesanía" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los conceptos</h2>
+                    <p>Haz clic en una palabra de la izquierda y luego en su significado de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con el legado de los pueblos originarios.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ El <strong>legado</strong> son elementos que se transmiten</div>
+                        <div class="resumen-item">✅ Palabras como <strong>guagua</strong> y <strong>pichintún</strong> son de origen indígena</div>
+                        <div class="resumen-item">✅ Alimentos como la <strong>papa</strong> y el <strong>choclo</strong> son indígenas</div>
+                        <div class="resumen-item">✅ Valores como el <strong>respeto</strong> por la naturaleza nos enseñaron</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E9.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E9.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C9
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'La palabra "guagua" significa "viejo" y es de origen mapuche.', 
+                respuestaCorrecta: false,
+                explicacion: 'Guagua viene del mapuzugun y significa bebé.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'La papa es un alimento que llegó a Chile con los españoles.', 
+                respuestaCorrecta: false,
+                explicacion: 'La papa es un alimento de origen indígena, no llegó con los españoles.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Los pueblos originarios llaman "Pachamama" a la Madre Tierra.', 
+                respuestaCorrecta: true,
+                explicacion: 'Pachamama es el nombre que los pueblos andinos dan a la Madre Tierra.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El admapu son normas heredadas de los antepasados mapuches.', 
+                respuestaCorrecta: true,
+                explicacion: 'El admapu es el conjunto de normas y tradiciones mapuches.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'El pueblo Yagán es conocido por su cerámica y alfarería.', 
+                respuestaCorrecta: false,
+                explicacion: 'El pueblo Yagán es conocido por su cestería, no por cerámica.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Guagua', derecha: 'Bebé' },
+            { id: '2', izquierda: 'Pichintún', derecha: 'Poquito' },
+            { id: '3', izquierda: 'Cahuín', derecha: 'Fiesta o reunión' },
+            { id: '4', izquierda: 'Ñuke mapu', derecha: 'Madre Tierra (mapuche)' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['GUAGUA', 'PICHINTUN', 'CAHUIN', 'PACHAMAMA', 'ADMAPU', 'KUME', 'MOGEN'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

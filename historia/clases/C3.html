@@ -9,47 +9,228 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 3
+                🗺️ Historia · Clase 3
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
         <h1 class="clase-titulo">🗺️ Los Paisajes de Chile</h1>
-        <p class="clase-subtitulo">Aprende a leer mapas y conocer el vocabulario geográfico</p>
 
-        <div class="clase-cuerpo">
-            <p><strong>¿Qué es un mapa?</strong></p>
-            <p>Un mapa es una representación plana de la Tierra o parte de ella. Nos ayuda a ubicarnos y conocer lugares.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>📌 Para leer un mapa, sigue estos pasos:</strong></p>
-            <ol>
-                <li><strong>Lee el título</strong> → indica qué información entrega el mapa.</li>
-                <li><strong>Identifica la rosa de los vientos</strong> → te dice la orientación.</li>
-                <li><strong>Lee la toponimia</strong> → los nombres de lugares.</li>
-                <li><strong>Lee la simbología (leyenda)</strong> → explica qué significan los colores y símbolos.</li>
-            </ol>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>📝 Vocabulario geográfico:</strong></p>
-            <ul>
-                <li>🌊 <strong>Océano</strong>: gran masa de agua salada.</li>
-                <li>🏔️ <strong>Valle</strong>: terreno plano entre cerros, con un río.</li>
-                <li>🌊 <strong>Fiordo</strong>: entrada estrecha rodeada de montañas.</li>
-                <li>🏝️ <strong>Archipiélago</strong>: conjunto de islas cercanas.</li>
-                <li>🏙️ <strong>Ciudad</strong>: lugar con miles de personas y muchas construcciones.</li>
-                <li>🏘️ <strong>Pueblo</strong>: más pequeño que una ciudad.</li>
-                <li>🌾 <strong>Cultivos</strong>: plantas sembradas para recolectar frutos.</li>
-                <li>🏗️ <strong>Construcciones</strong>: edificios, puentes, carreteras.</li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🗺️ ¿Qué es un paisaje?</h2>
+                    <p>Un <strong>paisaje</strong> es una parte del territorio que podemos ver desde un lugar y en un momento determinado.</p>
+                    <ul class="slide-lista">
+                        <li>🌿 Puede tener <strong>elementos naturales</strong> (ríos, montañas, bosques)</li>
+                        <li>🏙️ Puede tener <strong>elementos construidos por humanos</strong> (ciudades, puentes, carreteras)</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <div class="slide-imagen">
+                        <img src="https://i.ibb.co/DDBzy27f/Chat-GPT-Image-Jul-25-2026-09-42-36-PM.png" 
+                             alt="Paisaje" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Chile tiene paisajes muy diversos debido a su larga extensión?</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: Vocabulario geográfico -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>📝 Vocabulario geográfico</h2>
+                    <p>Estas palabras te ayudan a describir los paisajes:</p>
+                    <ul class="slide-lista">
+                        <li>🌊 <strong>Océano</strong> — gran masa de agua salada</li>
+                        <li>🏔️ <strong>Valle</strong> — terreno plano entre cerros, con un río</li>
+                        <li>🏝️ <strong>Archipiélago</strong> — conjunto de islas cercanas</li>
+                        <li>🌊 <strong>Fiordo</strong> — entrada estrecha rodeada de montañas</li>
+                        <li>🏙️ <strong>Ciudad</strong> — lugar con miles de personas y construcciones</li>
+                        <li>🏘️ <strong>Pueblo</strong> — lugar más pequeño que una ciudad</li>
+                        <li>🌾 <strong>Cultivos</strong> — plantas sembradas para recolectar frutos</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <div class="slide-imagen">
+                        <img src="https://i.ibb.co/S4DG415X/Chat-GPT-Image-Jul-25-2026-09-59-17-PM.png" 
+                             alt="Paisajes" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Paisajes naturales y culturales -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🌿 Paisajes naturales y culturales</h2>
+                    <p>Los paisajes pueden ser:</p>
+                    <ul class="slide-lista">
+                        <li>🌳 <strong>Naturales</strong> — donde el ser humano casi no ha intervenido (bosques, ríos, montañas)</li>
+                        <li>🏙️ <strong>Culturales</strong> — donde hay elementos construidos por humanos (ciudades, cultivos, carreteras)</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> En Chile existen muchos paisajes naturales protegidos, como los parques nacionales.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Cómo se lee un mapa -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🗺️ ¿Cómo se lee un mapa?</h2>
+                    <p>Para leer un mapa, sigue estos pasos:</p>
+                    <ul class="slide-lista">
+                        <li>📖 <strong>Lee el título</strong> — te dice qué información entrega el mapa</li>
+                        <li>🧭 <strong>Identifica la rosa de los vientos</strong> — te dice la orientación</li>
+                        <li>📝 <strong>Lee la toponimia</strong> — los nombres de lugares</li>
+                        <li>🎨 <strong>Lee la leyenda</strong> — explica el significado de colores y símbolos</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <div class="slide-imagen">
+                        <img src="https://i.ibb.co/gMmpyDcv/image.png" 
+                             alt="Mapa" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+                    <div class="slide-truco">
+                        💡 <strong>Truco:</strong> Siempre empieza leyendo el título y la rosa de los vientos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: ACTIVIDAD - Completa las definiciones (CON ORDEN) -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Completa las definiciones</h2>
+                    <p>Arrastra las palabras a los espacios en blanco en el orden correcto.</p>
+                    <div id="actividad-dragdrop-definiciones"></div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Relacionar columnas -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los conceptos</h2>
+                    <p>Haz clic en un elemento de la izquierda y luego en su pareja de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con el vocabulario geográfico.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Resumen -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ Un <strong>paisaje</strong> es lo que vemos de un territorio</div>
+                        <div class="resumen-item">✅ Hay elementos <strong>naturales</strong> y <strong>construidos por humanos</strong></div>
+                        <div class="resumen-item">✅ El <strong>vocabulario geográfico</strong> nos ayuda a describir paisajes</div>
+                        <div class="resumen-item">✅ Los mapas tienen <strong>título, rosa de los vientos y leyenda</strong></div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E3.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E3.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C3
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA DRAG & DROP - Definiciones (CON ORDEN)
+        // ==========================================
+        const datosDragDropDefiniciones = {
+            opciones: ['Océano', 'Valle', 'Archipiélago', 'Fiordo', 'Ciudad'],
+            espacios: [
+                { id: 'espacio1', palabraCorrecta: 'Océano', pista: 'Gran masa de agua salada' },
+                { id: 'espacio2', palabraCorrecta: 'Valle', pista: 'Terreno plano entre cerros' },
+                { id: 'espacio3', palabraCorrecta: 'Archipiélago', pista: 'Conjunto de islas cercanas' },
+                { id: 'espacio4', palabraCorrecta: 'Fiordo', pista: 'Entrada estrecha rodeada de montañas' },
+                { id: 'espacio5', palabraCorrecta: 'Ciudad', pista: 'Lugar con miles de personas y construcciones' }
+            ],
+            texto: 'Un ______ es una gran masa de agua salada. Un ______ es un terreno plano entre cerros. Un ______ es un conjunto de islas cercanas. Un ______ es una entrada estrecha rodeada de montañas. Una ______ es un lugar con miles de personas.'
+        };
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING (Relacionar columnas)
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Océano', derecha: 'Gran masa de agua salada' },
+            { id: '2', izquierda: 'Valle', derecha: 'Terreno plano entre cerros' },
+            { id: '3', izquierda: 'Archipiélago', derecha: 'Conjunto de islas cercanas' },
+            { id: '4', izquierda: 'Fiordo', derecha: 'Entrada estrecha rodeada de montañas' },
+            { id: '5', izquierda: 'Ciudad', derecha: 'Lugar con miles de personas' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['OCEANO', 'VALLE', 'FIORDO', 'CIUDAD', 'PUEBLO', 'CULTIVO', 'PAISAJE'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Drag & Drop - Definiciones (CON ORDEN)
+            iniciarDragDropOrden('actividad-dragdrop-definiciones', datosDragDropDefiniciones);
+
+            // Iniciar Matching (Relacionar columnas)
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

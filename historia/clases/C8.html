@@ -9,59 +9,267 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 8
+                🌿 Historia · Clase 8
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
-        <h1 class="clase-titulo">🌿 Pueblos del Centro y Sur</h1>
-        <p class="clase-subtitulo">Mapuche, Chono, Yagán y Selk'nam</p>
+        <h1 class="clase-titulo">🌿 Pueblos Originarios del Centro y Sur</h1>
 
-        <div class="clase-cuerpo">
-            <p><strong>🧑‍🌾 Pueblo Mapuche</strong></p>
-            <ul>
-                <li>Habitaban la <strong>Zona Centro y Sur</strong></li>
-                <li>Hablan <strong>mapuzugun</strong></li>
-                <li>Se dividen en grupos: <strong>Mapuche, Pewenche, Williche, Lafkenche, Puelche y Pikunche</strong></li>
-                <li>Los <strong>Pewenche y Puelche</strong> eran <strong>nómadas</strong></li>
-                <li>Recolectan el <strong>piñón</strong> (fruto del pewén o araucaria)</li>
-            </ul>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🧑‍🌾 Pueblo Chono</strong></p>
-            <ul>
-                <li>Navegantes del <strong>archipiélago</strong> (Zona Sur)</li>
-                <li>Vivían en <strong>dalcas</strong> (embarcaciones) con fuego para protegerse del frío</li>
-                <li>Viviendas de <strong>ramas y cuero de animales</strong></li>
-                <li>Pesca, caza de lobos marinos y <strong>buceo</strong> de las mujeres para recolectar mariscos</li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🧑‍🌾 Pueblo Yagán</strong></p>
-            <ul>
-                <li>Navegantes del <strong>extremo sur</strong></li>
-                <li>Embarcaciones de <strong>corteza de árbol</strong> llamadas <strong>ánan</strong></li>
-                <li><strong>Nómadas</strong>, vestían pieles de lobos marinos o nutrias</li>
-                <li>Desarrollaron la <strong>cestería</strong></li>
-                <li>Viviendas en forma de <strong>cono</strong>, con ramas y pieles</li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🌿 Pueblos originarios del centro y sur</h2>
+                    <p>En el centro y sur de Chile habitaron <strong>cuatro pueblos originarios</strong> muy importantes:</p>
+                    <ul class="slide-lista">
+                        <li>🌿 <strong>Mapuche</strong> — habitantes del centro y sur</li>
+                        <li>🌊 <strong>Chono</strong> — navegantes del sur</li>
+                        <li>🧊 <strong>Yagán</strong> — navegantes del extremo sur</li>
+                        <li>🔥 <strong>Selk'nam</strong> — caminantes del sur</li>
+                    </ul>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Algunos de estos pueblos aún mantienen vivas muchas de sus tradiciones?</p>
+                </div>
+            </div>
 
-            <p><strong>🧑‍🌾 Pueblo Selk'nam</strong></p>
-            <ul>
-                <li>Caminantes del <strong>sur</strong></li>
-                <li><strong>Nómadas</strong> y hábiles <strong>cazadores</strong></li>
-                <li>Vestían <strong>pieles de animales</strong></li>
-                <li>Celebraban la ceremonia del <strong>hain</strong>, pintándose el cuerpo</li>
-                <li>Más de <strong>1.400 personas</strong> se identifican como selk'nam en el censo</li>
-            </ul>
+            <!-- Slide 2: Pueblo Mapuche -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🌿 Pueblo Mapuche</h2>
+                    <p>El pueblo <strong>Mapuche</strong> es el pueblo originario más grande de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🗣️ Hablan <strong>mapuzugun</strong></li>
+                        <li>🌾 Vivían en el <strong>centro y sur</strong> de Chile</li>
+                        <li>🌲 Recolectaban el <strong>piñón</strong> (fruto de la araucaria)</li>
+                        <li>🏠 Viviendas llamadas <strong>ruka</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/CKv2CBfy/image.png" 
+                             alt="Pueblo Mapuche" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El pueblo Mapuche se divide en grupos como Pewenche, Williche y Lafkenche.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Pueblo Chono -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🌊 Pueblo Chono</h2>
+                    <p>El pueblo <strong>Chono</strong> habitaba en el <strong>archipiélago del sur</strong> de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🛶 Eran <strong>navegantes</strong> y pescadores</li>
+                        <li>🚤 Usaban embarcaciones llamadas <strong>dalcas</strong></li>
+                        <li>🔥 Llevaban <strong>fuego</strong> en sus embarcaciones para protegerse del frío</li>
+                        <li>🤿 Las mujeres <strong>buceaban</strong> para recolectar mariscos</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/MyyzR7Fv/image.png" 
+                             alt="Pueblo Chono" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los Chono cazaban lobos marinos para alimentarse.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Pueblo Yagán -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🧊 Pueblo Yagán</h2>
+                    <p>El pueblo <strong>Yagán</strong> habitaba en el <strong>extremo sur</strong> de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🛶 Usaban embarcaciones llamadas <strong>ánan</strong></li>
+                        <li>🌳 El ánan estaba hecho de <strong>corteza de árbol</strong></li>
+                        <li>🧵 Eran conocidos por su <strong>cestería</strong></li>
+                        <li>🏠 Viviendas en forma de <strong>cono</strong> con ramas y pieles</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/WW3F93X2/image.png" 
+                             alt="Pueblo Yagán" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Cristina Calderón fue la última hablante nativa del idioma yagán.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Pueblo Selk'nam -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🔥 Pueblo Selk'nam</h2>
+                    <p>El pueblo <strong>Selk'nam</strong> habitaba en la <strong>Tierra del Fuego</strong>, en el extremo sur.</p>
+                    <ul class="slide-lista">
+                        <li>🏹 Eran <strong>cazadores</strong> nómadas</li>
+                        <li>🎨 Celebraban la ceremonia del <strong>hain</strong> pintándose el cuerpo</li>
+                        <li>🧥 Vestían <strong>pieles de animales</strong> para protegerse del frío</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/JRynhvpb/image.png" 
+                             alt="Pueblo Selk'nam" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Según el censo, más de 1.400 personas se identifican como selk'nam en la actualidad.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los pueblos</h2>
+                    <p>Haz clic en un pueblo de la izquierda y luego en su característica de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con los pueblos del centro y sur.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ El pueblo <strong>Mapuche</strong> habla mapuzugun</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Chono</strong> usaba <strong>dalcas</strong> y llevaba fuego</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Yagán</strong> usaba <strong>ánan</strong> y hacía cestería</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Selk'nam</strong> celebraba el <strong>hain</strong></div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E8.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E8.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C8
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'El pueblo Mapuche habla el idioma mapuzugun.', 
+                respuestaCorrecta: true,
+                explicacion: 'El mapuzugun es el idioma del pueblo Mapuche.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'El pueblo Chono habitaba en el altiplano del norte de Chile.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los Chono habitaban en el archipiélago del sur de Chile.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Los Yagán usaban embarcaciones llamadas "ánan" hechas de corteza de árbol.', 
+                respuestaCorrecta: true,
+                explicacion: 'El ánan era la embarcación tradicional del pueblo Yagán.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El pueblo Selk\'nam celebraba la ceremonia del hain pintándose el cuerpo.', 
+                respuestaCorrecta: true,
+                explicacion: 'El hain era una ceremonia importante donde los Selk\'nam se pintaban el cuerpo.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'Los Chono eran conocidos por su alfarería y cerámica.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los Chono eran navegantes y pescadores, no alfareros.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Mapuche', derecha: 'Hablantes de mapuzugun' },
+            { id: '2', izquierda: 'Chono', derecha: 'Navegantes del sur' },
+            { id: '3', izquierda: 'Yagán', derecha: 'Usaban embarcaciones de corteza' },
+            { id: '4', izquierda: 'Selk\'nam', derecha: 'Celebraban el hain' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['MAPUCHE', 'CHONO', 'YAGAN', 'SELKNAM', 'MAPUZUGUN', 'DALCA', 'HAIN'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

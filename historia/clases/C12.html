@@ -9,56 +9,256 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 12
+                📋 Historia · Clase 12
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
         <h1 class="clase-titulo">📋 Normas de Convivencia</h1>
-        <p class="clase-subtitulo">Aprende las normas para convivir mejor en el colegio, la calle y con la naturaleza</p>
 
-        <div class="clase-cuerpo">
-            <p>Una <strong>norma</strong> es una regla que las personas deben seguir para mantener una <strong>buena convivencia</strong>.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🏫 Normas en el colegio:</strong></p>
-            <ul>
-                <li>👂 <strong>Escuchar con atención</strong> cuando se entrega información</li>
-                <li>✋ <strong>Levantar la mano</strong> para participar</li>
-                <li>📚 <strong>Cuidar las pertenencias</strong> propias y de los demás</li>
-                <li>🙋 <strong>Participar en clases</strong></li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🏙️ Normas en espacios públicos:</strong></p>
-            <ul>
-                <li>🗑️ <strong>Botar la basura en los basureros</strong></li>
-                <li>🌳 <strong>Cuidar juegos y plantas</strong> de parques y plazas</li>
-                <li>🚰 <strong>No abrir ni pintar grifos</strong> para que estén disponibles en emergencias</li>
-                <li>🚮 <strong>Llevarse la basura</strong> al visitar playas y parques</li>
-                <li>🐾 <strong>Cuidar la flora y fauna</strong></li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>📋 ¿Qué son las normas?</h2>
+                    <p>Las <strong>normas</strong> son reglas que las personas deben seguir para mantener una <strong>buena convivencia</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🏫 Nos ayudan a convivir en el <strong>colegio</strong></li>
+                        <li>🏙️ Nos ayudan a cuidar los <strong>espacios públicos</strong></li>
+                        <li>🌱 Nos ayudan a proteger el <strong>medioambiente</strong></li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Las normas existen para que todos podamos vivir en armonía y respeto.
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Las normas también existen en los pueblos originarios?</p>
+                </div>
+            </div>
 
-            <p><strong>🌱 Normas para el cuidado del medioambiente:</strong></p>
-            <ul>
-                <li>♻️ <strong>Reutilizar residuos</strong></li>
-                <li>🫙 <strong>Usar recipientes retornables</strong></li>
-                <li>💡 <strong>Preferir electrodomésticos que consuman menos energía</strong></li>
-            </ul>
+            <!-- Slide 2: Normas en el colegio -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🏫 Normas en el colegio</h2>
+                    <p>Para aprender mejor, debemos seguir estas normas:</p>
+                    <ul class="slide-lista">
+                        <li>✋ <strong>Levantar la mano</strong> para participar</li>
+                        <li>👂 <strong>Escuchar con atención</strong> al profesor</li>
+                        <li>📚 <strong>Cuidar los materiales</strong> y pertenencias</li>
+                        <li>🙋 <strong>Participar</strong> en clases</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <div class="placeholder-imagen" style="background:#d0e0fc;border-radius:15px;padding:20px;text-align:center;">
+                            🏫 [Niños en el colegio]
+                        </div>
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El respeto por los demás es la base de todas las normas.
+                    </div>
+                </div>
+            </div>
 
-            <p><strong>🧑‍🌾 Normas en los pueblos originarios:</strong></p>
-            <ul>
-                <li><strong>Admapu</strong> (mapuche): normas heredadas de los antepasados</li>
-                <li><strong>Principios aymaras</strong>: respeto por los mayores, tradiciones y trabajo comunitario</li>
-            </ul>
+            <!-- Slide 3: Normas en espacios públicos -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🏙️ Normas en espacios públicos</h2>
+                    <p>Los espacios públicos son de todos y debemos cuidarlos:</p>
+                    <ul class="slide-lista">
+                        <li>🗑️ <strong>Botar la basura</strong> en los basureros</li>
+                        <li>🌳 <strong>Cuidar los juegos y plantas</strong> de las plazas</li>
+                        <li>🚰 <strong>No pintar ni abrir grifos</strong> innecesariamente</li>
+                        <li>🚮 <strong>Llevar la basura</strong> al visitar playas y parques</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Un espacio público limpio es más agradable para todos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Normas para cuidar el medioambiente -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🌱 Normas para cuidar el medioambiente</h2>
+                    <p>Podemos cuidar el medioambiente con estas normas:</p>
+                    <ul class="slide-lista">
+                        <li>♻️ <strong>Reutilizar residuos</strong> — darles un nuevo uso</li>
+                        <li>🫙 <strong>Usar recipientes retornables</strong></li>
+                        <li>💡 <strong>Ahorrar energía</strong> — apagar luces al salir</li>
+                        <li>🚿 <strong>Cuidar el agua</strong> — cerrar los grifos</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Reciclar y reutilizar ayuda a reducir la contaminación.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Normas de los pueblos originarios -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Normas de los pueblos originarios</h2>
+                    <p>Los pueblos originarios también tienen normas y valores:</p>
+                    <ul class="slide-lista">
+                        <li>🌿 <strong>Admapu</strong> — normas heredadas de los antepasados mapuches</li>
+                        <li>👴 <strong>Respeto por los mayores</strong> — valor del pueblo Aymara</li>
+                        <li>🤝 <strong>Trabajo comunitario</strong> — ayudar a los demás</li>
+                        <li>🌍 <strong>Respeto por la naturaleza</strong> — cuidar la Madre Tierra</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los pueblos originarios viven en armonía con la naturaleza.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Ordenar pasos -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📋 Actividad: Ordena los pasos</h2>
+                    <p>Ordena los pasos para actuar correctamente en caso de emergencia.</p>
+                    <div id="actividad-ordenar"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con las normas de convivencia.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ Las <strong>normas</strong> son reglas para convivir bien</div>
+                        <div class="resumen-item">✅ En el colegio debemos <strong>levantar la mano</strong> y <strong>escuchar</strong></div>
+                        <div class="resumen-item">✅ Los espacios públicos hay que <strong>cuidarlos</strong></div>
+                        <div class="resumen-item">✅ El <strong>admapu</strong> son normas del pueblo Mapuche</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E12.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E12.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C12
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'Levantar la mano para participar es una norma importante en el colegio.', 
+                respuestaCorrecta: true,
+                explicacion: 'Levantar la mano nos ayuda a respetar los turnos y participar de manera ordenada.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'Botar la basura en la calle es una forma de cuidar los espacios públicos.', 
+                respuestaCorrecta: false,
+                explicacion: 'Botar basura en la calle ensucia los espacios públicos. Debemos usar los basureros.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Reutilizar residuos ayuda a cuidar el medioambiente.', 
+                respuestaCorrecta: true,
+                explicacion: 'Reutilizar reduce la cantidad de basura y protege el medioambiente.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El admapu es un conjunto de normas del pueblo Aymara.', 
+                respuestaCorrecta: false,
+                explicacion: 'El admapu es el conjunto de normas y tradiciones del pueblo Mapuche.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'En caso de emergencia, debemos reconocer las vías de escape.', 
+                respuestaCorrecta: true,
+                explicacion: 'Conocer las vías de escape nos ayuda a salir de forma segura en caso de emergencia.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA ORDENAR
+        // ==========================================
+        const elementosOrdenar = [
+            { id: 'paso1', texto: 'Mantén la calma' },
+            { id: 'paso2', texto: 'Identifica la vía de escape más cercana' },
+            { id: 'paso3', texto: 'Camina ordenadamente hacia la salida' },
+            { id: 'paso4', texto: 'Reúnete en el punto de encuentro' }
+        ];
+        const ordenCorrecto = ['paso1', 'paso2', 'paso3', 'paso4'];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['NORMA', 'RESPETO', 'CONVIVENCIA', 'ADMAPU', 'RECICLAR', 'CUIDADO', 'ESPACIO'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Ordenar secuencia
+            iniciarOrdenar('actividad-ordenar', elementosOrdenar, ordenCorrecto);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

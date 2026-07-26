@@ -9,49 +9,233 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 5
+                🌆 Historia · Clase 5
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
-        <h1 class="clase-titulo">🌆 Zona Centro</h1>
-        <p class="clase-subtitulo">Descubre las ciudades, valles y puertos de la zona central</p>
+        <h1 class="clase-titulo">🌆 Zona Centro de Chile</h1>
 
-        <div class="clase-cuerpo">
-            <p>En la <strong>Zona Central</strong> los <strong>veranos son calurosos y secos</strong>, y los <strong>inviernos son fríos y lluviosos</strong>.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🏙️ Ciudades importantes:</strong></p>
-            <ul>
-                <li><strong>Santiago</strong> (la capital de Chile)</li>
-                <li><strong>Rancagua</strong></li>
-                <li><strong>Talca</strong></li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🌾 Valles agrícolas</strong></p>
-            <p>Hay amplios valles donde se desarrolla la agricultura. Por ejemplo, los <strong>Valles de la Región del Maule</strong>.</p>
-
-            <p><strong>⛵ Puertos importantes:</strong></p>
-            <ul>
-                <li><strong>Valparaíso</strong></li>
-                <li><strong>San Antonio</strong></li>
-            </ul>
-
-            <p><strong>📋 El Censo</strong></p>
-            <p>Es una encuesta que se hace en todos los hogares para conocer cuántas personas viven en Chile. El último censo fue en 2024.</p>
-
-            <div style="background:#f0f7ff;padding:15px;border-radius:15px;margin:15px 0;border-left:6px solid #F5A623;">
-                <p><strong>📌 Dato:</strong> En la Zona Centro vive la <strong>mayor parte</strong> de la población de Chile.</p>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🌆 ¿Cómo es la Zona Centro de Chile?</h2>
+                    <p>La Zona Centro es la <strong>más poblada</strong> de Chile y tiene un clima <strong>mediterráneo</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🌤️ <strong>Veranos calurosos y secos</strong></li>
+                        <li>🌧️ <strong>Inviernos fríos y lluviosos</strong></li>
+                        <li>🏙️ <strong>Ciudades grandes</strong> como Santiago</li>
+                        <li>🌾 <strong>Valles agrícolas</strong> muy importantes</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/Q3py5kMF/image.png" 
+                             alt="Zona Central" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> En la Zona Centro vive la mayor parte de la población de Chile?</p>
+                </div>
             </div>
+
+            <!-- Slide 2: Clima de la Zona Centro -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🌤️ Clima de la Zona Centro</h2>
+                    <p>La Zona Centro tiene un <strong>clima mediterráneo</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>☀️ <strong>Veranos</strong> — calurosos y secos</li>
+                        <li>❄️ <strong>Inviernos</strong> — fríos y lluviosos</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Este clima es ideal para la agricultura, especialmente para las uvas y frutas.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Ciudades importantes -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🏙️ Ciudades importantes</h2>
+                    <p>En la Zona Centro se encuentran las ciudades más grandes de Chile:</p>
+                    <ul class="slide-lista">
+                        <li>🏛️ <strong>Santiago</strong> — la capital de Chile</li>
+                        <li>🏛️ <strong>Valparaíso</strong> — importante puerto</li>
+                        <li>🏛️ <strong>Rancagua</strong> — capital de la Región de O'Higgins</li>
+                        <li>🏛️ <strong>Talca</strong> — capital de la Región del Maule</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Santiago es la ciudad más poblada de Chile.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Valles agrícolas -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🌾 Valles agrícolas</h2>
+                    <p>La Zona Centro tiene <strong>valles muy fértiles</strong> donde se cultivan:</p>
+                    <ul class="slide-lista">
+                        <li>🍇 <strong>Uvas</strong> para vino y frutas</li>
+                        <li>🌽 <strong>Maíz</strong> y <strong>hortalizas</strong></li>
+                    </ul>
+                    <p>La <strong>Región del Maule</strong> es una de las más importantes para la agricultura.</p>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/jPyTpX0L/image.png" 
+                             alt="Valles centrales" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Puertos importantes -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>⛵ Puertos importantes</h2>
+                    <p>La Zona Centro tiene puertos muy importantes para el <strong>comercio marítimo</strong>:</p>
+                    <ul class="slide-lista">
+                        <li>⛵ <strong>Valparaíso</strong> — el puerto más importante de Chile</li>
+                        <li>⛵ <strong>San Antonio</strong> — otro puerto clave</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/jPfjWbZj/image.png" 
+                             alt="Puerto Valparaíso" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Valparaíso es conocido como el "Puerto Principal" de Chile.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Drag & Drop (con orden) -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Completa las características</h2>
+                    <p>Arrastra las palabras a los espacios en blanco en el orden correcto.</p>
+                    <div id="actividad-dragdrop"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona las ciudades</h2>
+                    <p>Haz clic en una ciudad de la izquierda y luego en su característica de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con la Zona Centro.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ La Zona Centro tiene <strong>clima mediterráneo</strong></div>
+                        <div class="resumen-item">✅ <strong>Santiago</strong> es la capital de Chile</div>
+                        <div class="resumen-item">✅ <strong>Valparaíso</strong> y <strong>San Antonio</strong> son puertos importantes</div>
+                        <div class="resumen-item">✅ La <strong>Región del Maule</strong> tiene valles agrícolas muy fértiles</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E5.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E5.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C5
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA DRAG & DROP (CON ORDEN)
+        // ==========================================
+        const datosDragDrop = {
+            opciones: ['Clima mediterráneo', 'Valles agrícolas', 'Puertos importantes', 'Ciudades grandes'],
+            espacios: [
+                { id: 'espacio1', palabraCorrecta: 'Clima mediterráneo', pista: 'Veranos calurosos, inviernos lluviosos' },
+                { id: 'espacio2', palabraCorrecta: 'Valles agrícolas', pista: 'Donde se cultivan uvas y frutas' },
+                { id: 'espacio3', palabraCorrecta: 'Puertos importantes', pista: 'Valparaíso y San Antonio' },
+                { id: 'espacio4', palabraCorrecta: 'Ciudades grandes', pista: 'Santiago es la más grande' }
+            ],
+            texto: 'La Zona Centro se caracteriza por su ______, sus ______, sus ______ y sus ______.'
+        };
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Santiago', derecha: 'Capital de Chile' },
+            { id: '2', izquierda: 'Valparaíso', derecha: 'Importante puerto' },
+            { id: '3', izquierda: 'Región del Maule', derecha: 'Valles agrícolas' },
+            { id: '4', izquierda: 'San Antonio', derecha: 'Puerto importante' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['SANTIAGO', 'VALPARAISO', 'MAULE', 'RANCAGUA', 'TALCA', 'PUERTO', 'CENSO'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Drag & Drop (CON ORDEN)
+            iniciarDragDropOrden('actividad-dragdrop', datosDragDrop);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

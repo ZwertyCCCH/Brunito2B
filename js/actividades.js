@@ -307,9 +307,6 @@ function iniciarDragDropOrden(containerId, datos) {
 
     // Botón verificar para orden
     html += `
-        <button class="btn-dragdrop-verificar" onclick="verificarDragDropOrden('${containerId}')">
-            ✅ Verificar respuestas
-        </button>
         <div id="dragdrop-feedback-${containerId}" class="dragdrop-feedback"></div>
     `;
 
@@ -459,17 +456,23 @@ function verificarDragDropOrden(containerId) {
 }
 
 // ============================================
-// 2. ORDENAR SECUENCIA
+// 2. ORDENAR SECUENCIA (VERSIÓN MEJORADA)
 // ============================================
 function iniciarOrdenar(containerId, elementos, ordenCorrecto) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
+    // Mezclar elementos
     const elementosMezclados = [...elementos];
     for (let i = elementosMezclados.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [elementosMezclados[i], elementosMezclados[j]] = [elementosMezclados[j], elementosMezclados[i]];
     }
+
+    // Estado de orden
+    let ordenActual = elementosMezclados.map(el => el.id);
+    let ordenCorrectoFlag = false;
+    let dragData = null;
 
     let html = `
         <div class="ordenar-container" id="ordenar-${containerId}">
@@ -479,7 +482,7 @@ function iniciarOrdenar(containerId, elementos, ordenCorrecto) {
 
     elementosMezclados.forEach((el, i) => {
         html += `
-            <div class="ordenar-item" draggable="true" data-id="${el.id}" data-index="${i}">
+            <div class="ordenar-item" data-id="${el.id}" data-index="${i}" style="cursor:grab;">
                 <span class="ordenar-numero">${i + 1}</span>
                 <span class="ordenar-texto">${el.texto}</span>
             </div>
@@ -488,23 +491,51 @@ function iniciarOrdenar(containerId, elementos, ordenCorrecto) {
 
     html += `
             </div>
-            <button class="btn-ordenar-verificar" onclick="verificarOrdenar('${containerId}', ${JSON.stringify(ordenCorrecto)})">
-                ✅ Verificar orden
-            </button>
             <div id="ordenar-feedback-${containerId}" class="ordenar-feedback"></div>
         </div>
     `;
 
     container.innerHTML = html;
 
+    // ==========================================
+    // FUNCIÓN PARA VERIFICAR ORDEN AUTOMÁTICAMENTE
+    // ==========================================
+    function verificarOrdenAutomatico() {
+        const items = container.querySelectorAll('.ordenar-item');
+        const ordenActual = Array.from(items).map(item => item.dataset.id);
+        const feedback = document.getElementById(`ordenar-feedback-${containerId}`);
+
+        const esCorrecto = ordenActual.every((id, i) => id === ordenCorrecto[i]);
+
+        if (esCorrecto && !ordenCorrectoFlag) {
+            ordenCorrectoFlag = true;
+            items.forEach(item => item.classList.add('correcto'));
+            if (feedback) {
+                feedback.innerHTML = `<div class="feedback-correcto">🎉 ¡Excelente! Has ordenado todos los elementos correctamente.</div>`;
+            }
+        } else if (!esCorrecto && ordenCorrectoFlag) {
+            ordenCorrectoFlag = false;
+            items.forEach(item => {
+                item.classList.remove('correcto');
+                item.classList.remove('incorrecto');
+            });
+            if (feedback) {
+                feedback.innerHTML = '';
+            }
+        }
+    }
+
+    // ==========================================
+    // EVENTOS PARA ESCRITORIO (DRAG & DROP NATIVO)
+    // ==========================================
     const items = container.querySelectorAll('.ordenar-item');
-    let draggedItem = null;
 
     items.forEach(item => {
         item.addEventListener('dragstart', function(e) {
-            draggedItem = this;
+            if (ordenCorrectoFlag) return;
             this.style.opacity = '0.5';
             e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', this.dataset.id);
         });
         item.addEventListener('dragend', function(e) {
             this.style.opacity = '1';
@@ -515,66 +546,165 @@ function iniciarOrdenar(containerId, elementos, ordenCorrecto) {
         });
         item.addEventListener('drop', function(e) {
             e.preventDefault();
-            if (draggedItem && draggedItem !== this) {
-                const parent = this.parentNode;
+            if (ordenCorrectoFlag) return;
+
+            const draggedId = e.dataTransfer.getData('text/plain');
+            const draggedItem = container.querySelector(`.ordenar-item[data-id="${draggedId}"]`);
+            const targetItem = this;
+
+            if (draggedItem && draggedItem !== targetItem) {
+                const parent = targetItem.parentNode;
                 const children = parent.querySelectorAll('.ordenar-item');
                 const fromIndex = Array.from(children).indexOf(draggedItem);
-                const toIndex = Array.from(children).indexOf(this);
+                const toIndex = Array.from(children).indexOf(targetItem);
 
                 if (fromIndex < toIndex) {
-                    this.parentNode.insertBefore(draggedItem, this.nextSibling);
+                    parent.insertBefore(draggedItem, targetItem.nextSibling);
                 } else {
-                    this.parentNode.insertBefore(draggedItem, this);
+                    parent.insertBefore(draggedItem, targetItem);
                 }
 
+                // Actualizar números
                 const nuevosItems = parent.querySelectorAll('.ordenar-item');
                 nuevosItems.forEach((item, i) => {
                     item.querySelector('.ordenar-numero').textContent = i + 1;
                     item.dataset.index = i;
                 });
+
+                // Verificar orden automáticamente
+                verificarOrdenAutomatico();
             }
         });
     });
-}
 
-// ============================================
-// VERIFICAR ORDENAR
-// ============================================
-function verificarOrdenar(containerId, ordenCorrecto) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
+    // ==========================================
+    // EVENTOS TÁCTILES (MÓVILES/TABLETS)
+    // ==========================================
+    let touchDraggedItem = null;
+    let touchClone = null;
+    let touchStartIndex = null;
 
-    const items = container.querySelectorAll('.ordenar-item');
-    const ordenActual = Array.from(items).map(item => item.dataset.id);
-    const feedback = document.getElementById(`ordenar-feedback-${containerId}`);
+    items.forEach(item => {
+        item.addEventListener('touchstart', function(e) {
+            if (ordenCorrectoFlag) return;
+            const touch = e.touches[0];
+            touchDraggedItem = this;
+            touchStartIndex = parseInt(this.dataset.index);
 
-    if (!feedback) return;
+            // Crear clon visual
+            touchClone = this.cloneNode(true);
+            touchClone.style.position = 'fixed';
+            touchClone.style.left = (touch.clientX - this.offsetWidth / 2) + 'px';
+            touchClone.style.top = (touch.clientY - this.offsetHeight / 2) + 'px';
+            touchClone.style.width = this.offsetWidth + 'px';
+            touchClone.style.zIndex = '1000';
+            touchClone.style.opacity = '0.9';
+            touchClone.style.transform = 'scale(1.05)';
+            touchClone.style.pointerEvents = 'none';
+            touchClone.style.margin = '0';
+            document.body.appendChild(touchClone);
 
-    const esCorrecto = ordenActual.every((id, i) => id === ordenCorrecto[i]);
+            this.style.opacity = '0.3';
+        }, { passive: true });
 
-    if (esCorrecto) {
-        feedback.innerHTML = `
-            <div class="feedback-correcto">🎉 ¡Excelente! Has ordenado todos los elementos correctamente.</div>
-        `;
-        items.forEach(item => item.classList.add('correcto'));
-    } else {
-        let mensaje = '❌ Algunos elementos están en el orden incorrecto. ';
-        let posicionesCorrectas = 0;
-        items.forEach((item, i) => {
-            if (item.dataset.id === ordenCorrecto[i]) {
-                item.classList.add('correcto');
-                posicionesCorrectas++;
-            } else {
-                item.classList.remove('correcto');
-                item.classList.add('incorrecto');
-                setTimeout(() => item.classList.remove('incorrecto'), 1500);
+        item.addEventListener('touchmove', function(e) {
+            if (!touchDraggedItem || !touchClone || ordenCorrectoFlag) return;
+            e.preventDefault();
+
+            const touch = e.touches[0];
+            touchClone.style.left = (touch.clientX - touchClone.offsetWidth / 2) + 'px';
+            touchClone.style.top = (touch.clientY - touchClone.offsetHeight / 2) + 'px';
+
+            // Resaltar elemento bajo el dedo
+            const elementoDebajo = document.elementFromPoint(touch.clientX, touch.clientY);
+            const itemDebajo = elementoDebajo ? elementoDebajo.closest('.ordenar-item') : null;
+
+            container.querySelectorAll('.ordenar-item').forEach(el => {
+                if (el !== touchDraggedItem) {
+                    el.style.borderColor = '#d0e0fc';
+                    el.style.backgroundColor = 'white';
+                }
+            });
+
+            if (itemDebajo && itemDebajo !== touchDraggedItem) {
+                itemDebajo.style.borderColor = '#4A90D9';
+                itemDebajo.style.backgroundColor = '#e8f0fe';
             }
+        }, { passive: false });
+
+        item.addEventListener('touchend', function(e) {
+            if (!touchDraggedItem || ordenCorrectoFlag) {
+                if (touchClone) {
+                    touchClone.remove();
+                    touchClone = null;
+                }
+                touchDraggedItem = null;
+                return;
+            }
+
+            const touch = e.changedTouches[0];
+            const elementoDebajo = document.elementFromPoint(touch.clientX, touch.clientY);
+            const itemDebajo = elementoDebajo ? elementoDebajo.closest('.ordenar-item') : null;
+
+            // Eliminar clon
+            if (touchClone) {
+                touchClone.remove();
+                touchClone = null;
+            }
+
+            // Restaurar opacidad
+            touchDraggedItem.style.opacity = '1';
+
+            // Limpiar estilos
+            container.querySelectorAll('.ordenar-item').forEach(el => {
+                el.style.borderColor = '#d0e0fc';
+                el.style.backgroundColor = 'white';
+            });
+
+            if (itemDebajo && itemDebajo !== touchDraggedItem) {
+                const parent = touchDraggedItem.parentNode;
+                const children = parent.querySelectorAll('.ordenar-item');
+                const fromIndex = Array.from(children).indexOf(touchDraggedItem);
+                const toIndex = Array.from(children).indexOf(itemDebajo);
+
+                if (fromIndex < toIndex) {
+                    parent.insertBefore(touchDraggedItem, itemDebajo.nextSibling);
+                } else {
+                    parent.insertBefore(touchDraggedItem, itemDebajo);
+                }
+
+                // Actualizar números
+                const nuevosItems = parent.querySelectorAll('.ordenar-item');
+                nuevosItems.forEach((item, i) => {
+                    item.querySelector('.ordenar-numero').textContent = i + 1;
+                    item.dataset.index = i;
+                });
+
+                // Verificar orden automáticamente
+                verificarOrdenAutomatico();
+            }
+
+            touchDraggedItem = null;
+            touchStartIndex = null;
         });
-        mensaje += `Tienes ${posicionesCorrectas} de ${ordenCorrecto.length} en la posición correcta.`;
-        feedback.innerHTML = `
-            <div class="feedback-parcial">${mensaje}</div>
-        `;
-    }
+
+        item.addEventListener('touchcancel', function() {
+            if (touchClone) {
+                touchClone.remove();
+                touchClone = null;
+            }
+            if (touchDraggedItem) {
+                touchDraggedItem.style.opacity = '1';
+                touchDraggedItem = null;
+            }
+            touchStartIndex = null;
+        });
+    });
+
+    // ==========================================
+    // VERIFICACIÓN INICIAL (por si ya está ordenado)
+    // ==========================================
+    verificarOrdenAutomatico();
 }
 
 // ============================================
@@ -890,7 +1020,188 @@ function seleccionarCeldaSopa(containerId, fila, col) {
 }
 
 // ============================================
-// 5. SOPA DE LETRAS - REINICIAR (función auxiliar)
+// 5. RELACIONAR COLUMNAS (MATCHING)
+// ============================================
+function iniciarMatching(containerId, pares) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // pares: Array de objetos { id, izquierda, derecha }
+    // Ejemplo: { id: '1', izquierda: 'Océano', derecha: 'Gran masa de agua salada' }
+
+    // Mezclar elementos izquierda y derecha por separado
+    const izquierda = [...pares];
+    const derecha = [...pares];
+    for (let i = izquierda.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [izquierda[i], izquierda[j]] = [izquierda[j], izquierda[i]];
+    }
+    for (let i = derecha.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [derecha[i], derecha[j]] = [derecha[j], derecha[i]];
+    }
+
+    let seleccionados = { izquierda: null, derecha: null };
+    let parejasEncontradas = 0;
+    const totalPares = pares.length;
+
+    let html = `
+        <div class="matching-container" id="matching-${containerId}">
+            <p class="matching-instruccion">Haz clic en un elemento de la izquierda y luego en su pareja de la derecha.</p>
+            <div class="matching-grid">
+                <div class="matching-columna matching-izquierda">
+    `;
+
+    izquierda.forEach((item) => {
+        const encontrado = item.encontrado || false;
+        html += `
+            <div class="matching-item ${encontrado ? 'encontrado' : ''}" 
+                 data-id="${item.id}" 
+                 data-lado="izquierda"
+                 ${encontrado ? 'style="opacity:0.4;pointer-events:none;"' : ''}
+                 onclick="seleccionarMatching('${containerId}', '${item.id}', 'izquierda')">
+                ${item.izquierda}
+            </div>
+        `;
+    });
+
+    html += `
+                </div>
+                <div class="matching-columna matching-derecha">
+    `;
+
+    derecha.forEach((item) => {
+        const encontrado = item.encontrado || false;
+        html += `
+            <div class="matching-item ${encontrado ? 'encontrado' : ''}" 
+                 data-id="${item.id}" 
+                 data-lado="derecha"
+                 ${encontrado ? 'style="opacity:0.4;pointer-events:none;"' : ''}
+                 onclick="seleccionarMatching('${containerId}', '${item.id}', 'derecha')">
+                ${item.derecha}
+            </div>
+        `;
+    });
+
+    html += `
+                </div>
+            </div>
+            <div id="matching-feedback-${containerId}" class="matching-feedback"></div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+
+    // Guardar pares en el container
+    container.dataset.pares = JSON.stringify(pares);
+    container.dataset.seleccionados = JSON.stringify({ izquierda: null, derecha: null });
+    container.dataset.parejasEncontradas = '0';
+}
+
+// ============================================
+// SELECCIONAR ELEMENTO EN MATCHING
+// ============================================
+function seleccionarMatching(containerId, id, lado) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // Si el elemento ya está encontrado, no hacer nada
+    const itemElement = container.querySelector(`.matching-item[data-id="${id}"][data-lado="${lado}"]`);
+    if (itemElement && itemElement.classList.contains('encontrado')) return;
+
+    const pares = JSON.parse(container.dataset.pares);
+    const seleccionados = JSON.parse(container.dataset.seleccionados);
+    const feedback = document.getElementById(`matching-feedback-${containerId}`);
+
+    // Si selecciona el mismo lado que ya tenía, deseleccionar
+    if (seleccionados[lado] === id) {
+        seleccionados[lado] = null;
+        container.dataset.seleccionados = JSON.stringify(seleccionados);
+        // Limpiar estilos de selección
+        container.querySelectorAll(`.matching-item[data-lado="${lado}"]`).forEach(el => {
+            el.classList.remove('seleccionado');
+        });
+        return;
+    }
+
+    // Si el lado está ocupado, limpiar la selección anterior en ese lado
+    if (seleccionados[lado] !== null) {
+        const anterior = container.querySelector(`.matching-item[data-id="${seleccionados[lado]}"][data-lado="${lado}"]`);
+        if (anterior) anterior.classList.remove('seleccionado');
+    }
+
+    // Seleccionar el nuevo elemento
+    seleccionados[lado] = id;
+    container.dataset.seleccionados = JSON.stringify(seleccionados);
+    itemElement.classList.add('seleccionado');
+
+    // Si ya hay selección en ambos lados, verificar pareja
+    if (seleccionados.izquierda !== null && seleccionados.derecha !== null) {
+        const idIzquierda = seleccionados.izquierda;
+        const idDerecha = seleccionados.derecha;
+
+        // Buscar si coinciden
+        const pareja = pares.find(p => p.id === idIzquierda);
+        const coincide = pareja && pareja.id === idDerecha;
+
+        if (coincide) {
+            // ✅ Correcto: marcar ambos como encontrados
+            const itemIzq = container.querySelector(`.matching-item[data-id="${idIzquierda}"][data-lado="izquierda"]`);
+            const itemDer = container.querySelector(`.matching-item[data-id="${idDerecha}"][data-lado="derecha"]`);
+            if (itemIzq) {
+                itemIzq.classList.remove('seleccionado');
+                itemIzq.classList.add('encontrado');
+                itemIzq.style.opacity = '0.4';
+                itemIzq.style.pointerEvents = 'none';
+            }
+            if (itemDer) {
+                itemDer.classList.remove('seleccionado');
+                itemDer.classList.add('encontrado');
+                itemDer.style.opacity = '0.4';
+                itemDer.style.pointerEvents = 'none';
+            }
+
+            parejasEncontradas = parseInt(container.dataset.parejasEncontradas) + 1;
+            container.dataset.parejasEncontradas = parejasEncontradas;
+
+            if (feedback) {
+                feedback.innerHTML = `<div class="feedback-correcto">✅ ¡Correcto! "${pareja.izquierda}" = "${pareja.derecha}"</div>`;
+                setTimeout(() => feedback.innerHTML = '', 2000);
+            }
+
+            // Limpiar selección
+            seleccionados.izquierda = null;
+            seleccionados.derecha = null;
+            container.dataset.seleccionados = JSON.stringify(seleccionados);
+
+            // Verificar si se completó todo
+            if (parejasEncontradas === totalPares) {
+                if (feedback) {
+                    feedback.innerHTML = `<div class="feedback-correcto">🎉 ¡Excelente! Has relacionado todos los conceptos correctamente.</div>`;
+                }
+            }
+        } else {
+            // ❌ Incorrecto: mostrar mensaje y deseleccionar
+            if (feedback) {
+                feedback.innerHTML = `<div class="feedback-incorrecto">❌ No coinciden. Intenta de nuevo.</div>`;
+                setTimeout(() => feedback.innerHTML = '', 1500);
+            }
+
+            // Limpiar selecciones
+            const itemIzq = container.querySelector(`.matching-item[data-id="${idIzquierda}"][data-lado="izquierda"]`);
+            const itemDer = container.querySelector(`.matching-item[data-id="${idDerecha}"][data-lado="derecha"]`);
+            if (itemIzq) itemIzq.classList.remove('seleccionado');
+            if (itemDer) itemDer.classList.remove('seleccionado');
+
+            seleccionados.izquierda = null;
+            seleccionados.derecha = null;
+            container.dataset.seleccionados = JSON.stringify(seleccionados);
+        }
+    }
+}
+
+// ============================================
+// 6. SOPA DE LETRAS - REINICIAR (función auxiliar)
 // ============================================
 function reiniciarSopaLetras(containerId) {
     const container = document.getElementById(containerId);
@@ -948,7 +1259,7 @@ function reiniciarSopaLetras(containerId) {
 }
 
 // ============================================
-// 6. RECALCULAR SOPA DE LETRAS EN RESPONSIVE
+// RECALCULAR SOPA DE LETRAS EN RESPONSIVE
 // ============================================
 window.addEventListener('resize', function() {
     // Recalcular el tamaño de las sopas de letras existentes
@@ -995,3 +1306,121 @@ window.addEventListener('resize', function() {
         }
     });
 });
+// ============================================
+// 7. VERDADERO O FALSO
+// ============================================
+function iniciarVerdaderoFalso(containerId, preguntas) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    // preguntas: Array de objetos { id, texto, respuestaCorrecta (true/false), explicacion }
+    let respuestas = new Array(preguntas.length).fill(null);
+    let preguntasRespondidas = 0;
+
+    let html = `
+        <div class="vf-container" id="vf-${containerId}">
+            <p class="vf-instruccion">Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+            <div class="vf-preguntas">
+    `;
+
+    preguntas.forEach((pregunta, index) => {
+        const respondido = respuestas[index] !== null;
+        const respuestaUsuario = respuestas[index];
+        const esCorrecta = respondido ? (respuestaUsuario === pregunta.respuestaCorrecta) : null;
+
+        html += `
+            <div class="vf-item" id="vf-item-${index}" data-index="${index}">
+                <div class="vf-texto">
+                    <span class="vf-numero">${index + 1}.</span>
+                    <span class="vf-enunciado">${pregunta.texto}</span>
+                </div>
+                <div class="vf-botones">
+                    <button class="vf-btn vf-verdadero ${respondido && respuestaUsuario === true ? 'seleccionado' : ''} ${respondido ? 'deshabilitado' : ''}" 
+                            onclick="responderVF('${containerId}', ${index}, true)"
+                            ${respondido ? 'disabled' : ''}>
+                        ✅ Verdadero
+                    </button>
+                    <button class="vf-btn vf-falso ${respondido && respuestaUsuario === false ? 'seleccionado' : ''} ${respondido ? 'deshabilitado' : ''}" 
+                            onclick="responderVF('${containerId}', ${index}, false)"
+                            ${respondido ? 'disabled' : ''}>
+                        ❌ Falso
+                    </button>
+                </div>
+                ${respondido ? `
+                    <div class="vf-feedback ${esCorrecta ? 'vf-correcto' : 'vf-incorrecto'}">
+                        ${esCorrecta ? '✅ ¡Correcto!' : '❌ Incorrecto. ' + pregunta.explicacion}
+                    </div>
+                ` : ''}
+            </div>
+        `;
+    });
+
+    html += `
+            </div>
+            <div id="vf-feedback-${containerId}" class="vf-feedback-general"></div>
+        </div>
+    `;
+
+    container.innerHTML = html;
+    container.dataset.preguntas = JSON.stringify(preguntas);
+    container.dataset.respuestas = JSON.stringify(respuestas);
+    container.dataset.respondidas = '0';
+}
+
+// ============================================
+// RESPONDER VERDADERO O FALSO
+// ============================================
+function responderVF(containerId, index, respuesta) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const preguntas = JSON.parse(container.dataset.preguntas);
+    const respuestas = JSON.parse(container.dataset.respuestas);
+
+    // Si ya respondió, no hacer nada
+    if (respuestas[index] !== null) return;
+
+    // Guardar respuesta
+    respuestas[index] = respuesta;
+    container.dataset.respuestas = JSON.stringify(respuestas);
+
+    const esCorrecta = respuesta === preguntas[index].respuestaCorrecta;
+    const item = document.getElementById(`vf-item-${index}`);
+
+    // Deshabilitar botones
+    const botones = item.querySelectorAll('.vf-btn');
+    botones.forEach(btn => {
+        btn.classList.add('deshabilitado');
+        btn.disabled = true;
+    });
+
+    // Marcar el botón seleccionado
+    const btnSeleccionado = item.querySelector(respuesta ? '.vf-verdadero' : '.vf-falso');
+    if (btnSeleccionado) btnSeleccionado.classList.add('seleccionado');
+
+    // Mostrar feedback
+    const feedback = document.createElement('div');
+    feedback.className = `vf-feedback ${esCorrecta ? 'vf-correcto' : 'vf-incorrecto'}`;
+    feedback.textContent = esCorrecta ? '✅ ¡Correcto!' : `❌ Incorrecto. ${preguntas[index].explicacion}`;
+    item.appendChild(feedback);
+
+    // Actualizar contador
+    let respondidas = parseInt(container.dataset.respondidas) + 1;
+    container.dataset.respondidas = respondidas;
+
+    const totalPreguntas = preguntas.length;
+
+    // Verificar si todas las preguntas están respondidas
+    if (respondidas === totalPreguntas) {
+        const feedbackGeneral = document.getElementById(`vf-feedback-${containerId}`);
+        const correctas = respuestas.filter((r, i) => r === preguntas[i].respuestaCorrecta).length;
+        if (feedbackGeneral) {
+            feedbackGeneral.innerHTML = `
+                <div class="feedback-correcto">
+                    🎉 ¡Has completado todas las preguntas! 
+                    <br>✅ ${correctas} de ${totalPreguntas} correctas.
+                </div>
+            `;
+        }
+    }
+}

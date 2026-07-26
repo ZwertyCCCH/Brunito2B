@@ -9,54 +9,271 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 7
+                🧑‍🌾 Historia · Clase 7
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
-        <h1 class="clase-titulo">🧑‍🌾 Pueblos del Norte</h1>
-        <p class="clase-subtitulo">Aymara, Chango, Lickanantay y Diaguita</p>
+        <h1 class="clase-titulo">🧑‍🌾 Pueblos Originarios del Norte</h1>
 
-        <div class="clase-cuerpo">
-            <p><strong>🧑‍🌾 Pueblo Aymara</strong></p>
-            <ul>
-                <li>Habitantes del <strong>altiplano</strong></li>
-                <li>Construyeron <strong>terrazas de cultivo</strong> para aprovechar el agua</li>
-                <li>Viviendas de <strong>piedra, adobe y paja</strong> (sin ventanas para mantener frescura)</li>
-                <li>Se dedican a la <strong>ganadería y artesanía textil</strong> con lana de alpaca y llama</li>
-            </ul>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🧑‍🌾 Pueblo Chango</strong></p>
-            <ul>
-                <li><strong>Pescadores y recolectores</strong> de mariscos</li>
-                <li>Viviendas de <strong>huesos de ballena</strong> y cuero de lobo marino</li>
-                <li>Cazaban ballenas con <strong>arpones</strong> en balsas de cuero inflado</li>
-                <li>Intercambiaban productos con el pueblo <strong>Lickanantay</strong></li>
-            </ul>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🧑‍🌾 Pueblo Lickanantay</strong></p>
-            <ul>
-                <li>Habitaban en el <strong>altiplano</strong> y <strong>valles</strong></li>
-                <li>Viajaban en <strong>caravanas</strong> para intercambiar productos</li>
-                <li>Practicaban la <strong>agricultura</strong> y la <strong>alfarería</strong></li>
-            </ul>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Pueblos originarios del norte</h2>
+                    <p>En el norte de Chile habitaron <strong>cuatro pueblos originarios</strong> muy importantes:</p>
+                    <ul class="slide-lista">
+                        <li>🧑‍🌾 <strong>Aymara</strong> — habitantes del altiplano</li>
+                        <li>🧑‍🌾 <strong>Chango</strong> — pescadores de la costa</li>
+                        <li>🧑‍🌾 <strong>Diaguita</strong> — alfareros y agricultores</li>
+                        <li>🧑‍🌾 <strong>Lickanantay</strong> — viajeros en caravanas</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/Pzc9J9yB/image.png" 
+                             alt="Pueblos originarios" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Estos pueblos aún mantienen vivas muchas de sus tradiciones?</p>
+                </div>
+            </div>
 
-            <p><strong>🧑‍🌾 Pueblo Diaguita</strong></p>
-            <ul>
-                <li>Habitaban en los <strong>valles</strong> del norte</li>
-                <li>Destacaban por sus <strong>vasijas de cerámica</strong> con diseños geométricos</li>
-                <li>Practicaban la <strong>agricultura</strong> y la <strong>alfarería</strong></li>
-            </ul>
+            <!-- Slide 2: Pueblo Aymara -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Pueblo Aymara</h2>
+                    <p>El pueblo <strong>Aymara</strong> habita en el <strong>altiplano</strong> del norte de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🏔️ Viven en el <strong>altiplano</strong> a más de 3.000 metros</li>
+                        <li>🏠 Viviendas de <strong>piedra, adobe y paja</strong></li>
+                        <li>🦙 Se dedican a la <strong>ganadería</strong> (llamas y alpacas)</li>
+                        <li>🧶 Son conocidos por su <strong>artesanía textil</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/VYGLK1Dz/image.png" 
+                             alt="Pueblo Aymara" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los Aymara construyeron <strong>terrazas de cultivo</strong> para aprovechar el agua.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Pueblo Chango -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Pueblo Chango</h2>
+                    <p>El pueblo <strong>Chango</strong> habitaba en la <strong>costa del norte</strong> de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🎣 Eran <strong>pescadores</strong> y recolectores de mariscos</li>
+                        <li>🏠 Viviendas de <strong>huesos de ballena</strong> y cuero de lobo marino</li>
+                        <li>🛶 Usaban <strong>balsas de cuero inflado</strong> para navegar</li>
+                        <li>⚔️ Cazaban ballenas con <strong>arpones</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/mV3ZrCrn/image.png" 
+                             alt="Pueblo Chango" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Las mujeres changas <strong>buceaban</strong> para recolectar mariscos.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Pueblo Diaguita -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Pueblo Diaguita</h2>
+                    <p>El pueblo <strong>Diaguita</strong> habitaba en los <strong>valles del norte</strong> de Chile.</p>
+                    <ul class="slide-lista">
+                        <li>🏺 Eran famosos por su <strong>alfarería</strong> y cerámica</li>
+                        <li>🌾 Practicaban la <strong>agricultura</strong></li>
+                        <li>🎨 Decoraban sus vasijas con <strong>diseños geométricos</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/nM5SPwQP/image.png" 
+                             alt="Pueblo Diaguita" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> La cerámica Diaguita es muy valorada por sus <strong>colores rojo y negro</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Pueblo Lickanantay -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🧑‍🌾 Pueblo Lickanantay</h2>
+                    <p>El pueblo <strong>Lickanantay</strong> habitaba en el <strong>altiplano y valles</strong> del norte.</p>
+                    <ul class="slide-lista">
+                        <li>🐪 Viajaban en <strong>caravanas</strong> para intercambiar productos</li>
+                        <li>🧂 Transportaban <strong>sal, cobre y textiles</strong></li>
+                        <li>🏠 Viviendas de <strong>piedra y barro</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/ZZm6by0/image.png" 
+                             alt="Pueblo Lickanantay" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los Lickanantay consideraban el <strong>agua como sagrada</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los pueblos</h2>
+                    <p>Haz clic en un pueblo de la izquierda y luego en su característica de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con los pueblos del norte.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ El pueblo <strong>Aymara</strong> habita en el altiplano</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Chango</strong> es pescador de la costa</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Diaguita</strong> es famoso por su alfarería</div>
+                        <div class="resumen-item">✅ El pueblo <strong>Lickanantay</strong> viaja en caravanas</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E7.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E7.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C7
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'El pueblo Aymara habita en el altiplano del norte de Chile.', 
+                respuestaCorrecta: true,
+                explicacion: 'Los Aymara viven en el altiplano, a más de 3.000 metros de altura.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'El pueblo Chango era conocido por su alfarería y cerámica.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los Changos eran pescadores. Los Diaguita eran los alfareros.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Los Diaguita decoraban sus vasijas con diseños geométricos.', 
+                respuestaCorrecta: true,
+                explicacion: 'La cerámica Diaguita es famosa por sus diseños geométricos en rojo y negro.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'El pueblo Lickanantay viajaba en caravanas para intercambiar productos.', 
+                respuestaCorrecta: true,
+                explicacion: 'Los Lickanantay viajaban en caravanas transportando sal, cobre y textiles.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'El pueblo Aymara usaba balsas de cuero inflado para navegar.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los Changos usaban balsas de cuero inflado para navegar y pescar.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Aymara', derecha: 'Habitantes del altiplano' },
+            { id: '2', izquierda: 'Chango', derecha: 'Pescadores de la costa' },
+            { id: '3', izquierda: 'Diaguita', derecha: 'Alfareros y agricultores' },
+            { id: '4', izquierda: 'Lickanantay', derecha: 'Viajeros en caravanas' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['AYMARA', 'CHANGO', 'DIAGUITA', 'LICKANANTAY', 'ALTIPLANO', 'PESCA', 'ALFARERIA'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Drag & Drop (CON ORDEN)
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

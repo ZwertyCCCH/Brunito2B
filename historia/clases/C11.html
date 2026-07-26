@@ -9,6 +9,7 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
                 🌍 Historia · Clase 11
@@ -17,58 +18,241 @@
         </div>
 
         <h1 class="clase-titulo">🌍 Inmigrantes en Chile</h1>
-        <p class="clase-subtitulo">Alemanes, ingleses, árabes, haitianos y muchos más</p>
 
-        <div class="clase-cuerpo">
-            <p>Un <strong>inmigrante</strong> es una persona que se traslada del lugar donde vive a otro lugar, dentro o fuera de su país.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🧑‍🤝‍🧑 Inmigrantes del pasado:</strong></p>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🇩🇪 Alemanes</strong></p>
-            <ul>
-                <li>Llegaron a la <strong>Zona Sur</strong></li>
-                <li>Aportes: <strong>arquitectura</strong> (casas de Valdivia) y <strong>comidas</strong> (kuchen)</li>
-            </ul>
-
-            <p><strong>🇬🇧 Ingleses</strong></p>
-            <ul>
-                <li>Llegaron por <strong>negocios</strong> a Punta Arenas, Valparaíso, Santiago y Antofagasta</li>
-                <li>Aportes: <strong>primeras compañías de bomberos</strong> y <strong>fútbol</strong> (Wanderers, Everton)</li>
-            </ul>
-
-            <p><strong>🇵🇸 Árabes</strong></p>
-            <ul>
-                <li>Provienen de <strong>Palestina, Siria y Líbano</strong></li>
-                <li>Aportes: <strong>comercio e industria textil</strong></li>
-                <li>Formaron clubes deportivos como el <strong>Club Palestino</strong></li>
-            </ul>
-
-            <p><strong>🌍 Pueblo Tribal Afrodescendiente Chileno</strong></p>
-            <ul>
-                <li>Descendientes de personas <strong>esclavizadas</strong> desde África</li>
-                <li>Mantienen costumbres como el <strong>Baile de Morenos de Paso</strong></li>
-            </ul>
-
-            <p><strong>🧑‍🤝‍🧑 Inmigrantes del presente:</strong></p>
-            <ul>
-                <li>🇭🇹 <strong>Haitianos</strong> (hablan creole, comen pollo frito)</li>
-                <li>🇨🇳 <strong>Chinos</strong> (comercio)</li>
-                <li>🇦🇷 <strong>Argentinos</strong> (asados, fútbol)</li>
-                <li>🇵🇪 <strong>Peruanos</strong> (gastronomía: ají de gallina)</li>
-                <li>🇻🇪 <strong>Venezolanos</strong> y 🇨🇴 <strong>Colombianos</strong></li>
-            </ul>
-
-            <div style="background:#f0f7ff;padding:15px;border-radius:15px;margin:15px 0;border-left:6px solid #F5A623;">
-                <p><strong>🌎 Sociedad multicultural:</strong> Chile incluye personas de diversas culturas, lo que enriquece al país.</p>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🌍 ¿Qué es un inmigrante?</h2>
+                    <p>Un <strong>inmigrante</strong> es una persona que se traslada del lugar donde vive a otro lugar, ya sea dentro o fuera de su país.</p>
+                    <ul class="slide-lista">
+                        <li>🌎 Puede ser de otro <strong>país</strong> (inmigrante internacional)</li>
+                        <li>🏠 Puede ser de otra <strong>ciudad</strong> (inmigrante interno)</li>
+                        <li>🌟 Los inmigrantes <strong>aportan</strong> a la cultura y economía del país</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Chile ha recibido inmigrantes de todo el mundo desde hace muchos años.
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> Muchos inmigrantes han llegado a Chile buscando mejores oportunidades?</p>
+                </div>
             </div>
+
+            <!-- Slide 2: Inmigrantes del pasado -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🧳 Inmigrantes del pasado</h2>
+                    <p>Chile ha recibido inmigrantes de diferentes países a lo largo de su historia:</p>
+                    <ul class="slide-lista">
+                        <li>🇩🇪 <strong>Alemanes</strong> — llegaron a la Zona Sur (Valdivia, Puerto Montt)</li>
+                        <li>🇬🇧 <strong>Ingleses</strong> — llegaron a Valparaíso y Antofagasta</li>
+                        <li>🇵🇸 <strong>Árabes</strong> — vinieron de Palestina, Siria y Líbano</li>
+                        <li>🌍 <strong>Afrodescendientes</strong> — descendientes de personas esclavizadas</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los inmigrantes alemanes fundaron ciudades como Valdivia y Osorno.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Aportes de los inmigrantes -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🎁 Aportes de los inmigrantes</h2>
+                    <p>Cada grupo de inmigrantes trajo sus propias tradiciones:</p>
+                    <ul class="slide-lista">
+                        <li>🏗️ <strong>Arquitectura</strong> — casas de estilo alemán en el sur</li>
+                        <li>⚽ <strong>Fútbol</strong> — traído por los ingleses (Wanderers, Everton)</li>
+                        <li>🧵 <strong>Comercio textil</strong> — aporte de los árabes</li>
+                        <li>🍲 <strong>Gastronomía</strong> — kuchen (alemán), ají de gallina (peruano)</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> Los ingleses fundaron los primeros clubes de fútbol en Chile.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Inmigrantes del presente -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🧳 Inmigrantes del presente</h2>
+                    <p>En los últimos años, han llegado muchos inmigrantes a Chile:</p>
+                    <ul class="slide-lista">
+                        <li>🇵🇪 <strong>Peruanos</strong> — famosos por su gastronomía</li>
+                        <li>🇭🇹 <strong>Haitianos</strong> — hablan creole y vienen del Caribe</li>
+                        <li>🇨🇳 <strong>Chinos</strong> — destacan en el comercio</li>
+                        <li>🇻🇪 <strong>Venezolanos</strong> — han llegado en gran cantidad en los últimos años</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> En Chile, los niños inmigrantes tienen derecho a la educación gratuita.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Sociedad multicultural -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🌍 Sociedad multicultural</h2>
+                    <p>Chile es una <strong>sociedad multicultural</strong>, es decir, incluye personas de diversas culturas.</p>
+                    <ul class="slide-lista">
+                        <li>🎵 <strong>Música y danza</strong> — salsa, cumbia, etc.</li>
+                        <li>🍽️ <strong>Gastronomía</strong> — comida peruana, china, coreana</li>
+                        <li>🎨 <strong>Costumbres</strong> — tradiciones de diferentes países</li>
+                    </ul>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> La multiculturalidad enriquece a la sociedad chilena.
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> El respeto por la diversidad cultural es muy importante?</p>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Verdadero o Falso -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Verdadero o Falso</h2>
+                    <p>Lee cada afirmación y selecciona si es <strong>Verdadera</strong> o <strong>Falsa</strong>.</p>
+                    <div id="actividad-vf"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los países</h2>
+                    <p>Haz clic en un país de la izquierda y luego en su aporte de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con la inmigración en Chile.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ Un <strong>inmigrante</strong> es alguien que se traslada a otro lugar</div>
+                        <div class="resumen-item">✅ Los <strong>alemanes</strong> aportaron arquitectura y kuchen</div>
+                        <div class="resumen-item">✅ Los <strong>ingleses</strong> trajeron el fútbol</div>
+                        <div class="resumen-item">✅ Chile es una <strong>sociedad multicultural</strong></div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E11.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E11.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C11
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA VERDADERO O FALSO
+        // ==========================================
+        const datosVF = [
+            { 
+                id: 'vf1', 
+                texto: 'Los inmigrantes alemanes llegaron a la Zona Sur de Chile.', 
+                respuestaCorrecta: true,
+                explicacion: 'Los alemanes se establecieron en la Zona Sur, especialmente en Valdivia y Puerto Montt.'
+            },
+            { 
+                id: 'vf2', 
+                texto: 'Los ingleses trajeron el kuchen a Chile.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los alemanes trajeron el kuchen. Los ingleses trajeron el fútbol y los bomberos.'
+            },
+            { 
+                id: 'vf3', 
+                texto: 'Los inmigrantes árabes vinieron de Palestina, Siria y Líbano.', 
+                respuestaCorrecta: true,
+                explicacion: 'Los árabes llegaron principalmente de Palestina, Siria y Líbano.'
+            },
+            { 
+                id: 'vf4', 
+                texto: 'Chile es una sociedad multicultural porque incluye diversas culturas.', 
+                respuestaCorrecta: true,
+                explicacion: 'La sociedad multicultural se caracteriza por la convivencia de diversas culturas.'
+            },
+            { 
+                id: 'vf5', 
+                texto: 'Los inmigrantes haitianos hablan español como idioma nativo.', 
+                respuestaCorrecta: false,
+                explicacion: 'Los haitianos hablan creole, aunque también aprenden español.'
+            }
+        ];
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Alemania', derecha: 'Arquitectura y kuchen' },
+            { id: '2', izquierda: 'Inglaterra', derecha: 'Fútbol y bomberos' },
+            { id: '3', izquierda: 'Palestina', derecha: 'Comercio textil' },
+            { id: '4', izquierda: 'Perú', derecha: 'Ají de gallina' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['ALEMAN', 'INGLES', 'ARABE', 'HAITIANO', 'PERUANO', 'KUCHEM', 'MULTICULTURAL'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Verdadero o Falso
+            iniciarVerdaderoFalso('actividad-vf', datosVF);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>

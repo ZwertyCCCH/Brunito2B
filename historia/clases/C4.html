@@ -9,42 +9,244 @@
 <body>
 
     <div class="contenido-clase">
+        <!-- ENCABEZADO DE CLASE -->
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:10px;">
             <span style="background:#F5A623;color:white;padding:6px 18px;border-radius:30px;font-weight:700;font-size:0.9rem;">
-                🌍 Historia · Clase 4
+                🏜️ Historia · Clase 4
             </span>
             <span style="font-size:0.9rem;color:#999;">📚 2° Básico</span>
         </div>
 
-        <h1 class="clase-titulo">🏜️ Zona Norte</h1>
-        <p class="clase-subtitulo">Conoce el desierto, el altiplano y los valles del norte de Chile</p>
+        <h1 class="clase-titulo">🏜️ Zona Norte de Chile</h1>
 
-        <div class="clase-cuerpo">
-            <p>La <strong>Zona Norte</strong> de Chile tiene <strong>escasas lluvias</strong>, por eso sus paisajes tienen poca vegetación.</p>
+        <!-- ========================================== -->
+        <!-- CONTENEDOR DE DIAPOSITIVAS                -->
+        <!-- ========================================== -->
 
-            <p><strong>🏔️ El Altiplano</strong></p>
-            <p>Es un terreno plano ubicado en las alturas de la cordillera de los Andes.</p>
+        <div class="slides-container" id="contenedor-slides">
 
-            <p><strong>🏜️ El Desierto de Atacama</strong></p>
-            <p>Es el <strong>desierto más seco del mundo</strong>. Aquí encontramos el famoso <strong>desierto florido</strong>, que florece cuando llueve.</p>
-
-            <p><strong>🌾 Valles con agricultura</strong></p>
-            <p>Más hacia el sur, encontramos valles con ríos donde se desarrolla la agricultura. Ejemplo: <strong>Valle del Elqui</strong>.</p>
-
-            <p><strong>🏖️ Ciudades costeras</strong></p>
-            <p>En la costa hay ciudades, puertos y playas. Ejemplo: <strong>Antofagasta</strong>.</p>
-
-            <div style="background:#f0f7ff;padding:15px;border-radius:15px;margin:15px 0;border-left:6px solid #F5A623;">
-                <p><strong>🌋 Dato curioso:</strong> En la Zona Norte también hay volcanes y salares.</p>
+            <!-- Slide 1: Introducción -->
+            <div class="diapositiva activa" data-index="0">
+                <div class="slide-contenido">
+                    <h2>🏜️ ¿Cómo es la Zona Norte de Chile?</h2>
+                    <p>La Zona Norte se caracteriza por tener <strong>escasas lluvias</strong> y paisajes muy diversos.</p>
+                    <ul class="slide-lista">
+                        <li>🏜️ <strong>Desierto de Atacama</strong> — el más seco del mundo</li>
+                        <li>🏔️ <strong>Altiplano</strong> — terreno plano en la cordillera</li>
+                        <li>🌾 <strong>Valles</strong> — con agricultura y cultivos</li>
+                        <li>🏖️ <strong>Costa</strong> — con ciudades, puertos y playas</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/PvSLc7ZS/image.png" 
+                             alt="Paisaje Zona Norte" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <p class="slide-pregunta">💡 <strong>¿Sabías que...</strong> La Zona Norte tiene el desierto más seco del mundo?</p>
+                </div>
             </div>
+
+            <!-- Slide 2: Desierto de Atacama -->
+            <div class="diapositiva" data-index="1">
+                <div class="slide-contenido">
+                    <h2>🏜️ El Desierto de Atacama</h2>
+                    <p>El <strong>Desierto de Atacama</strong> es el <strong>desierto más seco del mundo</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🌵 Tiene <strong>poca vegetación</strong> debido a las escasas lluvias</li>
+                        <li>🌸 Cuando llueve, ocurre el <strong>desierto florido</strong></li>
+                        <li>🌋 También hay <strong>volcanes</strong> y <strong>salares</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/Q7X2jhmH/image.png" 
+                             alt="Paisaje Desierto de Atacama" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> En el Desierto de Atacama hay zonas donde nunca ha llovido.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: El Altiplano -->
+            <div class="diapositiva" data-index="2">
+                <div class="slide-contenido">
+                    <h2>🏔️ El Altiplano</h2>
+                    <p>El <strong>altiplano</strong> es un terreno plano ubicado en las alturas de la <strong>cordillera de los Andes</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🏔️ Está a <strong>más de 3.000 metros</strong> de altura</li>
+                        <li>🦙 Habitan animales como la <strong>llama</strong> y la <strong>alpaca</strong></li>
+                        <li>🧑‍🌾 Pueblo <strong>Aymara</strong> y <strong>Lickanantay</strong> viven allí</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/5g0CKYC3/image.png" 
+                             alt="Paisaje Altiplano" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> El altiplano chileno es parte de la meseta más grande del mundo fuera del Tíbet.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Valles y agricultura -->
+            <div class="diapositiva" data-index="3">
+                <div class="slide-contenido">
+                    <h2>🌾 Valles y agricultura</h2>
+                    <p>En la Zona Norte también hay <strong>valles con ríos</strong> donde se desarrolla la <strong>agricultura</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🍇 <strong>Valle del Elqui</strong> — famoso por sus uvas y frutas</li>
+                        <li>🌽 Se cultivan <strong>uvas, frutas y hortalizas</strong></li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/RGyN0R55/image.png" 
+                             alt="Paisaje Valle del Elqui" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Costa del norte -->
+            <div class="diapositiva" data-index="4">
+                <div class="slide-contenido">
+                    <h2>🏖️ La costa del norte</h2>
+                    <p>La costa de la Zona Norte tiene <strong>ciudades, puertos y playas</strong>.</p>
+                    <ul class="slide-lista">
+                        <li>🏙️ <strong>Antofagasta</strong> — ciudad portuaria importante</li>
+                        <li>⛵ Puertos para el <strong>comercio marítimo</strong></li>
+                        <li>🏖️ Playas con <strong>aguas frías</strong> del Pacífico</li>
+                    </ul>
+                    <div class="slide-imagen">
+                        <img src="https://i.ibb.co/zhzsjB50/image.png" 
+                             alt="Paisaje Costas del Norte" 
+                             style="max-width:100%; border-radius:15px; box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                    <div class="slide-dato">
+                        📌 <strong>Dato curioso:</strong> En la costa norte también hay <strong>caletas de pescadores</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: ACTIVIDAD - Drag & Drop (con orden) -->
+            <div class="diapositiva" data-index="5">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Completa las características</h2>
+                    <p>Arrastra las palabras a los espacios en blanco en el orden correcto.</p>
+                    <div id="actividad-dragdrop"></div>
+                </div>
+            </div>
+
+            <!-- Slide 7: ACTIVIDAD - Matching -->
+            <div class="diapositiva" data-index="6">
+                <div class="slide-contenido">
+                    <h2>📌 Actividad: Relaciona los pueblos</h2>
+                    <p>Haz clic en un pueblo de la izquierda y luego en su característica de la derecha.</p>
+                    <div id="actividad-matching"></div>
+                </div>
+            </div>
+
+            <!-- Slide 8: ACTIVIDAD - Sopa de letras -->
+            <div class="diapositiva" data-index="7">
+                <div class="slide-contenido">
+                    <h2>🔍 Actividad: Sopa de letras</h2>
+                    <p>Encuentra las palabras relacionadas con la Zona Norte.</p>
+                    <div id="actividad-sopa"></div>
+                </div>
+            </div>
+
+            <!-- Slide 9: Resumen -->
+            <div class="diapositiva" data-index="8">
+                <div class="slide-contenido">
+                    <h2>📝 Resumen: Lo que aprendiste hoy</h2>
+                    <div class="slide-resumen">
+                        <div class="resumen-item">✅ La Zona Norte tiene <strong>escasas lluvias</strong></div>
+                        <div class="resumen-item">✅ El <strong>Desierto de Atacama</strong> es el más seco del mundo</div>
+                        <div class="resumen-item">✅ El <strong>altiplano</strong> es un terreno plano en la cordillera</div>
+                        <div class="resumen-item">✅ Los <strong>valles</strong> tienen agricultura y el <strong>Valle del Elqui</strong> es famoso</div>
+                        <div class="resumen-item">✅ La <strong>costa</strong> tiene ciudades, puertos y playas</div>
+                    </div>
+                    <div class="slide-fin">
+                        🎉 ¡Has completado la clase! Ahora puedes practicar con el ejercicio.
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="navegacion-clase">
-            <a href="../index.html" class="btn-navegacion">⬅ Volver a Historia</a>
-            <a href="../ejercicios/E4.html" class="btn-navegacion principal">✏️ Ir al Ejercicio →</a>
+        <!-- ========================================== -->
+        <!-- FOOTER FIJO - Navegación de diapositivas   -->
+        <!-- ========================================== -->
+
+        <div class="footer-slides" id="footer-slides" 
+             data-volver="../index.html" 
+             data-ejercicio="../ejercicios/E4.html">
+            <!-- Los botones son generados por slides.js -->
         </div>
+
     </div>
 
+    <!-- ========================================== -->
+    <!-- SCRIPTS                                    -->
+    <!-- ========================================== -->
+
     <script src="../../js/scripts.js"></script>
+    <script src="../../js/slides.js"></script>
+    <script src="../../js/actividades.js"></script>
+
+    <script>
+        // ==========================================
+        // DATOS ESPECÍFICOS DE LA CLASE C4
+        // ==========================================
+
+        // ==========================================
+        // 1. DATOS PARA DRAG & DROP (CON ORDEN)
+        // ==========================================
+        const datosDragDrop = {
+            opciones: ['Desierto de Atacama', 'Altiplano', 'Valles del norte', 'Costa del norte', 'Estrecho de Magallanes', 'Valle nevado', 'Puerto de Talcahuano'],
+            espacios: [
+                { id: 'espacio1', palabraCorrecta: 'Desierto de Atacama', pista: 'Es el desierto más seco del mundo' },
+                { id: 'espacio2', palabraCorrecta: 'Altiplano', pista: 'Terreno plano en la cordillera de los Andes' },
+                { id: 'espacio3', palabraCorrecta: 'Valles del norte', pista: 'Tienen agricultura y cultivos' },
+                { id: 'espacio4', palabraCorrecta: 'Costa del norte', pista: 'Tiene ciudades, puertos y playas' }
+            ],
+            texto: 'En la Zona Norte encontramos el ______, el ______, los ______ y la ______.'
+        };
+
+        // ==========================================
+        // 2. DATOS PARA MATCHING
+        // ==========================================
+        const datosMatching = [
+            { id: '1', izquierda: 'Valle del Elqui', derecha: 'Se cultivan uvas, frutas y hortalizas' },
+            { id: '2', izquierda: 'Altiplano', derecha: 'Habitan llamas y alpacas' },
+            { id: '3', izquierda: 'Desierto de Atacama', derecha: 'Conocido por el desierto florido' },
+            { id: '4', izquierda: 'Antofagasta', derecha: 'Ciudad portuaria' }
+        ];
+
+        // ==========================================
+        // 3. DATOS PARA SOPA DE LETRAS
+        // ==========================================
+        const palabrasSopa = ['ATACAMA', 'ALTIPLANO', 'ELQUI', 'ANTOFAGASTA', 'DESIERTO', 'VALLE', 'COSTA'];
+
+        // ==========================================
+        // INICIALIZAR ACTIVIDADES
+        // ==========================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Iniciar Drag & Drop (CON ORDEN)
+            iniciarDragDropOrden('actividad-dragdrop', datosDragDrop);
+
+            // Iniciar Matching
+            iniciarMatching('actividad-matching', datosMatching);
+
+            // Iniciar Sopa de letras (grid 10x10)
+            iniciarSopaLetras('actividad-sopa', palabrasSopa, 10);
+
+            // La navegación de slides se auto-inicia en slides.js
+            setTimeout(function() {
+                if (typeof actualizarFooter === 'function') {
+                    actualizarFooter();
+                }
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>
