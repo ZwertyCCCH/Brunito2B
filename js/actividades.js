@@ -1261,7 +1261,7 @@ function reiniciarSopaLetras(containerId) {
 // ============================================
 // RECALCULAR SOPA DE LETRAS EN RESPONSIVE
 // ============================================
-window.addEventListener('resize', function() {
+/*window.addEventListener('resize', function() {
     // Recalcular el tamaño de las sopas de letras existentes
     const containers = document.querySelectorAll('.sopa-letras-container');
     containers.forEach(container => {
@@ -1305,7 +1305,7 @@ window.addEventListener('resize', function() {
             }
         }
     });
-});
+});*/
 // ============================================
 // 7. VERDADERO O FALSO
 // ============================================
